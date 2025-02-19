@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-top {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-inner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+}
+
+.slide-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    z-index: 5;
+    color: white;
+    transition: all 0.5s ease;
+    left: 5%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.previous-title {
+    bottom: 60%;
+    opacity: 0.8;
+    color: #95c11f;
+    font-size: 3rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.current-title {
+    top: 40%;
+    opacity: 1;
+    font-size: 4rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
+}
+
+.next-title {
+    top: 60%;
+    opacity: 0.8;
+    color: #95c11f;
+    font-size: 3rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+}
+
+.gallery-thumbs {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    height: auto;
+    width: 40%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gallery-thumbs .swiper-slide {
+    width: 100%;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 2rem;
+    color: #fff;
+    padding: 10px 0;
+    transform: translateY(100%);
+    transition: transform 0.8s ease-in-out;
+}
+
+.gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.swiper-pagination {
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.swiper-pagination .current-number {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.swiper-pagination .total-number {
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.social-media {
+    position: fixed;
+    right: 30px;
+    top: 40%;
+    transform: translateY(-50%);
+    list-style: none;
+    z-index: 10;
+}
+
+.social-media li {
+    margin: 15px 0;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #95c11f;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 70%;
+    right: 25px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: .7rem;
+    font-weight: bold;
+    text-align: center;
+    writing-mode: vertical-rl;
+    z-index: 10;
+    animation: moveUpDown 2s infinite alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+.scroll-down {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.scroll-down span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    margin: 10px auto;
+    animation: scrollAnim 1.5s infinite;
+}
+
+@keyframes scrollAnim {
+    0% {
+        transform: rotate(45deg) translateY(0);
+    }
+    100% {
+        transform: rotate(45deg) translateY(10px);
+    }
+}
+
+.details-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: #a09b35;
+}
+
+.details-text {
+    font-size: 2rem;
+}
+
+.details-button {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #000000f3;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.details-button:hover {
+    transform: scale(1.1);
+}
+
+.details-button.active i {
+    content: '\f00d';
+    /* رمز "X" */
+}
+
+.details-button i {
+    content: '\f067';
+    /* رمز "+" */
+}

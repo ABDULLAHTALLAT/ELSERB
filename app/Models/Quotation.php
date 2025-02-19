@@ -10,9 +10,10 @@ class Quotation extends Model
     use HasFactory;
 
     protected $fillable = [
-        'full_name', 'phone', 'email', 'service_id', 'message'
+        'full_name', 'phone', 'email', 'company', 'service_id', 'message'
     ];
 
+    // العلاقة مع Service (إذا كان لديك نموذج خدمة مرتبط)
     public function service()
     {
         return $this->belongsTo(Service::class);

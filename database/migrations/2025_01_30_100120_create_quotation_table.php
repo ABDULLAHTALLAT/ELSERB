@@ -16,12 +16,12 @@ return new class extends Migration
             $table->string('full_name');
             $table->string('phone');
             $table->string('email');
+            $table->string('company'); // إضافة عمود الشركة
             $table->foreignId('service_id')->constrained('services')->onDelete('cascade'); // ربط الخدمة
             $table->text('message');
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
