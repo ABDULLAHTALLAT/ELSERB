@@ -42,11 +42,19 @@
         left: 5%;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
+.slide-title a {
+    text-decoration: none !important; /* إزالة الخط */
+    color: inherit; /* جعل اللون متوافقًا مع النص الأصلي */
+}
+
+.slide-title a:hover {
+    text-decoration: none !important; /* التأكد من عدم ظهوره عند التحويم */
+}
 
     .previous-title {
         bottom: 60%;
         opacity: 0.8;
-        background: linear-gradient(45deg , #f2c798, #ff8400, #c88354, #44321f);
+background: #e28743;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
         font-size: 4rem;
@@ -57,19 +65,20 @@
     .current-title {
         top: 40%;
         opacity: 1;
-        font-size: 6rem;
+        font-size:4.7rem;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0);
         margin-top: 10px;
+        text-decoration: none;
     }
 
     .next-title {
         top: 60%;
         opacity: 0.8;
-         background: linear-gradient(45deg, #ae865a, #c88354, #44321f);
+         background: #e28743;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
         font-size: 4rem;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.577);
         margin-top: 10px;
     }
 
@@ -273,108 +282,127 @@
     </header>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-    <script>
-        const sliderData = [{
+   <script>
+    const sliderData = [
+        {
             title: 'Video & Photography',
-            image: '{{ asset('images/slider/1.jpg') }}',
-            page: 'video-photography.html'
-        }, {
+            image: "{{ asset('images/slider/1.jpg') }}",
+            page: "{{ route('video-photography') }}"
+        },
+        {
             title: 'Motion Graphic',
-            image: '{{ asset('images/slider/2.jpg') }}',
-            page: 'motion-graphic.html'
-        }, {
+            image: "{{ asset('images/slider/2.jpg') }}",
+            page: "{{ route('motion-graphic') }}"
+        },
+        {
             title: 'Web Solutions',
-            image: '{{ asset('images/slider/3.jpg') }}',
-            page: 'serv/web-solutions.html'
-        }, {
+            image: "{{ asset('images/slider/3.jpg') }}",
+            page: "{{ route('web-solutions') }}"
+        },
+        {
             title: 'Mobile Apps',
-            image: '{{ asset('images/slider/4.jpg') }}',
-            page: 'mobile-apps.html'
-        }, {
+            image: "{{ asset('images/slider/4.jpg') }}",
+            page: "{{ route('mobile-apps') }}"
+        },
+        {
             title: 'Graphic Design',
-            image: '{{ asset('images/slider/5.jpg') }}',
-            page: 'graphic-design.html'
-        }, {
+            image: "{{ asset('images/slider/5.jpg') }}",
+            page: "{{ route('graphic-design') }}"
+        },
+        {
             title: 'Branding',
-            image: '{{ asset('images/slider/6.jpg') }}',
-            page: 'branding.html'
-        }, {
+            image: "{{ asset('images/slider/6.jpg') }}",
+            page: "{{ route('branding') }}"
+        },
+        {
             title: 'Packaging',
-            image: '{{ asset('images/slider/7.jpg') }}',
-            page: 'packaging.html'
-        }, {
+            image: "{{ asset('images/slider/7.jpg') }}",
+            page: "{{ route('packaging') }}"
+        },
+        {
             title: 'Social Media & Digital Marketing',
-            image: '{{ asset('images/slider/8.jpg') }}',
-            page: 'social-media-marketing.html'
-        }, {
+            image: "{{ asset('images/slider/8.jpg') }}",
+            page: "{{ route('social-media-marketing') }}"
+        },
+        {
             title: 'Search Engine Optimization',
-            image: '{{ asset('images/slider/9.jpg') }}',
-            page: 'seo.html'
-        }];
+            image: "{{ asset('images/slider/9.jpg') }}",
+            page: "{{ route('seo') }}"
+        }
+    ];
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const topWrapper = document.querySelector('.gallery-top .swiper-wrapper');
-            const thumbsWrapper = document.querySelector('.gallery-thumbs .swiper-wrapper');
+    document.addEventListener('DOMContentLoaded', function () {
+        const topWrapper = document.querySelector('.gallery-top .swiper-wrapper');
+        const thumbsWrapper = document.querySelector('.gallery-thumbs .swiper-wrapper');
 
-            sliderData.forEach((slide, index) => {
-                topWrapper.innerHTML += `
+        sliderData.forEach((slide, index) => {
+            topWrapper.innerHTML += `
                 <div class="swiper-slide">
                     <div class="slide-inner" style="background-image: url('${slide.image}');">
-                        <div class="slide-title previous-title">${index > 0 ? sliderData[(index - 1 + sliderData.length) % sliderData.length].title : sliderData[sliderData.length - 1].title}</div>
-                        <div class="slide-title current-title">${slide.title}
-                            <span class="details-container">
-
-
-                            </span>
+                        <div class="slide-title previous-title">
+                            <a href="${index > 0 ? sliderData[(index - 1 + sliderData.length) % sliderData.length].page : sliderData[sliderData.length - 1].page}">
+                                ${index > 0 ? sliderData[(index - 1 + sliderData.length) % sliderData.length].title : sliderData[sliderData.length - 1].title}
+                            </a>
                         </div>
-                        <div class="slide-title next-title">${index < sliderData.length - 1 ? sliderData[(index + 1) % sliderData.length].title : sliderData[0].title}</div>
+                        <div class="slide-title current-title">
+                            <a href="${slide.page}">
+                                ${slide.title}
+                            </a>
+                            <span class="details-container"></span>
+                        </div>
+                        <div class="slide-title next-title">
+                            <a href="${index < sliderData.length - 1 ? sliderData[(index + 1) % sliderData.length].page : sliderData[0].page}">
+                                ${index < sliderData.length - 1 ? sliderData[(index + 1) % sliderData.length].title : sliderData[0].title}
+                            </a>
+                        </div>
                     </div>
                 </div>
             `;
 
-                if (index < 3) {
-                    thumbsWrapper.innerHTML += `
-                    <div class="swiper-slide">${slide.title}</div>
+            if (index < 3) {
+                thumbsWrapper.innerHTML += `
+                    <div class="swiper-slide">
+                        <a href="${slide.page}">${slide.title}</a>
+                    </div>
                 `;
-                }
-            });
-
-            const galleryThumbs = new Swiper('.gallery-thumbs', {
-                direction: 'vertical',
-                spaceBetween: 10,
-                slidesPerView: 3,
-                loop: true
-            });
-
-            const galleryTop = new Swiper('.gallery-top', {
-                spaceBetween: 0,
-                effect: 'fade',
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'fraction',
-                    renderFraction: function(currentClass, totalClass) {
-                        return `<span class="current-number ${currentClass}"></span> / <span class="total-number ${totalClass}">9</span>`;
-                    }
-                },
-                thumbs: {
-                    swiper: galleryThumbs
-                },
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false
-                },
-                on: {
-                    slideChange: function() {
-                        document.querySelector('.current-number').textContent = this.realIndex + 1;
-                    }
-                }
-            });
-
-
-
+            }
         });
-    </script>
+
+        const galleryThumbs = new Swiper('.gallery-thumbs', {
+            direction: 'vertical',
+            spaceBetween: 10,
+            slidesPerView: 3,
+            loop: true
+        });
+
+        const galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 0,
+            effect: 'fade',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                renderFraction: function (currentClass, totalClass) {
+                    return `<span class="current-number ${currentClass}"></span> / <span class="total-number ${totalClass}">9</span>`;
+                }
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            on: {
+                slideChange: function () {
+                    document.querySelector('.current-number').textContent = this.realIndex + 1;
+                }
+            }
+        });
+    });
+</script>
+
+
 </body>
 
 </html>
