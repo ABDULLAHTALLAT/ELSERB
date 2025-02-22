@@ -62,31 +62,36 @@
         transform: rotate(-90deg) translateY(0);
     }
 
-    .social-icons {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-    }
+ .social-icons {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
 
-    .social-icons a {
-        text-decoration: none;
-        color: white;
-        font-size: 10px;
-        margin: 3px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        transition: 0.3s;
-    }
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* عرض الأيقونة */
+    height: 40px; /* ارتفاع الأيقونة */
+    border: 2px solid transparent; /* حواف شفافة افتراضيًا */
+    border-radius: 50%; /* لجعل الأيقونة دائرية */
+    transition: all 0.3s ease; /* تأثير سلس على جميع الخصائص */
+}
 
-    .social-icons a:hover {
-        background: #556B2F;
-    }
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.5); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
+    border-color: #754d2e; /* تغيير لون الحواف عند الـ hover */
+background-color: #c3814c
+}
+
 
 
 
@@ -262,9 +267,10 @@
         }
 
         .line {
-            width: 30%;
-            height: 2px;
-            background-color: #7e6c00;
+            width: 35%;
+            height: 4px;
+            background-color: #c3814c;
+            padding-right: 5px;
         }
 
         .logo {
@@ -276,7 +282,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid #c3814c;
+            border: 4px solid #c3814c;
         }
 
         .logo img {
@@ -318,7 +324,7 @@
 
         .methodology-step h3 {
             font-size: 20px;
-            color: #a09b35;
+            color: #754d2e;
             font-weight: bold;
             margin-bottom: 15px;
         }

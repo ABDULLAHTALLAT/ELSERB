@@ -7,6 +7,8 @@
     <meta name="description" content="Elserb - Your trusted partner for innovative solutions.">
     <title>Elserb</title>
     <link rel="icon" href="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" type="image/x-icon">
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         :root {

@@ -30,7 +30,7 @@ html {
 /* التأكد من أن الصفحة لا تقطع المحتوى */
 body {
     overflow: auto;
-     
+
 }
     </style>
 </head>

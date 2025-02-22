@@ -35,7 +35,7 @@
     }
 
     h1 {
-        color: #dfa671;
+        color: #873e23;
         font-size: 30px;
     }
 
@@ -45,20 +45,45 @@
         margin-bottom: 15px;
     }
 
-    .social-icons a {
-        margin-right: 10px;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
+    .social-icons {
+        margin: 10px 0;
     }
 
-    .social-icons a:hover {
-        text-decoration: underline;
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .google {
+        background: #4c4c6d;
+    }
+
+    .twitter {
+        background: #55acee;
+    }
+
+    .google-plus {
+        background: #dd4b39;
+    }
+
+    .linkedin {
+        background: #0077b5;
+    }
+
+    .behance {
+        background: #ff2b2b;
     }
 
     .content h2,
     .content h3 {
-        color: #dfa671;
+        color: #873e23;
     }
 
     .content p {
@@ -74,11 +99,13 @@
         <h1>Why is SEO Important for your Website?</h1>
         <p class="date">2025-02-18</p>
 
-        {{-- <div class="social-icons">
-            <a href="#" style="color:#3b5998;">🔵 Facebook</a>
-            <a href="#" style="color:#1DA1F2;">🔷 Twitter</a>
-            <a href="#" style="color:#DD4B39;">🔴 Google+</a>
-        </div> --}}
+        <div class="social-icons">
+            <a href="#" class="google"><i class="fab fa-google"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="google-plus"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="behance"><i class="fab fa-behance"></i></a>
+        </div>
 
         <div class="content">
             <h2>What is SEO?</h2>

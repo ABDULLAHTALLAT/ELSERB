@@ -72,7 +72,7 @@
 
     .welcome-text {
         position: absolute;
-        right: 10px;
+        right: 15px;
         bottom: 20%;
         transform: rotate(-90deg) translateY(100%);
         font-size: 12px;
@@ -85,31 +85,36 @@
         transform: rotate(-90deg) translateY(0);
     }
 
-    .social-icons {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-    }
+ .social-icons {
+    position: absolute;
+    right: 40px;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
 
-    .social-icons a {
-        text-decoration: none;
-        color: white;
-        font-size: 10px;
-        margin: 3px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        transition: 0.3s;
-    }
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* عرض الأيقونة */
+    height: 40px; /* ارتفاع الأيقونة */
+    border: 2px solid transparent; /* حواف شفافة افتراضيًا */
+    border-radius: 50%; /* لجعل الأيقونة دائرية */
+    transition: all 0.3s ease; /* تأثير سلس على جميع الخصائص */
+}
 
-    .social-icons a:hover {
-        background: #754800;
-    }
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.6); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
+    border-color: #754d2e; /* تغيير لون الحواف عند الـ hover */
+}
+
+
 
 
         .contact-section {
@@ -182,7 +187,7 @@
         .form-group input:hover,
         .form-group textarea:hover {
             border-color: #c3814c;
-            box-shadow: 0 2px 8px rgba(149, 193, 31, 0.1);
+            box-shadow: 0 5px 20px #873e23;
         }
 
         .form-group input:focus,
@@ -190,7 +195,7 @@
             outline: none;
             border-color: #c3814c;
             transform: translateY(-2px) translateZ(0);
-            box-shadow: 0 4px 12px rgba(149, 193, 31, 0.2);
+            box-shadow: 0 4px 12px #c88354;
         }
 
         .form-group textarea {
@@ -199,21 +204,23 @@
         }
 
         .submit-btn {
-            background-color: #895a35;
+            background-color: #873e23;
             color: #000000;
             padding: 12px 24px;
             border: none;
             cursor: pointer;
             font-size: 16px;
-            width: fit-content;
+            width: 10%;
             transition: all 0.3s ease;
+
         }
 
         .submit-btn:hover {
-            background-color: #624126;
+            background-color: #ea9755;
             color: #e2e2e2;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 8px 30px #ea9755;
         }
 
         @media (max-width: 768px) {

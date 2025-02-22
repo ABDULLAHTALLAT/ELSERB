@@ -145,3 +145,32 @@ Route::get('/quotation', function () {
 });
 
 Route::post('/quotations', [QuotationController::class, 'store'])->name('quotations.store');
+
+
+
+
+
+
+Route::get('/test-404', function () {
+    abort(404);
+});
+
+// اختبار خطأ 500
+Route::get('/test-500', function () {
+    abort(500);
+});
+
+// اختبار خطأ 403 (Forbidden)
+Route::get('/test-403', function () {
+    abort(403);
+});
+
+// اختبار خطأ 419 (CSRF Token Expired)
+Route::get('/test-419', function () {
+    abort(419);
+});
+
+// اختبار خطأ 401 (Unauthorized)
+Route::get('/test-401', function () {
+    abort(401);
+});

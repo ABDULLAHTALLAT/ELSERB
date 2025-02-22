@@ -9,13 +9,13 @@
         .video-section {
             position: relative;
             width: 100%;
-            height: 90vh;
+            height:140vh;
             cursor: pointer;
         }
 
         .video-section img {
             width: 100%;
-            height: 100%;
+            height:100%;
             object-fit: cover;
         }
 
@@ -74,7 +74,7 @@
 
 <body>
     <div class="video-section" onclick="openVideo()">
-        <img src="{{ asset('images/video/elsbvied.webp') }}" alt="عرض الفيديو">
+        <img src="{{ asset('images/video/9.png') }}" alt="عرض الفيديو">
         <div class="play-button"></div>
     </div>
 
