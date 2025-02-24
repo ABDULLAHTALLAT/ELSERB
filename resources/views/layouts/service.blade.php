@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
 
-    <!-- ✅ تحميل مكتبة FontAwesome بشكل صحيح -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        /* إعدادات أساسية */
-
         * {
             margin: 0;
             padding: 0;
@@ -19,13 +16,13 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Nippor', sans-serif;
         }
 
         .slider {
         width: 100%;
-        height: 80vh;
-        background: url({{ asset('images/serves/1234.jpg') }}) center/cover no-repeat;
+        height: 90vh;
+        background: url({{ asset('images/serves/service.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -40,7 +37,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.66);
+        background: rgba(0, 0, 0, 0.273);
     }
 
       .animated-text {
@@ -404,11 +401,15 @@
         <!-- أيقونات السوشيال ميديا -->
         <div class="social-icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
+
+     
+
     </section>
 
 
@@ -510,17 +511,17 @@
         </div>
         <div class="steps">
             <div class="step">
-                <img src="../images/SUCCESS/1 (2).png" alt="Step 1">
+                <img src="{{ asset('images/SUCCESS/1.png') }}" alt="Step 1">
                 <h3>Listening, understanding and planning</h3>
                 <p>To agree on the best way to create the brand.</p>
             </div>
             <div class="step">
-                <img src="../images/SUCCESS/2 (2).png" alt="Step 2">
+                <img src="{{ asset('images/SUCCESS/2.png') }}" alt="Step 2">
                 <h3>Working</h3>
                 <p>Our writers, designers, and all the teamwork work together to bring the brand to life in accordance with the rules and business plan presented.</p>
             </div>
             <div class="step">
-                <img src="../images/SUCCESS/3 (2).png" alt="Step 3">
+                <img src="{{ asset('images/SUCCESS/3.png') }}" alt="Step 3">
                 <h3>Following-up</h3>
                 <p>Our writers, designers, and all the teamwork work together to bring the brand to life in accordance with the rules and business plan presented.</p>
             </div>

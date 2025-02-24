@@ -8,7 +8,7 @@
     <title>Elserb</title>
     <link rel="icon" href="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" type="image/x-icon">
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         :root {
@@ -227,6 +227,54 @@
             transform: translateZ(30px);
             z-index: 10;
         }
+
+
+        .language-switcher {
+    position: relative;
+    display: flex;
+    align-items: left;
+    /* مسافة بين الاسم وزر اللغة */
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.language-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.language-menu li {
+    padding: 5px;
+}
+
+.language-menu a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.language-menu a img {
+    margin-right: 8px;
+}
+
+/* ✅ إظهار القائمة عند تمرير الفأرة */
+.language-switcher:hover .language-menu {
+    display: block;
+}
+
     </style>
 </head>
 
@@ -234,12 +282,18 @@
 
     <section class="nav-section">
         <div class="nav-content">
-    <a href="{{ route('home') }}" style="text-decoration: none;">
-        <div class="brand">
-            <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Elserb Logo" class="h-11">
-            <span class="logo-text">Alserb</span>
-        </div>
-    </a>
+
+
+            <a href="{{ route('home') }}" style="text-decoration: none;">
+
+
+                <div class="brand">
+                    <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Elserb Logo" class="h-11">
+                    <span class="logo-text">Alserb</span>
+
+
+                </div>
+            </a>
 
 
             <div class="menu-toggle">
@@ -264,6 +318,8 @@
             <a href="{{ route('aboutus') }}" class="menu-item">About Us</a>
             <a href="{{ route('contact') }}" class="menu-item">Contact</a>
             <a href="{{ route('blog') }}" class="menu-item">Blog</a>
+
+           
         </div>
     </div>
 
@@ -357,6 +413,15 @@
             checkNavbarState(); // استدعاء أولي عند تحميل الصفحة
         });
         </script>
+
+
+<script>
+    function changeLanguage(locale) {
+        fetch(`/lang/${locale}`)
+            .then(() => location.reload());
+    }
+</script>
+
 
 </body>
 

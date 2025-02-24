@@ -166,12 +166,12 @@
         .menu-items {
             display: flex;
             flex-direction: column;
-            gap: .6rem;
+            gap: .8rem;
             text-align: center;
         }
 
         .menu-item {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 900;
             color: var(--text-color);
             text-decoration: none;
@@ -237,10 +237,16 @@
 
     <section class="nav-section">
         <div class="nav-content">
-            <div class="brand">
-                <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Elserb Logo" class="h-11">
-                <span class="logo-text">Alserb</span>
-            </div>
+            <a href="{{ route('home') }}" style="text-decoration: none;">
+            
+            
+                <div class="brand">
+                    <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Elserb Logo" class="h-11">
+                    <span class="logo-text">Alserb</span>
+            
+            
+                </div>
+            </a>
 
             <div class="menu-toggle">
                 <span class="menu-text">Menu</span>

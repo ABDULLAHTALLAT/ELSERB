@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palmenburg About Section</title>
+    <!-- Google Fonts: Nippor -->
+    <link href="https://fonts.googleapis.com/css2?family=Nippor:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
       body {
-
+font-family: 'Nippor', sans-serif;
         background: #ffffff;
         position: relative
+        
       }
         .about-section {
             background-color: #ffffff;
@@ -119,6 +123,7 @@
             }
             .content p {
                 font-size: 16px;
+                margin-bottom: 10px;
             }
         }
 
@@ -275,13 +280,9 @@
     <section class="about-section">
         <div class="content">
             <h1>Alserb</h1>
-            <p>In a fast-evolving digital world, we are your ideal partner in achieving exceptional success. We offer comprehensive and
-            innovative solutions in digital marketing, web design and development, search engine optimization (SEO), mobile app
-            development, social media marketing, graphic design, and creative packaging.
-<br>
-            We understand that every brand has its unique story. That’s why we passionately transform your ideas into creative
-            solutions that accurately reflect your business vision. Excellence lies in the details, and we stay ahead of trends and
-            technology to ensure your brand stands out in a competitive market.</p>
+            <p>With years of experience and dedication, Yalsarb is your trusted partner in business growth. We understand your unique
+            needs and specialize in website design and strategic marketing plans that put our clients ahead of the competition. Our
+            expertise ensures targeted customer engagement and increased sales, helping your brand achieve lasting success.</p>
         </div>
         <div class="gif-container loading">
             <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Palmenburg Animation" onload="this.parentElement.classList.remove('loading')">

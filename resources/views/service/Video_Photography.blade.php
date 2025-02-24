@@ -21,7 +21,7 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
+        height: 95vh;
         background: url({{ asset('images/slider/9.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -108,7 +108,8 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: ##c3814c; /* تغيير لون الحواف عند الـ hover */
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #936138;
 }
 
 
@@ -117,12 +118,19 @@
             margin: auto;
             text-align: left;
         }
+.title {
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
 
-        .title {
-            color: #c3814c;
-            font-weight: bold;
-            font-size: 60px;
-        }
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
+
 
         .social-icons {
             margin: 10px 0;
@@ -162,6 +170,7 @@
 
         .subtitle {
             font-weight: bold;
+            font-size: 30px;
             color: #000000;
             margin-top: 50px;
         }
@@ -169,10 +178,12 @@
         .description {
             color: #666;
             max-width: 600px;
+            font-size:18px;
         }
 
         .bold-text {
             font-weight: bold;
+            font-size: 22px;
         }
 
         .highlight-text {
@@ -271,10 +282,11 @@
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -292,34 +304,39 @@
         <h3 class="subtitle">What is Video & Photography?</h3>
 
         <p class="description">
-            Video & Photography is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+        A video montage can be a powerful way to tell a story or present an idea by stringing together various clips, images,
+        and still frames into one continuous flow. Add to that the high interest it can generate — and large number of details
+        it conveys in a brief span.
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle">Why Use Video Montage in your Marketing?</h3>
 
-        <p class="bold-text">1. Video & Photography is a powerful mode of communication.</p>
+        <p class="bold-text">1. Creating Brand Awareness.</p>
         <p class="description">
             The good old saying “pictures speak louder than words” explains what design can do for communicating. With the assistance of powerful images, colors and layout, you can deliver strong messages to potential customers without using lengthy paragraphs. In
             simplest terms, graphics can make the message clearer and straightforward.
         </p>
 
-        <p class="bold-text">2. Indicate professionalism.</p>
+        <p class="bold-text">2. They Distill Information for Easy Comprehension.</p>
         <p class="description">
-            All the designs related to your business (including logo, Video & Photography, leaflets, business cards, etc.) are a strong sign of your professionalism. A professional appearance distinguishes your product, and business, from others, allowing you to gain new customers
-            and encourage existing clients to stick to your products and/or services.
+        Simplify Complex Ideas You can get complex footage across so much easier on a montage. With the help of visual storytelling and motion
+        graphics, they simplify abstract concepts, tutorials or neat processes into bits & pieces. This clarity guarantees that
+        your message is not only heard and understood but also remembered.
         </p>
 
-        <p class="bold-text">3. Graphics Surpass Languages.</p>
+        <p class="bold-text">3. Videos are Great for SEO.</p>
         <p class="description">
-            People can only read this blog if they have a good grasp of the English language. However, no matter what their primary language is, people can understand themes and images. The same is applicable to any kind of image or visual aid. As the internet breaks
-            down geographical barriers, appealing to a multilingual audience is important. Video & Photography is one of the best ways to achieve it.
+        Boost Your SEO Performance
+        Video Is Kind Of A Big Deal When It Comes To Better Google Performance Videos are massively beneficial to your SEO
+        efforts. YouTube is a highly Google ranked platform, and video montages build around the right topics are able to make
+        your brand or topic number 1 search in google pages. This increases your online visibility and additional traffic to
+        your website.
         </p>
-
+{{--
         <p class="highlight-text">
             You don’t get a second chance at a first impression, so your business’Video & Photography needs to be spot on right away. Our creative designers offer outstanding and attention-grabbing visuals for brochures, banners, flyers, business cards and many more. We will
             work with you to produce high-quality designs based on your unique requirements.
-        </p>
+        </p> --}}
     </div>
 
 

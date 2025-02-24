@@ -21,7 +21,7 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
+        height: 95vh;
         background: url({{ asset('images/slider/1.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -119,12 +119,17 @@
         }
 
         .title {
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
 
-            color: #c3814c;
-            font-weight: bold;
-            font-size: 60px;
-            margin-top: -30px;
-        }
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
 
         .social-icons {
             margin: 10px 0;
@@ -161,7 +166,33 @@
         .behance {
             background: #ff2b2b;
         }
+        .social-icons a:hover {
+    transform: scale(1.1); /* تكبير بسيط */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+}
 
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
+.google:hover {
+    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
+}
+
+.twitter:hover {
+    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
+}
+
+.google-plus:hover {
+    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
+}
+
+.linkedin:hover {
+    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
+}
+
+.behance:hover {
+    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
+}
         .subtitle {
             font-weight: bold;
             color: #000000;
@@ -195,22 +226,36 @@
             padding-bottom: 30px;
         }
 
-        .work-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-        }
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* توزيع البطاقات بالتساوي */
+    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
+    margin: auto; /* توسيط العنصر */
+    gap: 3px; /* المسافة بين البطاقات */
+}
 
-        .work-card {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            padding-top: 20px;
-        }
+.work-card {
+    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
+    max-width: 300px; /* تحديد عرض أقصى */
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .work-card {
+        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
+    }
+}
 
         .work-card img {
             width: 100%;
@@ -273,10 +318,11 @@
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -291,36 +337,43 @@
             <a href="#" class="behance"><i class="fab fa-behance"></i></a>
         </div>
 
-        <h3 class="subtitle">What is  Branding?</h3>
+        <h3 class="subtitle">What is Branding?</h3>
 
         <p class="description">
-             Branding is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+            Branding defines how your business is viewed, whilst building an emotional bond at every touchpoint. A successful brand
+            does not only create a loyalty between the current customers but it can also bring new audience by clearly expressing
+            its values and identity.
+
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle">Why Do You Need Branding in Your Marketing?</h3>
 
-        <p class="bold-text">1.  Branding is a powerful mode of communication.</p>
+        <p class="bold-text">1. More People Will Recognize Your Business.</p>
         <p class="description">
-            The good old saying “pictures speak louder than words” explains what design can do for communicating. With the assistance of powerful images, colors and layout, you can deliver strong messages to potential customers without using lengthy paragraphs. In
-            simplest terms, graphics can make the message clearer and straightforward.
+            Boosts Recognition for Your Business
+            A strong brand helps your business stand out and stay memorable. Customers are more likely to notice and recall a
+            business with cohesive and impactful branding than one that lacks a clear identity.
+
         </p>
 
-        <p class="bold-text">2. Indicate professionalism.</p>
+        <p class="bold-text">2. Branding Creates Loyal Customers.</p>
         <p class="description">
-            All the designs related to your business (including logo, packaging, leaflets, business cards, etc.) are a strong sign of your professionalism. A professional appearance distinguishes your product, and business, from others, allowing you to gain new customers
-            and encourage existing clients to stick to your products and/or services.
+        Builds Customer Loyalty
+        Effective branding goes beyond recognition; it creates an emotional connection. By giving your business a relatable,
+        human side, you foster loyalty among customers who feel aligned with your brand values and are more likely to return.
+
         </p>
 
-        <p class="bold-text">3. Graphics Surpass Languages.</p>
+        <p class="bold-text">3. Your brand provides motivation and direction for your staff.</p>
         <p class="description">
-            People can only read this blog if they have a good grasp of the English language. However, no matter what their primary language is, people can understand themes and images. The same is applicable to any kind of image or visual aid. As the internet breaks
-            down geographical barriers, appealing to a multilingual audience is important.  Branding is one of the best ways to achieve it.
-        </p>
+        Inspires and Unites Your Team
+        Branding isn’t just for customers—it motivates your staff, too. Branded materials, office design, and a clear brand
+        identity create a sense of pride and unity among employees, driving better engagement and performance.
+</p>
 
         <p class="highlight-text">
-            You don’t get a second chance at a first impression, so your business’ branding needs to be spot on right away. Our creative designers offer outstanding and attention-grabbing visuals for brochures, banners, flyers, business cards and many more. We will
-            work with you to produce high-quality designs based on your unique requirements.
+        We help you capture marketplace opportunities and establish sustained differentiation through creative naming,
+        imaginative logo, comprehensive brand strategy and insightful market research.
         </p>
     </div>
 

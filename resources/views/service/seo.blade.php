@@ -21,8 +21,8 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
-        background: url({{ asset('images/slider/7.jpg') }}) center/cover no-repeat;
+        height: 95vh;
+        background: url({{ asset('images/slider/9.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -117,12 +117,18 @@
             text-align: left;
         }
 
-        .title {
-            color: #c3814c;
-            font-weight: bold;
-            font-size: 60px;
-            margin-top: 40px;
-        }
+            .title {
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
+
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
 
         .social-icons {
             margin: 10px 0;
@@ -160,6 +166,35 @@
             background: #ff2b2b;
         }
 
+
+          .social-icons a:hover {
+    transform: scale(1.1); /* تكبير بسيط */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+}
+
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
+.google:hover {
+    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
+}
+
+.twitter:hover {
+    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
+}
+
+.google-plus:hover {
+    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
+}
+
+.linkedin:hover {
+    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
+}
+
+.behance:hover {
+    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
+}
+
         .subtitle {
             font-weight: bold;
             color: #000000;
@@ -193,23 +228,38 @@
             padding-bottom: 30px;
         }
 
-        .work-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-        }
 
-        .work-card {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            padding-top: 20px;
-        }
 
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* توزيع البطاقات بالتساوي */
+    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
+    margin: auto; /* توسيط العنصر */
+    gap: 3px; /* المسافة بين البطاقات */
+}
+
+.work-card {
+    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
+    max-width: 300px; /* تحديد عرض أقصى */
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .work-card {
+        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
+    }
+}
         .work-card img {
             width: 100%;
             height: 100%;
@@ -271,10 +321,11 @@
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -289,36 +340,54 @@
             <a href="#" class="behance"><i class="fab fa-behance"></i></a>
         </div>
 
-        <h3 class="subtitle">What is Search Engine Optimization?</h3>
+        <h3 class="subtitle">What is Search Engine Optimization (SEO)?</h3>
 
         <p class="description">
-            Search Engine Optimization is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+        Search Engine Optimization, or SEO, is the process of optimizing your website to enhance its visibility in search engine
+        results. When potential customers search for products, services, or information related to your business on platforms
+        like Google, SEO ensures your site appears prominently in those search results.
+
+        The higher your website ranks, the greater the chance of attracting attention, engaging potential customers, and
+        converting them into loyal clients. Effective SEO helps drive organic traffic, boost brand credibility, and ensure your
+        business stands out in the competitive digital landscape.
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle">Why Is SEO Necessary for Business?</h3>
 
         <p class="bold-text">1. Search Engine Optimization is a powerful mode of communication.</p>
         <p class="description">
-            The good old saying “pictures speak louder than words” explains what design can do for communicating. With the assistance of powerful images, colors and layout, you can deliver strong messages to potential customers without using lengthy paragraphs. In
-            simplest terms, graphics can make the message clearer and straightforward.
+            Bring more Visitors to Your Website
+            SEO is supposed to position the website higher overall when people search so they come up ultimately and actually get
+            more traffic to your site. When you can get website optimizations to rank higher in search results you ensure your
+            business stands out. A large number of users only visit the first page of search results so it is important to rank in
+            top positions consistently in order to catch potential clients before your competitors do.
         </p>
 
         <p class="bold-text">2. Indicate professionalism.</p>
         <p class="description">
-            All the designs related to your business (including logo, Search Engine Optimization, leaflets, business cards, etc.) are a strong sign of your professionalism. A professional appearance distinguishes your product, and business, from others, allowing you to gain new customers
-            and encourage existing clients to stick to your products and/or services.
+        Create Your Bragging Right Authority
+        A website with the proper optimization tells search engines and visitors that-“Hey, this is a trustworthy place with
+        quality” When your site ranks on web page one, your customers will subconsciously believe in your brand. You could be
+        also improving your website rankings via SEO but also coming across as a leader of the marketplace.
+
         </p>
 
         <p class="bold-text">3. Graphics Surpass Languages.</p>
         <p class="description">
-            People can only read this blog if they have a good grasp of the English language. However, no matter what their primary language is, people can understand themes and images. The same is applicable to any kind of image or visual aid. As the internet breaks
-            down geographical barriers, appealing to a multilingual audience is important. Search Engine Optimization is one of the best ways to achieve it.
+        Facilitate Business Expansion
+        SEO is not all traffic, its results. Through excellent SEO tactics you will develop customer acquistion, surpass the
+        competition and enhanced UX in general. This All leads to more sales, long term customers and growth for your business.
+
+        Optimise Your Website with Us
+        Looking To Elevate Your Website? Our SEO experts can analyze your site and give this step-by-step with improvements to
+        try. Whether it be including some targeted keywords to the on-purpose of your page and making sure that your content is
+        relevant — all these things lead to organic growth for your business while attracting clients naturally.
         </p>
 
         <p class="highlight-text">
-            You don’t get a second chance at a first impression, so your business’Search Engine Optimization needs to be spot on right away. Our creative designers offer outstanding and attention-grabbing visuals for brochures, banners, flyers, business cards and many more. We will
-            work with you to produce high-quality designs based on your unique requirements.
+        So, nothing beats a good SEO-ed website. We can help you get organic growth and attract the right visitors. Our SEO team
+        will provide you a report of your current website and recommend SEO improvements such as insert descriptions, relevant
+        keywords and key phrases to increase your page relevancy.
         </p>
     </div>
 

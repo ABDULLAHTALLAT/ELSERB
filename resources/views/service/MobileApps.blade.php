@@ -21,8 +21,8 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
-        background: url({{ asset('images/slider/2.jpg') }}) center/cover no-repeat;
+        height: 95vh;
+        background: url({{ asset('images/slider/5.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -37,7 +37,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.399);
     }
 
    .animated-text {
@@ -109,7 +109,8 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #91c637; /* تغيير لون الحواف عند الـ hover */
+    border-color: #382815; /* تغيير لون الحواف عند الـ hover */
+background-color: #b88f61;
 }
 
 
@@ -119,11 +120,18 @@
             text-align: left;
         }
 
-        .title {
-            color: #c3814c;
-            font-weight: bold;
-            font-size: 60px;
-        }
+      .title {
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
+
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
 
         .social-icons {
             margin: 10px 0;
@@ -160,6 +168,33 @@
         .behance {
             background: #ff2b2b;
         }
+        .social-icons a:hover {
+    transform: scale(1.1); /* تكبير بسيط */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+}
+
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
+.google:hover {
+    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
+}
+
+.twitter:hover {
+    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
+}
+
+.google-plus:hover {
+    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
+}
+
+.linkedin:hover {
+    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
+}
+
+.behance:hover {
+    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
+}
 
         .subtitle {
             font-weight: bold;
@@ -174,6 +209,7 @@
 
         .bold-text {
             font-weight: bold;
+            color: #333333d4;
         }
 
         .highlight-text {
@@ -194,22 +230,36 @@
             padding-bottom: 30px;
         }
 
-        .work-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-        }
+     .work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* توزيع البطاقات بالتساوي */
+    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
+    margin: auto; /* توسيط العنصر */
+    gap: 3px; /* المسافة بين البطاقات */
+}
 
-        .work-card {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            padding-top: 20px;
-        }
+.work-card {
+    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
+    max-width: 300px; /* تحديد عرض أقصى */
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .work-card {
+        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
+    }
+}
 
         .work-card img {
             width: 100%;
@@ -272,10 +322,11 @@
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -293,33 +344,51 @@
         <h3 class="subtitle">What is Mobile Apps?</h3>
 
         <p class="description">
-            Mobile Apps is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+        App development for mobile devices refers to the process of developing applications for smartphones and tablets. The
+        apps are able to fetch data over the internet, which results in effective and enhanced user experience.
+
+        The process involves conceptualizing the idea, developing the application, linking it with the backend systems, and
+        debugging the application to various devices to ensure the functionality of the application. This is how applications
+        that are easy to use and address the needs of the audience are built by businesses.
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle">Why Mobile App Development Is Important for Your Business?</h3>
 
-        <p class="bold-text">1. Mobile Apps is a powerful mode of communication.</p>
+        <p class="bold-text">1. Reach a global audience.</p>
         <p class="description">
-            The good old saying “pictures speak louder than words” explains what design can do for communicating. With the assistance of powerful images, colors and layout, you can deliver strong messages to potential customers without using lengthy paragraphs. In
-            simplest terms, graphics can make the message clearer and straightforward.
+        Broaden Your Horizon to a Global Audience
+        Since most of today's internet traffic is coming from mobile devices, mobile apps allow businesses to connect with
+        customers through millions of locations worldwide. The right application design can give a business the strength to
+        expand markets, increase brand visibility, and newly unlock growth opportunities in a globally interconnected space.
         </p>
 
-        <p class="bold-text">2. Indicate professionalism.</p>
+        <p class="bold-text">2. On-the-go advertising.</p>
         <p class="description">
-            All the designs related to your business (including logo, packaging, leaflets, business cards, etc.) are a strong sign of your professionalism. A professional appearance distinguishes your product, and business, from others, allowing you to gain new customers
-            and encourage existing clients to stick to your products and/or services.
+        Be at the Top of Your Customer's Mind During Travel
+        Mobile apps allow consumers to interact with your business any time and any place-whether at home, on the move, or at
+        work. An app provides your business with a friendly and more accessible environment while strengthening your brand
+        presence, which enhances repeat buying and customer loyalty.
         </p>
 
-        <p class="bold-text">3. Graphics Surpass Languages.</p>
+        <p class="bold-text">3. Social platforming.</p>
         <p class="description">
-            People can only read this blog if they have a good grasp of the English language. However, no matter what their primary language is, people can understand themes and images. The same is applicable to any kind of image or visual aid. As the internet breaks
-            down geographical barriers, appealing to a multilingual audience is important. Mobile Apps is one of the best ways to achieve it.
-        </p>
+        Build an Active Community with Social Features
+        By integrating social features such as forums, in-app messaging, and reviews, a mobile app can turn into an engagement
+        hub. These features provide a platform for active community building, where customers can share feedback, discuss
+        products, and interact with your brand on a deeper level.
+
+        Tailored Solutions Once Created
+        Our mobile app development services are about your budget, goals, and requirements. Zero in on your need, from native
+        apps on iOS and Android to cross-platform solutions, offering the user the best experience out there with the full
+        extent of the device and OS features combined.
+ </p>
 
         <p class="highlight-text">
-            You don’t get a second chance at a first impression, so your business’Mobile Apps needs to be spot on right away. Our creative designers offer outstanding and attention-grabbing visuals for brochures, banners, flyers, business cards and many more. We will
-            work with you to produce high-quality designs based on your unique requirements.
+        Our application development services are tailor-made based on your budget, specific needs, and requirements. We maximize
+        value by suggesting improvements with advanced technologies to reduce cost or make systems more efficient, we create
+        native and cross-platform mobile apps for IOS and Android with unique native user experiences that leverage all
+        potential device and operating system features. We connect your app with third-party services, extend its functionality,
+        implement new security protocols and centralize data between your disparate business systems.
         </p>
     </div>
 

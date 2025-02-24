@@ -1,3 +1,6 @@
+<!-- Google Fonts: Nippor -->
+<link href="https://fonts.googleapis.com/css2?family=Nippor:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
  * {
         margin: 0;
@@ -6,7 +9,7 @@
     }
 
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Nippor', sans-serif;
         background-color: #ffffff;
     }
 

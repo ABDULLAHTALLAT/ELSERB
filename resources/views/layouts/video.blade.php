@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مشغل الفيديو</title>
     <style>
-        .video-section {
-            position: relative;
-            width: 100%;
-            height:140vh;
-            cursor: pointer;
-        }
+   .video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    overflow: hidden; /* يمنع أي تجاوز خارج الإطار */
+}
 
-        .video-section img {
-            width: 100%;
-            height:100%;
-            object-fit: cover;
-        }
+.video-section img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* يجعل الصورة تملأ كامل المساحة مع القص إذا لزم الأمر */
+    display: block;
+}
 
         .play-button {
             position: absolute;
@@ -74,7 +76,7 @@
 
 <body>
     <div class="video-section" onclick="openVideo()">
-        <img src="{{ asset('images/video/9.png') }}" alt="عرض الفيديو">
+        <img src="{{ asset('images/video/09.webp') }}" alt="عرض الفيديو">
         <div class="play-button"></div>
     </div>
 

@@ -21,7 +21,7 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
+        height: 95vh;
         background: url({{ asset('images/slider/4.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -194,23 +194,37 @@ background-color: #b88f61;
             margin-bottom: 20px;
             padding-bottom: 30px;
         }
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* توزيع البطاقات بالتساوي */
+    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
+    margin: auto; /* توسيط العنصر */
+    gap: 15px; /* المسافة بين البطاقات */
+}
 
-        .work-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-        }
+.work-card {
+    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
+    max-width: 300px; /* تحديد عرض أقصى */
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
 
-        .work-card {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            padding-top: 20px;
-        }
+@media (max-width: 1200px) {
+    .work-card {
+        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
+    }
+}
+
 
         .work-card img {
             width: 100%;
@@ -229,7 +243,7 @@ background-color: #b88f61;
             /* جعل العنصر بعيداً عن الرؤية */
             left: 0;
             width: 100%;
-            background: rgba(123, 225, 20, 0.7);
+            background: rgba(173, 126, 38, 0.7);
             font-size: large;
             color: rgb(0, 0, 0);
             text-align: center;
@@ -273,10 +287,11 @@ background-color: #b88f61;
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -294,33 +309,46 @@ background-color: #b88f61;
         <h3 class="subtitle">What is Motion Graphic?</h3>
 
         <p class="description">
-            Motion Graphic is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+        Motion graphics are an animated form of graphic design, which can include text changes and other animations For
+        Example shapes or illustrations. Animations can be 2D or 3D and are often produced with an accompanying music, voiceover
+        or on-screen text to communicate the message visually.
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle"> Why Should You Integrate Motion Graphics In Your Marketing?
+</h3>
 
-        <p class="bold-text">1. Motion Graphic is a powerful mode of communication.</p>
+        <p class="bold-text">1. Thinking Outside the Box.</p>
         <p class="description">
-            The good old saying “pictures speak louder than words” explains what design can do for communicating. With the assistance of powerful images, colors and layout, you can deliver strong messages to potential customers without using lengthy paragraphs. In
-            simplest terms, graphics can make the message clearer and straightforward.
+        Relish Enhanced Creativity and Innovation
+        First and foremost, you are allowed to ditch the conventional approaches and expand the outer limits of creativity. Such
+        tools assist you in making your ideas clear to the audience helping you become articulate when it comes to your
+        presentations and campaigns. If you have a statistics to explain, a product to launch or a story around the brand you
+        want to narrate – motion graphics serve you with an impressive recourse of communication at professional levels, but
+        still within a creative framework.
+
         </p>
 
-        <p class="bold-text">2. Indicate professionalism.</p>
+        <p class="bold-text">2. They’re Great When You’re Short on Time.</p>
         <p class="description">
-            All the designs related to your business (including logo, packaging, leaflets, business cards, etc.) are a strong sign of your professionalism. A professional appearance distinguishes your product, and business, from others, allowing you to gain new customers
-            and encourage existing clients to stick to your products and/or services.
+        Make an Impact in a Flash
+        The modern day life is busy and you have only a limited period to capture someone’s attention. Usually, Motion Graphics
+        is brief – somewhere between 30 seconds and 3 minutes long which provides an excellent way of getting your message
+        across whilst keeping it short. It takes less than a minute to express ideas that in a conventional sense may take 1500
+        words worth of reading material delivered, visually, in written word and accompanied with music so that the message is
+        concise and impactful.
         </p>
 
-        <p class="bold-text">3. Graphics Surpass Languages.</p>
+        <p class="bold-text">3.They’re Emotionally Captivating.</p>
         <p class="description">
-            People can only read this blog if they have a good grasp of the English language. However, no matter what their primary language is, people can understand themes and images. The same is applicable to any kind of image or visual aid. As the internet breaks
-            down geographical barriers, appealing to a multilingual audience is important. Motion Graphic is one of the best ways to achieve it.
-        </p>
+        Build an Emotional Tie with Your Target Audience
+        Motion graphics introduction is the best way to revolutionize a piece of text. It has an ability to awe someone and take
+        them in a different reality by simply adding beautiful art, music, and voice narration with a simple statement, whereas
+        for many their feelings are always an excellent way of moving forward.</p>
 
         <p class="highlight-text">
-            You don’t get a second chance at a first impression, so your business’Motion Graphic needs to be spot on right away. Our creative designers offer outstanding and attention-grabbing visuals for brochures, banners, flyers, business cards and many more. We will
-            work with you to produce high-quality designs based on your unique requirements.
+        We will guide you through the process of creating astonishing artwork for your landing page or an engaging video
+        explainer for social media using visual effects, animation, and other cinematic techniques to bring your creations to
+        life.
         </p>
     </div>
 

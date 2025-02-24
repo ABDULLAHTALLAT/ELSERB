@@ -29,7 +29,7 @@
         }
 
         .float:hover {
-            background-color: #b88f61; /* لون أغمق عند التمرير */
+            background-color: #904600; /* لون أغمق عند التمرير */
             transform: scale(1.05);
         }
     </style>

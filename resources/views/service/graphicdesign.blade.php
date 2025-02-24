@@ -21,7 +21,7 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
+        height: 95vh;
         background: url({{ asset('images/slider/6.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -108,8 +108,10 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #754d2e; /* تغيير لون الحواف عند الـ hover */
+    border-color: #382815; /* تغيير لون الحواف عند الـ hover */
+background-color: #b88f61;
 }
+
 
 
         .container {
@@ -118,13 +120,18 @@
             text-align: left;
         }
 
-        .title {
-            color: #c3814c;
-            font-weight: bold;
-            font-size: 60px;
-            margin-top: 40px;
-        }
+      .title {
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
 
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
         .social-icons {
             margin: 10px 0;
         }
@@ -160,11 +167,40 @@
         .behance {
             background: #ff2b2b;
         }
+        .social-icons a:hover {
+    transform: scale(1.1); /* تكبير بسيط */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+}
+
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
+.google:hover {
+    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
+}
+
+.twitter:hover {
+    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
+}
+
+.google-plus:hover {
+    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
+}
+
+.linkedin:hover {
+    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
+}
+
+.behance:hover {
+    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
+}
 
         .subtitle {
             font-weight: bold;
             color: #000000;
+            font-size: 30px;
             margin-top: 50px;
+            margin-bottom: 20px;
         }
 
         .description {
@@ -272,10 +308,11 @@
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -293,33 +330,45 @@
         <h3 class="subtitle">What is Graphic Design?</h3>
 
         <p class="description">
-            Graphic design is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+        Graphic design is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has
+        added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to
+        build brand awareness and influence the customer’s decision-making process.
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle"> Why Do You Need Graphics in Your Marketing?</h3>
 
         <p class="bold-text">1. Graphic design is a powerful mode of communication.</p>
         <p class="description">
-            The good old saying “pictures speak louder than words” explains what design can do for communicating. With the assistance of powerful images, colors and layout, you can deliver strong messages to potential customers without using lengthy paragraphs. In
-            simplest terms, graphics can make the message clearer and straightforward.
+    Graphics Communicate More Effectively
+    The saying “a picture is worth a thousand words” holds true in marketing. Graphics use powerful visuals, colors, and
+    layouts to deliver clear and compelling messages, making it easier for potential customers to understand your brand
+    without lengthy explanations.
+
+
         </p>
 
         <p class="bold-text">2. Indicate professionalism.</p>
         <p class="description">
-            All the designs related to your business (including logo, packaging, leaflets, business cards, etc.) are a strong sign of your professionalism. A professional appearance distinguishes your product, and business, from others, allowing you to gain new customers
-            and encourage existing clients to stick to your products and/or services.
+        Showcase Professionalism
+        Every design associated with your business—logos, packaging, brochures, or business cards—reflects your professionalism.
+        High-quality graphics set you apart from competitors, building trust and encouraging both new and loyal customers to
+        engage with your brand.
+
+
         </p>
 
         <p class="bold-text">3. Graphics Surpass Languages.</p>
         <p class="description">
-            People can only read this blog if they have a good grasp of the English language. However, no matter what their primary language is, people can understand themes and images. The same is applicable to any kind of image or visual aid. As the internet breaks
-            down geographical barriers, appealing to a multilingual audience is important. Graphic design is one of the best ways to achieve it.
+            Break Language Barriers
+            While written content requires a shared language, visuals speak universally. Graphics allow you to connect with a
+            diverse, multilingual audience, making them essential for businesses targeting global or culturally varied markets.
         </p>
 
         <p class="highlight-text">
-            You don’t get a second chance at a first impression, so your business’ branding needs to be spot on right away. Our creative designers offer outstanding and attention-grabbing visuals for brochures, banners, flyers, business cards and many more. We will
-            work with you to produce high-quality designs based on your unique requirements.
+        Make Your First Impression Count
+        In marketing, first impressions are everything. Our expert designers create stunning visuals tailored to your unique
+        needs, including brochures, banners, flyers, and more. Let us help you build a professional brand image that leaves a
+        lasting impact.
         </p>
     </div>
 
@@ -337,78 +386,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            let projects = [{
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 1",
-                category: "Graphic Design"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 2",
-                category: "Graphic Design"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 3",
-                category: "Graphic Design"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 4",
-                category: "Graphic Design"
-            }, {
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 5",
-                category: "Graphic Design"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 6",
-                category: "Graphic Design"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 7",
-                category: "Graphic Design"
-            }, {
-                image: "{{ asset('images/work/3.jpg') }}",
-                name: "Project 8",
-                category: "Graphic Design"
-            }];
-
-            let itemsPerPage = 4;
-            let currentIndex = 0;
-
-            function renderProjects() {
-                let container = $("#workGallery");
-                let endIndex = currentIndex + itemsPerPage;
-
-                for (let i = currentIndex; i < endIndex && i < projects.length; i++) {
-                    let project = projects[i];
-                    let card = `
-                        <div class="work-card">
-                            <img src="${project.image}" alt="${project.name}">
-                            <div class="work-info">
-                                <h5>${project.name}</h5>
-                                <p>${project.category}</p>
-                            </div>
-                        </div>
-                    `;
-                    container.append(card);
-                }
-
-                currentIndex += itemsPerPage;
-
-                // إخفاء زر "Show More" إذا تم عرض كل المشاريع
-                if (currentIndex >= projects.length) {
-                    $("#showMore").hide();
-                }
-            }
-
-            // عرض المشاريع الأولية
-            renderProjects();
-
-            // عند الضغط على زر "Show More"
-            $("#showMore").click(function() {
-                renderProjects();
-            });
-        });
+      
     </script>
 
 

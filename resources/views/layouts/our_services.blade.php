@@ -38,7 +38,7 @@
         .service-card {
             width: 350px;
 
-            height: 450px;
+            height: 550px;
             background-color: #000000;
             border-radius: 15px;
             overflow: hidden;
@@ -66,9 +66,8 @@
         }
 
         .service-icon {
-            width: 170px;
-            /* تكبير الصورة قليلاً */
-            height: 170px;
+            width: 260px;
+            height: 290px;
             margin-bottom: 1.5rem;
             transition: transform 0.3s ease;
             overflow: hidden;
@@ -79,12 +78,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* يضمن تغطية الصورة للمساحة بالكامل مع الحفاظ على النسبة */
             transition: transform 0.3s ease;
         }
 
         .service-card:hover .service-icon {
-            transform: scale(1.1);
+            transform: scale(1.3);
             /* تكبير الصورة بشكل بسيط */
             z-index: 2;
             background-color: #1a181873;
@@ -95,7 +93,7 @@
             color: #c3814c;
             font-size: 1.4rem;
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
 
@@ -124,7 +122,7 @@
           <a href="{{ route('video-photography') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/vedio.png') }}" alt="Video & Photography">
+                        <img src="{{ asset('images/ourserves/video.png') }}" alt="Video & Photography">
                     </div>
                     <h3>Video & Photography</h3>
                 </div>
@@ -133,7 +131,7 @@
             <a href="{{ route('motion-graphic') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/vedio.png') }}" alt="Motion Graphic">
+                        <img src="{{ asset('images/ourserves/mot.png') }}" alt="Motion Graphic">
                     </div>
                     <h3>Motion Graphic</h3>
                 </div>
@@ -151,7 +149,7 @@
             <a href="{{ route('mobile-apps') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/mas.png') }}" alt="Motion Graphic">
+                        <img src="{{ asset('images/ourserves/mobile.png') }}" alt="Motion Graphic">
                     </div>
                     <h3>Mobile Apps</h3>
                 </div>
@@ -160,7 +158,7 @@
             <a href="{{ route('graphic-design') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/gs.png') }}" alt="Web Solutions">
+                        <img src="{{ asset('images/ourserves/graphic.png') }}" alt="Web Solutions">
                     </div>
                     <h3>Graphic Design</h3>
                 </div>
@@ -170,7 +168,7 @@
             <a href="{{ route('branding') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/brand.png ') }}" alt="Motion Graphic">
+                        <img src="{{ asset('images/ourserves/branding.png') }}" alt="Motion Graphic">
                     </div>
                     <h3>Branding</h3>
                 </div>
@@ -179,7 +177,7 @@
             <a href="{{ route('packaging') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/packe.png') }}" alt="Web Solutions">
+                        <img src="{{ asset('images/ourserves/pack.png') }}" alt="Web Solutions">
                     </div>
                     <h3>Packaging</h3>
                 </div>
@@ -189,10 +187,10 @@
         <a href="{{ route('social-media-marketing') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/digital.png') }}" alt="Web Solutions">
+                        <img src="{{ asset('images/ourserves/social.png') }}" alt="Web Solutions">
                     </div>
-                    <h3>Social Media &</h3>
-                    <h3> Digital Marketing</h3>
+                    <h3>Social Media & Digital Marketing</h3>
+                    <h3> </h3>
                 </div>
             </a>
 

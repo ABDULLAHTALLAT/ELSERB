@@ -21,7 +21,7 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
+        height: 95vh;
         background: url({{ asset('images/slider/5.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -112,18 +112,24 @@
 }
 
 
-        .container {
+            .container {
             max-width: 700px;
             margin: auto;
             text-align: left;
         }
 
-        .title {
-            color: #c3814c;
-            font-weight: bold;
-            font-size: 60px;
-        }
+      .title {
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
 
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
         .social-icons {
             margin: 10px 0;
         }
@@ -159,11 +165,40 @@
         .behance {
             background: #ff2b2b;
         }
+        .social-icons a:hover {
+    transform: scale(1.1); /* تكبير بسيط */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+}
+
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
+.google:hover {
+    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
+}
+
+.twitter:hover {
+    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
+}
+
+.google-plus:hover {
+    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
+}
+
+.linkedin:hover {
+    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
+}
+
+.behance:hover {
+    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
+}
 
         .subtitle {
             font-weight: bold;
             color: #000000;
+            font-size: 30px;
             margin-top: 50px;
+            margin-bottom: 20px;
         }
 
         .description {
@@ -193,22 +228,37 @@
             padding-bottom: 30px;
         }
 
-        .work-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-        }
 
-        .work-card {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            padding-top: 20px;
-        }
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* توزيع البطاقات بالتساوي */
+    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
+    margin: auto; /* توسيط العنصر */
+    gap: 3px; /* المسافة بين البطاقات */
+}
+
+.work-card {
+    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
+    max-width: 300px; /* تحديد عرض أقصى */
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .work-card {
+        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
+    }
+}
 
         .work-card img {
             width: 100%;
@@ -227,7 +277,7 @@
             /* جعل العنصر بعيداً عن الرؤية */
             left: 0;
             width: 100%;
-            background: rgba(123, 225, 20, 0.7);
+            background: #3a2717;
             font-size: large;
             color: rgb(0, 0, 0);
             text-align: center;
@@ -271,10 +321,11 @@
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -292,11 +343,12 @@
         <h3 class="subtitle">What is Packaging?</h3>
 
         <p class="description">
-            Packaging is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+        Packaging is Packaging means designing, engineering and building the container or wrapping for a product. Primarily it
+        acts two purposes: protecting the product and selling it. Carefully considered package design can affect everything from
+        delivery damage to get customer attraction and retailer motivation to stock your product
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle">Why Need Packaging in Your Marketing?</h3>
 
         <p class="bold-text">1. Packaging is a powerful mode of communication.</p>
         <p class="description">

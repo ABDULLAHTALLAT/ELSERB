@@ -174,3 +174,12 @@ Route::get('/test-419', function () {
 Route::get('/test-401', function () {
     abort(401);
 });
+
+
+Route::get('lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'ar'])) {
+        session(['locale' => $locale]);
+        app()->setLocale($locale);
+    }
+    return redirect()->back();
+});

@@ -11,7 +11,7 @@
     }
 
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Nippor', sans-serif;
         background-color: #ffffff;
     }
 

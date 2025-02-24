@@ -21,7 +21,7 @@
 
         .slider {
         width: 100%;
-        height: 80vh;
+        height: 95vh;
         background: url({{ asset('images/slider/3.jpg') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -116,7 +116,8 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #91c637; /* تغيير لون الحواف عند الـ hover */
+    border-color: #382815; /* تغيير لون الحواف عند الـ hover */
+background-color: #b88f61;
 }
 
 
@@ -129,25 +130,28 @@
         .title {
             color: #c3814c;
             font-weight: bold;
+            margin-top: 50px;
+            margin-bottom: 20px;
             font-size: 60px;
         }
 
-        .social-icons {
-            margin: 10px 0;
-        }
+.social-icons {
+    margin: 10px 0;
+}
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-        }
-
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
         .google {
             background: #4c4c6d;
         }
@@ -168,6 +172,34 @@
             background: #ff2b2b;
         }
 
+        .social-icons a:hover {
+    transform: scale(1.1); /* تكبير بسيط */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+}
+
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
+.google:hover {
+    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
+}
+
+.twitter:hover {
+    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
+}
+
+.google-plus:hover {
+    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
+}
+
+.linkedin:hover {
+    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
+}
+
+.behance:hover {
+    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
+}
+
         .subtitle {
             font-weight: bold;
             color: #000000;
@@ -185,7 +217,8 @@
 
         .highlight-text {
             font-weight: bold;
-            color: #000;
+            color: #666666;
+            font-size: 20px;
         }
 
         .work-section {
@@ -197,26 +230,41 @@
             color: #c3814c;
             font-weight: bold;
             font-size: 50px;
-            margin-bottom: 20px;
+
+            margin-bottom: 50px;
             padding-bottom: 30px;
         }
 
-        .work-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-        }
+     .work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* توزيع البطاقات بالتساوي */
+    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
+    margin: auto; /* توسيط العنصر */
+    gap: 3px; /* المسافة بين البطاقات */
+}
 
-        .work-card {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            padding-top: 20px;
-        }
+.work-card {
+    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
+    max-width: 300px; /* تحديد عرض أقصى */
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .work-card {
+        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
+    }
+}
 
         .work-card img {
             width: 100%;
@@ -279,10 +327,11 @@
         <div class="welcome-text">WELCOMYOU</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -300,33 +349,49 @@
         <h3 class="subtitle">What is Web Solutions?</h3>
 
         <p class="description">
-            Web Solutions is the most powerful art that has breathed fresh life into digital marketing. This modern form of art has added a contemporary flair to the advertisement profile of every company. It also acts as one of the key components to build brand
-            awareness and influence the customer’s decision-making process.
+        Web design and development is the process of building a website. Web design focuses on the visual elements—layout,
+        colors, fonts, and overall style—to create an appealing and user-friendly interface. Web development takes care of the
+        technical aspects, ensuring the website is functional, fast, and optimized for users.
         </p>
 
-        <h3 class="subtitle">Why do you need Graphics in your marketing?</h3>
+        <h3 class="subtitle">Why is website design and development important to your business?</h3>
 
-        <p class="bold-text">1. Web Solutions is a powerful mode of communication.</p>
+        <p class="bold-text">1. It sets the first impression.</p>
         <p class="description">
-            The good old saying “pictures speak louder than words” explains what design can do for communicating. With the assistance of powerful images, colors and layout, you can deliver strong messages to potential customers without using lengthy paragraphs. In
-            simplest terms, graphics can make the message clearer and straightforward.
+            First impressions matter.
+            Your website is the first thing people see when they interact with your business online. A well-designed website creates
+            a positive first impression. build trust and encourage visitors to stay and learn more about your offerings.
+
         </p>
 
-        <p class="bold-text">2. Indicate professionalism.</p>
+        <p class="bold-text">2. Enhances Usability.</p>
         <p class="description">
-            All the designs related to your business (including logo, Web Solutions, leaflets, business cards, etc.) are a strong sign of your professionalism. A professional appearance distinguishes your product, and business, from others, allowing you to gain new customers
-            and encourage existing clients to stick to your products and/or services.
+        Great user experience
+        Good design ensures that your website is easy to use. Help visitors quickly find what they're looking for. The
+        user-friendly layout and attractive visuals make the experience enjoyable. Keep users engaged and more likely to come
+        back.owers Bounce Rates
         </p>
 
-        <p class="bold-text">3. Graphics Surpass Languages.</p>
+        <p class="bold-text">3. Reduces Bounce Rates.</p>
         <p class="description">
-            People can only read this blog if they have a good grasp of the English language. However, no matter what their primary language is, people can understand themes and images. The same is applicable to any kind of image or visual aid. As the internet breaks
-            down geographical barriers, appealing to a multilingual audience is important. Web Solutions is one of the best ways to achieve it.
+        The proportion of visitors who navigate away from your website after visiting only a single page is what is defined as a
+        bounce rate. If your website is both designed adequately and is responsive, then it will urge users to browse through
+        other pages which will ultimately increase the time spent on your site. This results in a decrease in the percentage of
+        users that leave without taking any action and simultaneously increases the likelihood of these same users familiarizing
+        themselves with your business, its products or even making a purchase.
+
+        If you are in need of a fresh new website, want to redesign the existing one, or simply polish it, then it is enough to
+        partner with a proficient web design firm that will be able to reshape your online appearance for the better. The firm
+        that will take the time to learn your business goals and the competitive business environment can assist you in properly
+        achieving an impressive online presence by designing a website that is successful in converting leads.
         </p>
 
         <p class="highlight-text">
-            You don’t get a second chance at a first impression, so your business’Web Solutions needs to be spot on right away. Our creative designers offer outstanding and attention-grabbing visuals for brochures, banners, flyers, business cards and many more. We will
-            work with you to produce high-quality designs based on your unique requirements.
+        Whether you have a website, are looking for a refresh, or want to create a brand new one, we can help you reach the next
+        level. That's the power of a good web design agency, which you enlist is critical to your success. As your partner in
+        presenting your business - the product of your blood, sweat, and tears - to the world, Palmenburg possesses a strong
+        understanding of the entire digital landscape.
+
         </p>
     </div>
 

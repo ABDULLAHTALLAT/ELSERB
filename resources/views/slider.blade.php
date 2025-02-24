@@ -57,8 +57,8 @@
 background: #e28743;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-        font-size: 4rem;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.393);
+        font-size: 4.5rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.049);
         margin-bottom: 10px;
     }
 
@@ -77,8 +77,8 @@ background: #e28743;
          background: #e28743;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-        font-size: 4rem;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.577);
+        font-size: 4.5rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
         margin-top: 10px;
     }
 
@@ -243,6 +243,9 @@ background: #e28743;
         content: '\f067';
         /* رمز "+" */
     }
+    /* إضافة طبقة شفافة فوق السلايدر */
+
+
 </style>
 </head>
 
@@ -265,13 +268,15 @@ background: #e28743;
         </div>
 
         <!-- السوشيال ميديا -->
-        <ul class="social-media">
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-google"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        </ul>
+    <ul class="social-media">
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fab fa-snapchat"></i></a></li>
+    </ul>
+
 
         <!-- الكلمة "WELCOME YOU" -->
         <div class="welcome-text">
@@ -286,47 +291,47 @@ background: #e28743;
     const sliderData = [
         {
             title: 'Video & Photography',
-            image: "{{ asset('images/slider/1.jpg') }}",
+            image: "{{ asset('images/slider2/12345.png') }}",
             page: "{{ route('video-photography') }}"
         },
         {
             title: 'Motion Graphic',
-            image: "{{ asset('images/slider/2.jpg') }}",
+            image: "{{ asset('images/slider2/213.png') }}",
             page: "{{ route('motion-graphic') }}"
         },
         {
             title: 'Web Solutions',
-            image: "{{ asset('images/slider/3.jpg') }}",
+            image: "{{ asset('images/slider2/33123.png') }}",
             page: "{{ route('web-solutions') }}"
         },
         {
             title: 'Mobile Apps',
-            image: "{{ asset('images/slider/4.jpg') }}",
+            image: "{{ asset('images/slider2/41234.png') }}",
             page: "{{ route('mobile-apps') }}"
         },
         {
             title: 'Graphic Design',
-            image: "{{ asset('images/slider/5.jpg') }}",
+            image: "{{ asset('images/slider2/512.png') }}",
             page: "{{ route('graphic-design') }}"
         },
         {
             title: 'Branding',
-            image: "{{ asset('images/slider/6.jpg') }}",
+            image: "{{ asset('images/slider2/612.png') }}",
             page: "{{ route('branding') }}"
         },
         {
             title: 'Packaging',
-            image: "{{ asset('images/slider/7.jpg') }}",
+            image: "{{ asset('images/slider2/712.png') }}",
             page: "{{ route('packaging') }}"
         },
         {
             title: 'Social Media & Digital Marketing',
-            image: "{{ asset('images/slider/8.jpg') }}",
+            image: "{{ asset('images/slider2/8122.png') }}",
             page: "{{ route('social-media-marketing') }}"
         },
         {
             title: 'Search Engine Optimization',
-            image: "{{ asset('images/slider/9.jpg') }}",
+            image: "{{ asset('images/slider2/91234.png') }}",
             page: "{{ route('seo') }}"
         }
     ];

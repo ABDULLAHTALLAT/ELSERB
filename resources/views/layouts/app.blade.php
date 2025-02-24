@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,8 @@
     <!-- Include CSS libraries for Swiper and Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<!-- Google Fonts: Nippor -->
+<link href="https://fonts.googleapis.com/css2?family=Nippor:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Include your custom styles -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -25,12 +26,13 @@
 /* إخفاء شريط التمرير في فايرفوكس */
 html {
     scrollbar-width: none;
+    font-family: 'Nippor', sans-serif;
 }
 
 /* التأكد من أن الصفحة لا تقطع المحتوى */
 body {
     overflow: auto;
-
+font-family: 'Nippor', sans-serif;
 }
     </style>
 </head>

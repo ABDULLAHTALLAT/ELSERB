@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Nippor -->
+    <link href="https://fonts.googleapis.com/css2?family=Nippor:wght@400;700&display=swap" rel="stylesheet">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         .container {
@@ -11,7 +14,7 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-
+             font-family: 'Nippor', sans-serif;
             gap: 90px;
 
             padding:80px 0% ;
@@ -28,18 +31,21 @@
         h2 {
             color: #c3814c;
             font-weight: bold;
+            font-family: 'Nippor', sans-serif;
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 40px;
             margin-bottom: 10px;
             text-align: left;
+            font-family: 'Nippor', sans-serif;
         }
 
         h2 {
             font-size:38px;
             margin-bottom: 30px;
             text-align: left;
+            font-family: 'Nippor', sans-serif;
         }
 
         .form-grid {
@@ -62,11 +68,12 @@
         input[type="email"],
         input[type="tel"],
         textarea {
+            font-family: 'Nippor', sans-serif;
             width: 110%;
             padding: 20px;
             border: 2px solid #6e492b;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 15px;
             transition: all 0.3s ease;
 
         }
@@ -89,15 +96,50 @@
             align-items: center;
             cursor: pointer;
             color: #6e492b;
+            padding-right: 20px;
         }
 
         .custom-checkbox:hover {
             color: #c3814c;
         }
 
-        .custom-checkbox input {
-            margin-right: 10px;
-        }
+      /* إخفاء الـ checkbox الافتراضي */
+.custom-checkbox input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6e492b; /* لون الإطار */
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px
+
+}
+
+/* تغيير اللون عند التحديد */
+.custom-checkbox input:checked {
+    background-color: #c3814c; /* اللون الجديد عند التحديد */
+    border-color: #c3814c;
+}
+
+/* إضافة علامة ✓ عند التحديد */
+.custom-checkbox input:checked::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    margin-right: 10px;
+}
+
+/* تغيير اللون عند تمرير الماوس */
+.custom-checkbox:hover input {
+    border-color: #c3814c;
+}
+
 
         textarea {
             height: 150px;
@@ -175,13 +217,13 @@
             justify-content: center;
             align-items: center;
             margin-top: 40px;
-            padding: 20px;
+            padding: 60px;
         }
 
         .contact-wrapper {
             display: flex;
             justify-content: center;
-            gap: 50px;
+            gap: 200px;
             align-items: center;
         }
 
@@ -211,7 +253,7 @@
 
         .contact-item:hover {
             transform: translateY(-10px);
-            background-color: #bb7b54;
+            background-color:#c3814c;
         }
 
 
