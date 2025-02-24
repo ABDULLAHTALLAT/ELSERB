@@ -130,69 +130,44 @@
 .title:hover {
     color: #904600; /* اللون الجديد عند تمرير الفأرة */
 }
+.social-icons {
+    margin: 10px 0;
+}
 
-        .social-icons {
-            margin: 10px 0;
-        }
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-        }
+/* تخصيص الألوان لكل منصة */
+.facebook { background: #1877F2; }
+.instagram { background: #E4405F; }
+.tiktok { background: #000000; }
+.snapchat { background: #FFFC00; color: black; } /* لون نص أسود ليظهر على الخلفية الصفراء */
+.youtube { background: #FF0000; }
 
-        .google {
-            background: #4c4c6d;
-        }
-
-        .twitter {
-            background: #55acee;
-        }
-
-        .google-plus {
-            background: #dd4b39;
-        }
-
-        .linkedin {
-            background: #0077b5;
-        }
-
-        .behance {
-            background: #ff2b2b;
-        }
-        .social-icons a:hover {
-    transform: scale(1.1); /* تكبير بسيط */
+/* تأثيرات عند التحويل */
+.social-icons a:hover {
+    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
                 0 0 10px rgba(0, 0, 0, 0.2),
-                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+                0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
-.google:hover {
-    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
-}
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في التأثير */
+.facebook:hover { box-shadow: 0 0 5px #1877F2, 0 0 10px #1877F2, 0 0 15px #1877F2; }
+.instagram:hover { box-shadow: 0 0 5px #E4405F, 0 0 10px #E4405F, 0 0 15px #E4405F; }
+.tiktok:hover { box-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000; }
+.snapchat:hover { box-shadow: 0 0 5px #FFFC00, 0 0 10px #FFFC00, 0 0 15px #FFFC00; }
+.youtube:hover { box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; }
 
-.twitter:hover {
-    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
-}
-
-.google-plus:hover {
-    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
-}
-
-.linkedin:hover {
-    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
-}
-
-.behance:hover {
-    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
-}
         .subtitle {
             font-weight: bold;
             color: #000000;
@@ -329,13 +304,14 @@
     <div class="container">
         <h2 class="title"> Branding</h2>
 
-        <div class="social-icons">
-            <a href="#" class="google"><i class="fab fa-google"></i></a>
-            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="google-plus"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="behance"><i class="fab fa-behance"></i></a>
-        </div>
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+
 
         <h3 class="subtitle">What is Branding?</h3>
 

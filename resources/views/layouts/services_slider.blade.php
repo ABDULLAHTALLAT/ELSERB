@@ -27,7 +27,7 @@
     </ul>
     <!-- "WELCOME YOU" Text -->
     <div class="welcome-text">
-        <b>WELCOME YOU</b>
+        <b>Alserb</b>
     </div>
 </header>
 @endsection

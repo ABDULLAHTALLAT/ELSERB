@@ -11,15 +11,14 @@
 
         .services-section {
             padding: 6rem 2rem;
-
-            background-color: #000000;
+            background-color: #000000fc;
             position: relative;
         }
 
         .section-title {
-            font-family: 'Neighbor';
+           
             color: #c3814c;
-            font-size: 5rem;
+            font-size: 3rem;
             text-align: center;
             margin-bottom: 3rem;
             text-transform: uppercase;
@@ -31,16 +30,14 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 2rem;
-            max-width: 1200px;
+            max-width: 1900px;
             margin: 0 auto;
         }
 
         .service-card {
-            width: 350px;
-
-            height: 550px;
-            background-color: #000000;
-            border-radius: 15px;
+            width: 388px;
+            height: 620px;
+            border-radius: 20px;
             overflow: hidden;
             position: relative;
             cursor: pointer;
@@ -66,10 +63,10 @@
         }
 
         .service-icon {
-            width: 260px;
-            height: 290px;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
+            width: 110%;
+            height: 98%;
+            margin-bottom: 1.7rem;
+            transition: transform 0.2ms ease;
             overflow: hidden;
             position: relative;
         }
@@ -78,14 +75,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.1s ease;
         }
 
         .service-card:hover .service-icon {
-            transform: scale(1.3);
+            transform: scale(1.1);
             /* تكبير الصورة بشكل بسيط */
             z-index: 2;
-            background-color: #1a181873;
+            background-color: #1a181800;
 
         }
 
@@ -93,9 +90,9 @@
             color: #c3814c;
             font-size: 1.4rem;
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 4rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: .4px;
 
         }
 
@@ -190,7 +187,7 @@
                         <img src="{{ asset('images/ourserves/social.png') }}" alt="Web Solutions">
                     </div>
                     <h3>Social Media & Digital Marketing</h3>
-                    <h3> </h3>
+                    
                 </div>
             </a>
 

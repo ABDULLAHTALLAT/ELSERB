@@ -8,6 +8,7 @@
     @include('layouts.aboutus')
     @include('layouts.footer')
     @include('layouts.qutition_buttun')
+    @include('layouts.gotoup')
 @endsection
 
 @section('scripts')

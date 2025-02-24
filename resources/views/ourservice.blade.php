@@ -3,9 +3,9 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.navbar')
-@include('layouts.service')
-@include('layouts.footer')
-@include('layouts.qutition_buttun')
-
+    @include('layouts.navbar')
+    @include('layouts.service')
+    @include('layouts.footer')
+    @include('layouts.qutition_buttun')
+    @include('layouts.gotoup')
 @endsection

@@ -7,8 +7,7 @@
     <meta name="description" content="Elserb - Your trusted partner for innovative solutions.">
     <title>Elserb</title>
     <link rel="icon" href="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" type="image/x-icon">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Nippor:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         :root {
@@ -22,6 +21,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            
         }
 
 
@@ -75,7 +75,7 @@
     transition: all 0.3s ease;
     margin-left: -10px;
     margin-bottom: -10px;
-    font-family: 'Arial', sans-serif; /* الخط الأساسي */
+
 }
 
 .logo-text:hover {
@@ -83,7 +83,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-family: 'Poppins', sans-serif; /* تغيير الخط عند الـ hover */
+
 }
 
 
@@ -233,7 +233,6 @@
     position: relative;
     display: flex;
     align-items: left;
-    /* مسافة بين الاسم وزر اللغة */
 }
 
 .language-btn {

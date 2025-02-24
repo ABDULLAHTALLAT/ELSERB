@@ -10,5 +10,6 @@
             {{-- @include('layouts.client') --}}
             @include('layouts.footer')
             @include('layouts.qutition_buttun')
+            @include('layouts.gotoup')
 
 @endsection

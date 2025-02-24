@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts: Nippor -->
-    <link href="https://fonts.googleapis.com/css2?family=Nippor:wght@400;700&display=swap" rel="stylesheet">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
@@ -14,7 +13,7 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-             font-family: 'Nippor', sans-serif;
+          
             gap: 90px;
 
             padding:80px 0% ;
@@ -30,22 +29,22 @@
         h1,
         h2 {
             color: #c3814c;
-            font-weight: bold;
-            font-family: 'Nippor', sans-serif;
+           
+           
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 38px;
             margin-bottom: 10px;
             text-align: left;
-            font-family: 'Nippor', sans-serif;
+           
         }
 
         h2 {
-            font-size:38px;
+            font-size:30px;
             margin-bottom: 30px;
             text-align: left;
-            font-family: 'Nippor', sans-serif;
+           
         }
 
         .form-grid {
@@ -68,7 +67,7 @@
         input[type="email"],
         input[type="tel"],
         textarea {
-            font-family: 'Nippor', sans-serif;
+           
             width: 110%;
             padding: 20px;
             border: 2px solid #6e492b;
@@ -89,6 +88,7 @@
 
         .checkbox-wrapper {
             margin-bottom: 10px;
+           
         }
 
         .custom-checkbox {
@@ -97,6 +97,8 @@
             cursor: pointer;
             color: #6e492b;
             padding-right: 20px;
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
         .custom-checkbox:hover {
@@ -114,7 +116,7 @@
     border-radius: 5px;
     position: relative;
     cursor: pointer;
-    margin-left: 10px
+    margin-left: 30px
 
 }
 
@@ -175,21 +177,21 @@
 
         .circle-wrapper {
             position: absolute;
-            width: 400px;
-            height: 400px;
-            border: 10px solid #c3814c;
+            width: 500px;
+            height: 500px;
+            border: 5px solid #c3814c;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
             margin-left: 100px;
-            top: 150px;
+            top: 100px;
         }
 
         .circle-image {
-            width: 90%;
-            height: 90%;
+            width: 95%;
+            height: 95%;
             object-fit: cover;
         }
 
@@ -243,12 +245,12 @@
 
         .contact-item p {
             font-size: 16px;
-            font-weight: bold;
+            font-weight: normal;
             margin: 0;
         }
 
         .contact-item small {
-            color: rgb(0, 0, 0);
+            color: rgba(0, 0, 0, 0.636);
         }
 
         .contact-item:hover {

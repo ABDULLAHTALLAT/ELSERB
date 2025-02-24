@@ -75,7 +75,6 @@
     transition: all 0.3s ease;
     margin-left: -10px;
     margin-bottom: -10px;
-    font-family: 'Arial', sans-serif; /* الخط الأساسي */
 }
 
 .logo-text:hover {
@@ -83,7 +82,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-family: 'Poppins', sans-serif; /* تغيير الخط عند الـ hover */
+
 }
 
 
@@ -166,7 +165,7 @@
         .menu-items {
             display: flex;
             flex-direction: column;
-            gap: .8rem;
+            gap: 1.1rem;
             text-align: center;
         }
 
@@ -238,13 +237,9 @@
     <section class="nav-section">
         <div class="nav-content">
             <a href="{{ route('home') }}" style="text-decoration: none;">
-            
-            
                 <div class="brand">
                     <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Elserb Logo" class="h-11">
                     <span class="logo-text">Alserb</span>
-            
-            
                 </div>
             </a>
 

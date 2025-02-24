@@ -16,6 +16,10 @@
     <!-- Include your custom styles -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Neighbor&display=swap" rel="stylesheet">
+
+
+
+
     <style>
 
 
@@ -35,6 +39,19 @@ body {
 font-family: 'Nippor', sans-serif;
 }
     </style>
+
+
+<style>
+    @font-face {
+        font-family: 'MyCustomFont';
+        src: url('{{ asset('Fonts/Neighbor.ttf') }}') format('truetype');
+    }
+
+    body {
+        font-family: 'MyCustomFont', sans-serif !important;
+    }
+</style>
+
 </head>
 
 <body>

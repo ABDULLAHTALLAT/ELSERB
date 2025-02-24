@@ -156,7 +156,7 @@ background: #e28743;
         top: 70%;
         right: 25px;
         transform: translateY(-50%);
-        color: #fff;
+        color: #b77847;
         font-size: 1rem;
         font-weight: bold;
         text-align: center;
@@ -280,7 +280,7 @@ background: #e28743;
 
         <!-- الكلمة "WELCOME YOU" -->
         <div class="welcome-text">
-            <b>WELCOME YOU</b>
+            <b>Alserb...</b>
         </div>
 
 
