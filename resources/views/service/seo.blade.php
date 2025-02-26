@@ -22,7 +22,7 @@
         .slider {
         width: 100%;
         height: 95vh;
-        background: url({{ asset('images/slider/9.jpg') }}) center/cover no-repeat;
+        background: url({{ asset('images/slider2/912.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -40,8 +40,8 @@
         background: rgba(0, 0, 0, 0.6);
     }
 
-   .animated-text {
-    font-size: 4em;
+.animated-text {
+    font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
     display: flex;
@@ -50,6 +50,11 @@
 
 .animated-text span {
     display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
     animation: wave 1.9s infinite ease-in-out;
 }
 
@@ -64,7 +69,6 @@
         transform: translateY(0);
     }
 }
-
     .welcome-text {
         position: absolute;
         right: 10px;
@@ -107,7 +111,8 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #91c637; /* تغيير لون الحواف عند الـ hover */
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #904600;
 }
 
 
@@ -117,7 +122,7 @@
             text-align: left;
         }
 
-            .title {
+        .title {
     color: #c3814c;
     font-weight: bold;
     font-size: 60px;
@@ -129,74 +134,48 @@
 .title:hover {
     color: #904600; /* اللون الجديد عند تمرير الفأرة */
 }
+.social-icons {
+    margin: 10px 0;
+}
 
-        .social-icons {
-            margin: 10px 0;
-        }
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-        }
+/* تخصيص الألوان لكل منصة */
+.facebook { background: #1877F2; }
+.instagram { background: #E4405F; }
+.tiktok { background: #000000; }
+.snapchat { background: #FFFC00; color: black; } /* لون نص أسود ليظهر على الخلفية الصفراء */
+.youtube { background: #FF0000; }
 
-        .google {
-            background: #4c4c6d;
-        }
-
-        .twitter {
-            background: #55acee;
-        }
-
-        .google-plus {
-            background: #dd4b39;
-        }
-
-        .linkedin {
-            background: #0077b5;
-        }
-
-        .behance {
-            background: #ff2b2b;
-        }
-
-
-          .social-icons a:hover {
-    transform: scale(1.1); /* تكبير بسيط */
+/* تأثيرات عند التحويل */
+.social-icons a:hover {
+    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
                 0 0 10px rgba(0, 0, 0, 0.2),
-                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+                0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
-.google:hover {
-    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
-}
-
-.twitter:hover {
-    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
-}
-
-.google-plus:hover {
-    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
-}
-
-.linkedin:hover {
-    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
-}
-
-.behance:hover {
-    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
-}
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في التأثير */
+.facebook:hover { box-shadow: 0 0 5px #1877F2, 0 0 10px #1877F2, 0 0 15px #1877F2; }
+.instagram:hover { box-shadow: 0 0 5px #E4405F, 0 0 10px #E4405F, 0 0 15px #E4405F; }
+.tiktok:hover { box-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000; }
+.snapchat:hover { box-shadow: 0 0 5px #FFFC00, 0 0 10px #FFFC00, 0 0 15px #FFFC00; }
+.youtube:hover { box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; }
 
         .subtitle {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
             color: #000000;
             margin-top: 50px;
         }
@@ -204,14 +183,20 @@
         .description {
             color: #666;
             max-width: 600px;
+            font-family: 'Cairo', sans-serif;
+
         }
 
         .bold-text {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
         }
 
         .highlight-text {
             font-weight: bold;
+              font-family: 'Cairo', sans-serif;
+
             color: #000;
         }
 
@@ -227,8 +212,6 @@
             margin-bottom: 20px;
             padding-bottom: 30px;
         }
-
-
 
 .work-container {
     display: flex;
@@ -260,6 +243,7 @@
         flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
     }
 }
+
         .work-card img {
             width: 100%;
             height: 100%;
@@ -316,8 +300,8 @@
 
 
     <section class="slider">
-        <div class="overlay"></div>
-        <h1 class="animated-text">Search Engine Optimization</h1>
+
+        <h1 class="animated-text">SEO</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -331,14 +315,13 @@
 
     <div class="container">
         <h2 class="title">Search Engine Optimization</h2>
+    <div class="social-icons">
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+    </div>
 
-        <div class="social-icons">
-            <a href="#" class="google"><i class="fab fa-google"></i></a>
-            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="google-plus"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="behance"><i class="fab fa-behance"></i></a>
-        </div>
 
         <h3 class="subtitle">What is Search Engine Optimization (SEO)?</h3>
 
@@ -404,80 +387,6 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let projects = [{
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 1",
-                category: "Search Engine Optimization"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 2",
-                category: "Search Engine Optimization"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 3",
-                category: "Search Engine Optimization"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 4",
-                category: "Search Engine Optimization"
-            }, {
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 5",
-                category: "Search Engine Optimization"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 6",
-                category: "Search Engine Optimization"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 7",
-                category: "Search Engine Optimization"
-            }, {
-                image: "{{ asset('images/work/3.jpg') }}",
-                name: "Project 8",
-                category: "Search Engine Optimization"
-            }];
-
-            let itemsPerPage = 4;
-            let currentIndex = 0;
-
-            function renderProjects() {
-                let container = $("#workGallery");
-                let endIndex = currentIndex + itemsPerPage;
-
-                for (let i = currentIndex; i < endIndex && i < projects.length; i++) {
-                    let project = projects[i];
-                    let card = `
-                        <div class="work-card">
-                            <img src="${project.image}" alt="${project.name}">
-                            <div class="work-info">
-                                <h5>${project.name}</h5>
-                                <p>${project.category}</p>
-                            </div>
-                        </div>
-                    `;
-                    container.append(card);
-                }
-
-                currentIndex += itemsPerPage;
-
-                // إخفاء زر "Show More" إذا تم عرض كل المشاريع
-                if (currentIndex >= projects.length) {
-                    $("#showMore").hide();
-                }
-            }
-
-            // عرض المشاريع الأولية
-            renderProjects();
-
-            // عند الضغط على زر "Show More"
-            $("#showMore").click(function() {
-                renderProjects();
-            });
-        });
-    </script>
 
 
 

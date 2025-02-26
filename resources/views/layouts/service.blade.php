@@ -121,6 +121,7 @@
             padding: 50px 20px;
             text-align: center;
             background-color: #ffffff;
+            padding-bottom: 60px;
         }
 
         .services h1 {
@@ -153,38 +154,38 @@
             border-radius: 15px;
             background-color: #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border: 6px solid transparent;
+            border: 3px solid transparent;
             /* الحواف مخفية بشكل افتراضي */
         }
 
         .service-item:hover {
             transform: scale(1.05);
-            background-color: #f0f0f0;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff00;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.623);
             border-color: #c3814c;
             /* إظهار الحواف عند الوقوف */
         }
 
         .service-icon {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             position: center;
-            margin-bottom: 20px;
+
         }
 
         .service-icon img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            padding-bottom: 30px;
+
         }
 
         .service-title {
             color: #c3814c;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             position: relative;
             text-align: center;
-            padding-bottom: 10px;
+            padding-bottom: 30px;
         }
 
         .service-item:hover .service-title::after {
@@ -244,11 +245,13 @@
         .success-info h2 {
             color: #c3814c;
             font-size: 3em;
+
             margin-bottom: 10px;
         }
 
         .success-info p {
             font-size: 1.2em;
+             font-family: Arial, sans-serif;
             margin-bottom: 15px;
             color: #fff;
         }
@@ -295,11 +298,13 @@
         .step h3 {
             color: #624126;
             margin: 10px;
+             font-family: Arial, sans-serif;
         }
 
         .step p {
             color: #ffffff;
             margin: 10px;
+             font-family: Arial, sans-serif;
         }
         /* الحركات */
 
@@ -360,7 +365,7 @@
         }
 
         .heritage .right-side h2 {
-            font-size: 2em;
+            font-size: 3em;
             color: #c3814c;
             margin-bottom: 10px;
         }
@@ -368,6 +373,7 @@
         .heritage .right-side p {
             font-size: 1.2em;
             color: #000000;
+             font-family: Arial, sans-serif;
         }
 
         .heritage .left-side {
@@ -377,6 +383,7 @@
 
         .heritage .left-side p {
             font-size: 1.5em;
+             font-family: Arial, sans-serif;
             color: #000000;
             margin-bottom: 10px;
         }

@@ -22,7 +22,7 @@
         .slider {
         width: 100%;
         height: 95vh;
-        background: url({{ asset('images/slider/4.jpg') }}) center/cover no-repeat;
+        background: url({{ asset('images/slider2/mo.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -39,8 +39,7 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
     }
-
-    .animated-text {
+.animated-text {
     font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
@@ -50,6 +49,11 @@
 
 .animated-text span {
     display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
     animation: wave 1.9s infinite ease-in-out;
 }
 
@@ -64,8 +68,6 @@
         transform: translateY(0);
     }
 }
-
-
     .welcome-text {
         position: absolute;
         right: 10px;
@@ -108,8 +110,8 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #382815; /* تغيير لون الحواف عند الـ hover */
-background-color: #b88f61;
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #904600;
 }
 
 
@@ -120,50 +122,59 @@ background-color: #b88f61;
         }
 
         .title {
-            color: #c3814c;
-            font-weight: bold;
-            font-size: 60px;
-            margin-top: 50px;
-        }
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
 
-        .social-icons {
-            margin: 10px 0;
-        }
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
+.social-icons {
+    margin: 10px 0;
+}
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-        }
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
 
-        .google {
-            background: #4c4c6d;
-        }
+/* تخصيص الألوان لكل منصة */
+.facebook { background: #1877F2; }
+.instagram { background: #E4405F; }
+.tiktok { background: #000000; }
+.snapchat { background: #FFFC00; color: black; } /* لون نص أسود ليظهر على الخلفية الصفراء */
+.youtube { background: #FF0000; }
 
-        .twitter {
-            background: #55acee;
-        }
+/* تأثيرات عند التحويل */
+.social-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2);
+}
 
-        .google-plus {
-            background: #dd4b39;
-        }
-
-        .linkedin {
-            background: #0077b5;
-        }
-
-        .behance {
-            background: #ff2b2b;
-        }
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في التأثير */
+.facebook:hover { box-shadow: 0 0 5px #1877F2, 0 0 10px #1877F2, 0 0 15px #1877F2; }
+.instagram:hover { box-shadow: 0 0 5px #E4405F, 0 0 10px #E4405F, 0 0 15px #E4405F; }
+.tiktok:hover { box-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000; }
+.snapchat:hover { box-shadow: 0 0 5px #FFFC00, 0 0 10px #FFFC00, 0 0 15px #FFFC00; }
+.youtube:hover { box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; }
 
         .subtitle {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
             color: #000000;
             margin-top: 50px;
         }
@@ -171,14 +182,20 @@ background-color: #b88f61;
         .description {
             color: #666;
             max-width: 600px;
+            font-family: 'Cairo', sans-serif;
+
         }
 
         .bold-text {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
         }
 
         .highlight-text {
             font-weight: bold;
+              font-family: 'Cairo', sans-serif;
+
             color: #000;
         }
 
@@ -194,13 +211,14 @@ background-color: #b88f61;
             margin-bottom: 20px;
             padding-bottom: 30px;
         }
+
 .work-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* توزيع البطاقات بالتساوي */
     max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
     margin: auto; /* توسيط العنصر */
-    gap: 15px; /* المسافة بين البطاقات */
+    gap: 3px; /* المسافة بين البطاقات */
 }
 
 .work-card {
@@ -225,7 +243,6 @@ background-color: #b88f61;
     }
 }
 
-
         .work-card img {
             width: 100%;
             height: 100%;
@@ -243,7 +260,7 @@ background-color: #b88f61;
             /* جعل العنصر بعيداً عن الرؤية */
             left: 0;
             width: 100%;
-            background: rgba(173, 126, 38, 0.7);
+            background: rgba(123, 225, 20, 0.7);
             font-size: large;
             color: rgb(0, 0, 0);
             text-align: center;
@@ -282,7 +299,7 @@ background-color: #b88f61;
 
 
     <section class="slider">
-        <div class="overlay"></div>
+
         <h1 class="animated-text">Motion Graphic</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
@@ -299,12 +316,12 @@ background-color: #b88f61;
         <h2 class="title">Motion Graphic</h2>
 
         <div class="social-icons">
-            <a href="#" class="google"><i class="fab fa-google"></i></a>
-            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="google-plus"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="behance"><i class="fab fa-behance"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
         </div>
+
 
         <h3 class="subtitle">What is Motion Graphic?</h3>
 
@@ -365,80 +382,6 @@ background-color: #b88f61;
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let projects = [{
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 1",
-                category: "Motion Graphic"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 2",
-                category: "Motion Graphic"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 3",
-                category: "Motion Graphic"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 4",
-                category: "Motion Graphic"
-            }, {
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 5",
-                category: "Motion Graphic"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 6",
-                category: "Motion Graphic"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 7",
-                category: "Motion Graphic"
-            }, {
-                image: "{{ asset('images/work/3.jpg') }}",
-                name: "Project 8",
-                category: "Motion Graphic"
-            }];
-
-            let itemsPerPage = 4;
-            let currentIndex = 0;
-
-            function renderProjects() {
-                let container = $("#workGallery");
-                let endIndex = currentIndex + itemsPerPage;
-
-                for (let i = currentIndex; i < endIndex && i < projects.length; i++) {
-                    let project = projects[i];
-                    let card = `
-                        <div class="work-card">
-                            <img src="${project.image}" alt="${project.name}">
-                            <div class="work-info">
-                                <h5>${project.name}</h5>
-                                <p>${project.category}</p>
-                            </div>
-                        </div>
-                    `;
-                    container.append(card);
-                }
-
-                currentIndex += itemsPerPage;
-
-                // إخفاء زر "Show More" إذا تم عرض كل المشاريع
-                if (currentIndex >= projects.length) {
-                    $("#showMore").hide();
-                }
-            }
-
-            // عرض المشاريع الأولية
-            renderProjects();
-
-            // عند الضغط على زر "Show More"
-            $("#showMore").click(function() {
-                renderProjects();
-            });
-        });
-    </script>
 
 
 

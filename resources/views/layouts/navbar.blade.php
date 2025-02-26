@@ -30,6 +30,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 80px;
     background-color: #00000000; /* شفاف في البداية */
     transition: background-color 0.1s ease-in-out;
     padding: 15px 20px;
@@ -52,7 +53,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 1rem;
+            padding: 0.1rem .5rem;
         }
 
         .brand {
@@ -166,18 +167,18 @@
         .menu-items {
             display: flex;
             flex-direction: column;
+            font-family: 'Cairo', sans-serif;
             gap: 1rem;
             text-align: center;
 
         }
 
         .menu-item {
-            font-size: 3.5rem;
-            font-weight: 900;
+            font-size: 2.5rem;
             color: var(--text-color);
             text-decoration: none;
             transition: color 0.3s ease, transform 0.3s ease;
-            transform: translateY(20px);
+            transform: translateY(10px);
             opacity: 0;
         }
 
@@ -313,7 +314,7 @@
             <a href="{{ route('home') }}" class="menu-item">Home</a>
             <a href="{{ route('ourservice') }}" class="menu-item">Our Services</a>
             <a href="{{ route('ourclients') }}" class="menu-item">Our Clients</a>
-            <a href="{{ route('ourwork') }}" class="menu-item">Our Works</a>
+            <a href="{{ route('ourwork') }}" class="menu-item">Our Work</a>
             <a href="{{ route('quotations') }}" class="menu-item">Get a Quotation</a>
             <a href="{{ route('aboutus') }}" class="menu-item">About Us</a>
             <a href="{{ route('contact') }}" class="menu-item">Contact</a>

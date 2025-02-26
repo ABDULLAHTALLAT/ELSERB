@@ -40,7 +40,6 @@
         background: rgba(0, 0, 0, 0.6);
     }
 
-
 .animated-text {
     font-size: 7em;
     font-weight: bold;
@@ -301,7 +300,7 @@ background-color: #904600;
 
 
     <section class="slider">
-        <div class="overlay"></div>
+        
         <h1 class="animated-text">Graphic <space> <space> Design</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
@@ -317,12 +316,13 @@ background-color: #904600;
     <div class="container">
         <h2 class="title">Graphic Design</h2>
 
-        <div class="social-icons">
-            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
-        </div>
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+
 
         <h3 class="subtitle">What is Graphic Design?</h3>
 
@@ -397,20 +397,6 @@ background-color: #904600;
         setTimeout(() => {
             document.querySelector(".partners").classList.add("active");
         }, 1000);
-    });
-</script>
-
-
-<script>
-    const text = document.querySelector(".animated-text");
-    const letters = text.textContent.split("");
-    text.innerHTML = ""; // إزالة النص الأصلي
-
-    letters.forEach((letter, index) => {
-        const span = document.createElement("span");
-        span.textContent = letter;
-        span.style.animationDelay = `${index * 0.2}s`; // تأخير الموجة لكل حرف
-        text.appendChild(span);
     });
 </script>
 

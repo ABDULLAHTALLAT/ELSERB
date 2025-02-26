@@ -1,8 +1,8 @@
 <style>
    .slider {
         width: 100%;
-        height: 70vh;
-        background: url({{ asset('images/Blugs/1.jpg') }}) center/cover no-repeat;
+        height: 85vh;
+        background: url({{ asset('images/Blugs/blogs.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -17,10 +17,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0);
     }
 
-    .animated-text {
+
+.animated-text {
     font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
@@ -30,6 +31,11 @@
 
 .animated-text span {
     display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
     animation: wave 1.9s infinite ease-in-out;
 }
 
@@ -45,13 +51,13 @@
     }
 }
 
-
     .welcome-text {
         position: absolute;
         right: 10px;
         bottom: 10%;
         transform: rotate(-90deg) translateY(100%);
         font-size: 12px;
+        font-family: 'Cairo', sans-serif;
         color: rgba(255, 255, 255, 0.621);
         font-weight: bold;
         transition: all 1s ease-in-out;
@@ -120,11 +126,17 @@ background-color: #b88f61;
             color: #bb7b54;
             font-size: 30px;
             padding: 10px;
+            padding-bottom: 50px;
+            padding-top: 20px;
             margin-left: -20px;
         }
+
+
+
         .card p {
             font-size: 19px;
-            color: #666;
+            font-family: 'Cairo', sans-serif;
+            color: #000000;
         }
          .read-more {
 
@@ -136,6 +148,7 @@ background-color: #b88f61;
             font-weight: bold;
             font-size: 20px;
             center-align: center;
+            padding-top: 20px;
         }
         .read-more:hover {
             text-decoration: underline;
@@ -148,13 +161,14 @@ background-color: #b88f61;
     <section class="slider">
         <div class="overlay"></div>
         <h1 class="animated-text">News</h1>
-        <div class="welcome-text">WELCOM YOU</div>
+        <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 

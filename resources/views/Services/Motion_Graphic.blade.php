@@ -3,6 +3,7 @@
 
 @section('content')
     @include('layouts.navbar')
+    @include('layouts.translat')
     @include('service.MotionGraphic')
                 @include('layouts.footer')
                 @include('layouts.qutition_buttun')

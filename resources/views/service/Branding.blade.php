@@ -14,11 +14,6 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-        }
-
         .slider {
         width: 100%;
         height: 95vh;
@@ -300,7 +295,7 @@ background-color: #904600;
 
 
     <section class="slider">
-        <div class="overlay"></div>
+        
         <h1 class="animated-text"> Branding</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">

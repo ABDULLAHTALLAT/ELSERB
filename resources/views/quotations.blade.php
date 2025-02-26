@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.NAV')
+        @include('layouts.NAV')
 
+    @include('layouts.translat')
 
+        @include('layouts.qut')
 
-    @include('layouts.qut')
+        <div class="mb-5"></div> {{-- مسافة بين الأقسام --}}
 
-    <div class="mb-5"></div> {{-- مسافة بين الأقسام --}}
+        @include('layouts.footer')
 
-    @include('layouts.footer')
+        <div class="mb-5"></div> {{-- مسافة بين الأقسام --}}
 
-    <div class="mb-5"></div> {{-- مسافة بين الأقسام --}}
-
-            @include('layouts.gotoup')
+                @include('layouts.gotoup')
 
 @endsection

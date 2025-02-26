@@ -36,7 +36,7 @@
 
         .service-card {
             width: 350px;
-            height: 450px;
+            height: 490px;
             border-radius: 20px;
             overflow: hidden;
             position: relative;
@@ -118,7 +118,7 @@
           <a href="{{ route('video-photography') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/video.png') }}" alt="Video & Photography">
+                        <img src="{{ asset('images/ourserves/234.png') }}" alt="Video & Photography">
                     </div>
                     <h3>Video & Photography</h3>
                 </div>

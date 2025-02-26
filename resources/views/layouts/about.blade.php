@@ -70,9 +70,10 @@ font-family: 'Nippor', sans-serif;
         .content p {
             font-size: 18px;
             line-height: 1.6;
-            color: #333;
+            color: #000000;
             max-width: 500px;
             margin-bottom: 20px;
+            font-family: 'Cairo', sans-serif;
         }
 
         .gif-container {
@@ -194,7 +195,7 @@ font-family: 'Nippor', sans-serif;
         .partners h2 {
             color: #c3814c;
             font-size: 40px;
-             font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Cairo', sans-serif;
             opacity: 0; /* إخفاء النص في البداية */
             transform: translateY(-50px); /* نقل النص للأعلى */
             transition: opacity 1s ease-out, transform 1s ease-out; /* التأثيرات */
@@ -204,7 +205,7 @@ font-family: 'Nippor', sans-serif;
         .partners p {
             color: #000000;
             font-size: 20px;
-             font-family: Arial, Helvetica, sans-serif;
+             font-family: 'Cairo', sans-serif;
             opacity: 0; /* إخفاء النص في البداية */
             transform: translateY(-50px); /* نقل النص للأعلى */
             transition: opacity 1s ease-out, transform 1s ease-out; /* التأثيرات */

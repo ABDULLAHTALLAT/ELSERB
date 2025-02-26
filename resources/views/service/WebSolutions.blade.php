@@ -62,18 +62,35 @@
         filter: blur(2px);
     }
 }
-
 .animated-text {
-    font-size:7em;
+    font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    animation: moveBlur 2s infinite ease-in-out;
+    gap: 7px;
 }
 
+.animated-text span {
+    display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
 
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
+    animation: wave 1.9s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
     .welcome-text {
         position: absolute;
         right: 10px;
@@ -116,8 +133,8 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #382815; /* تغيير لون الحواف عند الـ hover */
-background-color: #b88f61;
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #904600;
 }
 
 
@@ -128,13 +145,17 @@ background-color: #b88f61;
         }
 
         .title {
-            color: #c3814c;
-            font-weight: bold;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            font-size: 60px;
-        }
+    color: #c3814c;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند التغيير */
+}
 
+.title:hover {
+    color: #904600; /* اللون الجديد عند تمرير الفأرة */
+}
 .social-icons {
     margin: 10px 0;
 }
@@ -149,59 +170,34 @@ background-color: #b88f61;
     color: white;
     border-radius: 5px;
     margin: 5px;
-    position: relative;
-    transition: all 0.3s ease-in-out;
 }
-        .google {
-            background: #4c4c6d;
-        }
 
-        .twitter {
-            background: #55acee;
-        }
+/* تخصيص الألوان لكل منصة */
+.facebook { background: #1877F2; }
+.instagram { background: #E4405F; }
+.tiktok { background: #000000; }
+.snapchat { background: #FFFC00; color: black; } /* لون نص أسود ليظهر على الخلفية الصفراء */
+.youtube { background: #FF0000; }
 
-        .google-plus {
-            background: #dd4b39;
-        }
-
-        .linkedin {
-            background: #0077b5;
-        }
-
-        .behance {
-            background: #ff2b2b;
-        }
-
-        .social-icons a:hover {
-    transform: scale(1.1); /* تكبير بسيط */
+/* تأثيرات عند التحويل */
+.social-icons a:hover {
+    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
                 0 0 10px rgba(0, 0, 0, 0.2),
-                0 0 15px rgba(0, 0, 0, 0.2); /* طبقات متعددة */
+                0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* جعل اللون الرئيسي لكل أيقونة ينتشر في الطبقات */
-.google:hover {
-    box-shadow: 0 0 5px #4c4c6d, 0 0 10px #4c4c6d, 0 0 15px #4c4c6d;
-}
-
-.twitter:hover {
-    box-shadow: 0 0 5px #55acee, 0 0 10px #55acee, 0 0 15px #55acee;
-}
-
-.google-plus:hover {
-    box-shadow: 0 0 5px #dd4b39, 0 0 10px #dd4b39, 0 0 15px #dd4b39;
-}
-
-.linkedin:hover {
-    box-shadow: 0 0 5px #0077b5, 0 0 10px #0077b5, 0 0 15px #0077b5;
-}
-
-.behance:hover {
-    box-shadow: 0 0 5px #ff2b2b, 0 0 10px #ff2b2b, 0 0 15px #ff2b2b;
-}
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في التأثير */
+.facebook:hover { box-shadow: 0 0 5px #1877F2, 0 0 10px #1877F2, 0 0 15px #1877F2; }
+.instagram:hover { box-shadow: 0 0 5px #E4405F, 0 0 10px #E4405F, 0 0 15px #E4405F; }
+.tiktok:hover { box-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000; }
+.snapchat:hover { box-shadow: 0 0 5px #FFFC00, 0 0 10px #FFFC00, 0 0 15px #FFFC00; }
+.youtube:hover { box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; }
 
         .subtitle {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
             color: #000000;
             margin-top: 50px;
         }
@@ -209,16 +205,21 @@ background-color: #b88f61;
         .description {
             color: #666;
             max-width: 600px;
+            font-family: 'Cairo', sans-serif;
+
         }
 
         .bold-text {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
         }
 
         .highlight-text {
             font-weight: bold;
-            color: #666666;
-            font-size: 20px;
+              font-family: 'Cairo', sans-serif;
+
+            color: #000;
         }
 
         .work-section {
@@ -230,12 +231,11 @@ background-color: #b88f61;
             color: #c3814c;
             font-weight: bold;
             font-size: 50px;
-
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             padding-bottom: 30px;
         }
 
-     .work-container {
+.work-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* توزيع البطاقات بالتساوي */
@@ -283,7 +283,7 @@ background-color: #b88f61;
             /* جعل العنصر بعيداً عن الرؤية */
             left: 0;
             width: 100%;
-            background: rgba(255, 162, 0, 0.7);
+            background: rgba(123, 225, 20, 0.7);
             font-size: large;
             color: rgb(0, 0, 0);
             text-align: center;
@@ -322,8 +322,8 @@ background-color: #b88f61;
 
 
     <section class="slider">
-        <div class="overlay"></div>
-        <h1 class="animated-text">Web Solutions</h1>
+
+        <h1 class="animated-text">Web <space> <space> Solutions</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -339,12 +339,12 @@ background-color: #b88f61;
         <h2 class="title">Web Solutions</h2>
 
         <div class="social-icons">
-            <a href="#" class="google"><i class="fab fa-google"></i></a>
-            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="google-plus"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="behance"><i class="fab fa-behance"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
         </div>
+
 
         <h3 class="subtitle">What is Web Solutions?</h3>
 
@@ -408,80 +408,6 @@ background-color: #b88f61;
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let projects = [{
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 1",
-                category: "Web Solutions"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 2",
-                category: "Web Solutions"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 3",
-                category: "Web Solutions"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 4",
-                category: "Web Solutions"
-            }, {
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 5",
-                category: "Web Solutions"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 6",
-                category: "Web Solutions"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 7",
-                category: "Web Solutions"
-            }, {
-                image: "{{ asset('images/work/3.jpg') }}",
-                name: "Project 8",
-                category: "Web Solutions"
-            }];
-
-            let itemsPerPage = 4;
-            let currentIndex = 0;
-
-            function renderProjects() {
-                let container = $("#workGallery");
-                let endIndex = currentIndex + itemsPerPage;
-
-                for (let i = currentIndex; i < endIndex && i < projects.length; i++) {
-                    let project = projects[i];
-                    let card = `
-                        <div class="work-card">
-                            <img src="${project.image}" alt="${project.name}">
-                            <div class="work-info">
-                                <h5>${project.name}</h5>
-                                <p>${project.category}</p>
-                            </div>
-                        </div>
-                    `;
-                    container.append(card);
-                }
-
-                currentIndex += itemsPerPage;
-
-                // إخفاء زر "Show More" إذا تم عرض كل المشاريع
-                if (currentIndex >= projects.length) {
-                    $("#showMore").hide();
-                }
-            }
-
-            // عرض المشاريع الأولية
-            renderProjects();
-
-            // عند الضغط على زر "Show More"
-            $("#showMore").click(function() {
-                renderProjects();
-            });
-        });
-    </script>
 
 
 

@@ -15,7 +15,6 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
             background-color: #ffffff;
         }
 
@@ -42,11 +41,11 @@
 
 
 .animated-text {
-    font-size: 7em;
+    font-size: 4em;
     font-weight: bold;
     color: #f5f5f5;
     display: flex;
-    gap: 7px;
+    gap: 2px;
 }
 
 .animated-text span {
@@ -301,7 +300,7 @@ background-color: #904600;
 
 
     <section class="slider">
-        <div class="overlay"></div>
+
         <h1 class="animated-text">Video & Photography</h1>
 
         <div class="welcome-text">Alserb...</div>
@@ -318,13 +317,13 @@ background-color: #904600;
     <div class="container">
         <h2 class="title">Video & Photography</h2>
 
-        <div class="social-icons">
-            <a href="#" class="google"><i class="fab fa-google"></i></a>
-            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="google-plus"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="behance"><i class="fab fa-behance"></i></a>
-        </div>
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+
 
         <h3 class="subtitle">What is Video & Photography?</h3>
 
@@ -377,80 +376,6 @@ background-color: #904600;
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let projects = [{
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 1",
-                category: "Video & Photography"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 2",
-                category: "Video & Photography"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 3",
-                category: "Video & Photography"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 4",
-                category: "Video & Photography"
-            }, {
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 5",
-                category: "Video & Photography"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 6",
-                category: "Video & Photography"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 7",
-                category: "Video & Photography"
-            }, {
-                image: "{{ asset('images/work/3.jpg') }}",
-                name: "Project 8",
-                category: "Video & Photography"
-            }];
-
-            let itemsPerPage = 4;
-            let currentIndex = 0;
-
-            function renderProjects() {
-                let container = $("#workGallery");
-                let endIndex = currentIndex + itemsPerPage;
-
-                for (let i = currentIndex; i < endIndex && i < projects.length; i++) {
-                    let project = projects[i];
-                    let card = `
-                        <div class="work-card">
-                            <img src="${project.image}" alt="${project.name}">
-                            <div class="work-info">
-                                <h5>${project.name}</h5>
-                                <p>${project.category}</p>
-                            </div>
-                        </div>
-                    `;
-                    container.append(card);
-                }
-
-                currentIndex += itemsPerPage;
-
-                // إخفاء زر "Show More" إذا تم عرض كل المشاريع
-                if (currentIndex >= projects.length) {
-                    $("#showMore").hide();
-                }
-            }
-
-            // عرض المشاريع الأولية
-            renderProjects();
-
-            // عند الضغط على زر "Show More"
-            $("#showMore").click(function() {
-                renderProjects();
-            });
-        });
-    </script>
 
 
 

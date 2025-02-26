@@ -4,6 +4,7 @@
 @section('content')
         @include('layouts.NAV')
         @include('blogs.blog7')
+        @include('layouts.translat')
         @include('layouts.footer')
         @include('layouts.qutition_buttun')
     @include('layouts.gotoup')

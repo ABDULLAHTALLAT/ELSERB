@@ -6,6 +6,7 @@
     @include('layouts.navbar')
 
     @include('layouts.aboutus')
+    @include('layouts.translat')
     @include('layouts.footer')
     @include('layouts.qutition_buttun')
     @include('layouts.gotoup')

@@ -305,17 +305,17 @@ background: #e28743;
         },
         {
             title: 'Web Solutions',
-            image: "{{ asset('images/slider2/33123.png') }}",
+            image: "{{ asset('images/slider2/web1 (1).png') }}",
             page: "{{ route('web-solutions') }}"
         },
         {
             title: 'Mobile Apps',
-            image: "{{ asset('images/slider2/41234.png') }}",
+            image: "{{ asset('images/slider2/mobil.png') }}",
             page: "{{ route('mobile-apps') }}"
         },
         {
             title: 'Graphic Design',
-            image: "{{ asset('images/slider2/512.png') }}",
+            image: "{{ asset('images/slider2/grap.png') }}",
             page: "{{ route('graphic-design') }}"
         },
         {
