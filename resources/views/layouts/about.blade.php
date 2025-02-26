@@ -13,7 +13,7 @@
 font-family: 'Nippor', sans-serif;
         background: #ffffff;
         position: relative
-        
+
       }
         .about-section {
             background-color: #ffffff;
@@ -194,6 +194,7 @@ font-family: 'Nippor', sans-serif;
         .partners h2 {
             color: #c3814c;
             font-size: 40px;
+             font-family: Arial, Helvetica, sans-serif;
             opacity: 0; /* إخفاء النص في البداية */
             transform: translateY(-50px); /* نقل النص للأعلى */
             transition: opacity 1s ease-out, transform 1s ease-out; /* التأثيرات */
@@ -203,7 +204,7 @@ font-family: 'Nippor', sans-serif;
         .partners p {
             color: #000000;
             font-size: 20px;
-            font-weight: bold;
+             font-family: Arial, Helvetica, sans-serif;
             opacity: 0; /* إخفاء النص في البداية */
             transform: translateY(-50px); /* نقل النص للأعلى */
             transition: opacity 1s ease-out, transform 1s ease-out; /* التأثيرات */

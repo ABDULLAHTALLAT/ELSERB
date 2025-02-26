@@ -9,7 +9,7 @@
     }
 
     body {
-        font-family: 'Nippor', sans-serif;
+
         background-color: #ffffff;
     }
 
@@ -33,17 +33,36 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
     }
+.animated-text {
+    font-size: 7em;
+    font-weight: bold;
+    color: #f5f5f5;
+    display: flex;
+    gap: 7px;
+}
 
-    .animated-text {
-        position: relative;
-        font-size: 10rem;
-        color: #fff;
-        font-weight: bold;
-        transform: translateX(100%);
-        opacity: 0;
-        transition: all 1s ease-in-out;
-        z-index: 1;
+.animated-text span {
+    display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
+    animation: wave 1.9s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
     }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
     .slider.active .animated-text {
         transform: translateX(0);
@@ -102,7 +121,6 @@ background-color: #c3814c
             max-width: 1100px;
             margin: 0 auto;
             padding: 50px 20px;
-            font-family: Arial, sans-serif;
         }
 
         .about-title {
@@ -134,7 +152,6 @@ background-color: #c3814c
             color: #444;
             line-height: 1.6;
             font-size: 20px;
-            font-family: Arial, sans-serif;
             max-width: 100%;
             text-align: left;
             margin: 0;
@@ -149,9 +166,9 @@ background-color: #c3814c
             color: #444;
             line-height: 1.6;
             font-size: 15px;
-            font-family: Arial, sans-serif;
             max-width: 100%;
             text-align: left;
+             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             white-space: pre-line;
@@ -351,8 +368,8 @@ background-color: #c3814c
 
     <section class="slider">
         <div class="overlay"></div>
-        <h1 class="animated-text">About Us</h1>
-        <div class="welcome-text">WELCOMYOU</div>
+        <h1 class="animated-text">About <space> <space> <space> Us</h1>
+        <div class="welcome-text">Alserb...</div>
         <div class="social-icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-behance"></i></a>
@@ -597,5 +614,16 @@ background-color: #c3814c
             }, 1000);
         });
     </script>
+<script>
+    const text = document.querySelector(".animated-text");
+    const letters = text.textContent.split("");
+    text.innerHTML = ""; // إزالة النص الأصلي
 
+    letters.forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.style.animationDelay = `${index * 0.3}s`; // تأخير الموجة لكل حرف
+        text.appendChild(span);
+    });
+</script>
 </body>

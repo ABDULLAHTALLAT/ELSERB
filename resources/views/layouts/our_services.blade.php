@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elserb</title>
     <link rel="icon" href="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" type="image/x-icon">
-      <link href="https://fonts.googleapis.com/css2?family=Neighbor&display=swap" rel="stylesheet">    <style>
-        /* styles.css */
+     <style>
+
 
         .services-section {
             padding: 6rem 2rem;
@@ -16,7 +16,7 @@
         }
 
         .section-title {
-           
+
             color: #c3814c;
             font-size: 3rem;
             text-align: center;
@@ -35,8 +35,8 @@
         }
 
         .service-card {
-            width: 388px;
-            height: 620px;
+            width: 350px;
+            height: 450px;
             border-radius: 20px;
             overflow: hidden;
             position: relative;
@@ -90,10 +90,9 @@
             color: #c3814c;
             font-size: 1.4rem;
             text-align: center;
-            margin-top: 4rem;
+            margin-top: 2rem;
             text-transform: uppercase;
             letter-spacing: .4px;
-
         }
 
         @media (max-width: 768px) {
@@ -187,7 +186,7 @@
                         <img src="{{ asset('images/ourserves/social.png') }}" alt="Web Solutions">
                     </div>
                     <h3>Social Media & Digital Marketing</h3>
-                    
+
                 </div>
             </a>
 

@@ -30,13 +30,13 @@
 /* إخفاء شريط التمرير في فايرفوكس */
 html {
     scrollbar-width: none;
-    font-family: 'Nippor', sans-serif;
+
 }
 
 /* التأكد من أن الصفحة لا تقطع المحتوى */
 body {
     overflow: auto;
-font-family: 'Nippor', sans-serif;
+
 }
     </style>
 

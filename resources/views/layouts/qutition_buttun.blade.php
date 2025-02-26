@@ -11,11 +11,11 @@
             right: 20px;
             background-color: #c3814c; /* اللون الأخضر المشابه للصورة */
             color: white;
-            padding: 12px 24px;
+            padding: 24px 24px;
             border-radius: 12px; /* زوايا مستديرة */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             text-decoration: none;
-            font-weight: bold;
+
             font-size: 14px;
             text-transform: uppercase; /* لجعل النص بأحرف كبيرة */
             cursor: pointer;

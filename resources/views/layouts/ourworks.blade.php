@@ -12,8 +12,8 @@
 
     .slider {
         width: 100%;
-        height: 65vh;
-        background: url({{ asset('images/work/slide.jpeg') }}) center/cover no-repeat;
+        height: 75vh;
+        background: url({{ asset('images/work/work.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -31,7 +31,8 @@
         background: rgba(0, 0, 0, 0.6);
     }
 
-    .animated-text {
+
+.animated-text {
     font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
@@ -41,6 +42,11 @@
 
 .animated-text span {
     display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
     animation: wave 1.9s infinite ease-in-out;
 }
 
@@ -55,6 +61,7 @@
         transform: translateY(0);
     }
 }
+
 
 
 
@@ -216,8 +223,8 @@
 
         <section class="slider">
             <div class="overlay"></div>
-            <h1 class="animated-text">Our Works</h1>
-            <div class="welcome-text">WELCOMYOU</div>
+            <h1 class="animated-text">Our Work</h1>
+            <div class="welcome-text">Alserb..</div>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-behance"></i></a>

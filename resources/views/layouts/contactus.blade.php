@@ -11,14 +11,14 @@
     }
 
     body {
-        font-family: 'Nippor', sans-serif;
+
         background-color: #ffffff;
     }
 
     .slider {
         width: 100%;
         height: 80vh;
-        background: url({{ asset('images/About/contact.jpg') }}) center/cover no-repeat;
+        background: url({{ asset('images/About/contactus.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -60,14 +60,35 @@
 }
 
 .animated-text {
-    font-size:7em;
+    font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    animation: moveBlur 2s infinite ease-in-out;
+    gap: 7px;
 }
+
+.animated-text span {
+    display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
+    animation: wave 1.9s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 
     .welcome-text {
@@ -76,8 +97,8 @@
         bottom: 20%;
         transform: rotate(-90deg) translateY(100%);
         font-size: 12px;
-        color: rgba(255, 255, 255, 0.621);
-        font-weight: bold;
+        color: #c3814c;
+        font-weight: normal;
         transition: all 1s ease-in-out;
     }
 
@@ -121,7 +142,7 @@
             max-width: 1300px;
             margin: 50px auto;
             padding: 20px;
-            font-family: Arial, sans-serif;
+
         }
 
         .contact-header {
@@ -172,6 +193,7 @@
             color: #c3814c;
             margin-bottom: 5px;
             font-weight: bold;
+            padding-bottom: 19px;
         }
 
         .form-group input,
@@ -186,8 +208,8 @@
 
         .form-group input:hover,
         .form-group textarea:hover {
-            border-color: #c3814c;
-            box-shadow: 0 5px 20px #873e23;
+            border-color: #ac6124;
+            box-shadow: 10px 10px 10px #00000077;
         }
 
         .form-group input:focus,
@@ -204,23 +226,24 @@
         }
 
         .submit-btn {
-            background-color: #873e23;
+            background-color: #c3814c;
             color: #000000;
             padding: 12px 24px;
             border: none;
             cursor: pointer;
-            font-size: 16px;
-            width: 10%;
+            font-size: 20px;
+            width: 100%;
             transition: all 0.3s ease;
-
+            text-align: center;
+            display: inline-block;
         }
 
         .submit-btn:hover {
-            background-color: #ea9755;
-            color: #e2e2e2;
+            background-color: #c3814c;
+            color: #00000091;
             transform: translateY(-2px);
             border-radius: 10px;
-            box-shadow: 0 8px 30px #ea9755;
+
         }
 
         @media (max-width: 768px) {
@@ -236,10 +259,8 @@
 
     <section class="slider">
         <div class="overlay"></div>
-        <h1 class="animated-text">
-             Talk to us <i class="fa fa-phone"></i>
-        </h1>
-        <div class="welcome-text">WELCOMYOU</div>
+    <h1 class="animated-text">Talk <space> <space> <space> To <space> <space> <space> Us </h1>
+        <div class="welcome-text">Alserb...</div>
         <div class="social-icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-behance"></i></a>
@@ -313,6 +334,19 @@
         setTimeout(() => {
             document.querySelector(".partners").classList.add("active");
         }, 1000);
+    });
+</script>
+
+<script>
+    const text = document.querySelector(".animated-text");
+    const letters = text.textContent.split("");
+    text.innerHTML = ""; // إزالة النص الأصلي
+
+    letters.forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.style.animationDelay = `${index * 0.3}s`; // تأخير الموجة لكل حرف
+        text.appendChild(span);
     });
 </script>
 </body>

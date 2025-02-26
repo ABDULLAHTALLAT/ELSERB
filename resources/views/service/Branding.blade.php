@@ -22,7 +22,7 @@
         .slider {
         width: 100%;
         height: 95vh;
-        background: url({{ asset('images/slider/1.jpg') }}) center/cover no-repeat;
+        background: url({{ asset('images/slider2/brand.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -40,7 +40,7 @@
         background: rgba(0, 0, 0, 0.6);
     }
 
-    .animated-text {
+.animated-text {
     font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
@@ -50,6 +50,11 @@
 
 .animated-text span {
     display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
     animation: wave 1.9s infinite ease-in-out;
 }
 
@@ -64,8 +69,6 @@
         transform: translateY(0);
     }
 }
-
-
     .welcome-text {
         position: absolute;
         right: 10px;
@@ -108,7 +111,8 @@
 
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #91c637; /* تغيير لون الحواف عند الـ hover */
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #904600;
 }
 
 
@@ -170,6 +174,8 @@
 
         .subtitle {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
             color: #000000;
             margin-top: 50px;
         }
@@ -177,14 +183,20 @@
         .description {
             color: #666;
             max-width: 600px;
+            font-family: 'Cairo', sans-serif;
+
         }
 
         .bold-text {
             font-weight: bold;
+                    font-family: 'Cairo', sans-serif;
+
         }
 
         .highlight-text {
             font-weight: bold;
+              font-family: 'Cairo', sans-serif;
+
             color: #000;
         }
 
@@ -290,7 +302,7 @@
     <section class="slider">
         <div class="overlay"></div>
         <h1 class="animated-text"> Branding</h1>
-        <div class="welcome-text">WELCOMYOU</div>
+        <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -308,7 +320,6 @@
                 <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
-                <a href="#" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
                 <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
             </div>
 
@@ -366,82 +377,6 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let projects = [{
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 1",
-                category: " Branding"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 2",
-                category: " Branding"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 3",
-                category: " Branding"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 4",
-                category: " Branding"
-            }, {
-                image: "{{ asset('images/work/1.jpg') }}",
-                name: "Project 5",
-                category: " Branding"
-            }, {
-                image: "{{ asset('images/work/4.jpg') }}",
-                name: "Project 6",
-                category: " Branding"
-            }, {
-                image: "{{ asset('images/work/2.jpg') }}",
-                name: "Project 7",
-                category: " Branding"
-            }, {
-                image: "{{ asset('images/work/3.jpg') }}",
-                name: "Project 8",
-                category: " Branding"
-            }];
-
-            let itemsPerPage = 4;
-            let currentIndex = 0;
-
-            function renderProjects() {
-                let container = $("#workGallery");
-                let endIndex = currentIndex + itemsPerPage;
-
-                for (let i = currentIndex; i < endIndex && i < projects.length; i++) {
-                    let project = projects[i];
-                    let card = `
-                        <div class="work-card">
-                            <img src="${project.image}" alt="${project.name}">
-                            <div class="work-info">
-                                <h5>${project.name}</h5>
-                                <p>${project.category}</p>
-                            </div>
-                        </div>
-                    `;
-                    container.append(card);
-                }
-
-                currentIndex += itemsPerPage;
-
-                // إخفاء زر "Show More" إذا تم عرض كل المشاريع
-                if (currentIndex >= projects.length) {
-                    $("#showMore").hide();
-                }
-            }
-
-            // عرض المشاريع الأولية
-            renderProjects();
-
-            // عند الضغط على زر "Show More"
-            $("#showMore").click(function() {
-                renderProjects();
-            });
-        });
-    </script>
-
-
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -468,6 +403,19 @@
     });
 </script>
 
+
+<script>
+    const text = document.querySelector(".animated-text");
+    const letters = text.textContent.split("");
+    text.innerHTML = ""; // إزالة النص الأصلي
+
+    letters.forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.style.animationDelay = `${index * 0.3}s`; // تأخير الموجة لكل حرف
+        text.appendChild(span);
+    });
+</script>
 </body>
 
 </html>

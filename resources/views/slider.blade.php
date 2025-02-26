@@ -52,12 +52,12 @@
 }
 
     .previous-title {
-        bottom: 60%;
+        bottom: 65%;
         opacity: 0.8;
 background: #e28743;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-        font-size: 4.5rem;
+        font-size: 3rem;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.049);
         margin-bottom: 10px;
     }
@@ -65,19 +65,19 @@ background: #e28743;
     .current-title {
         top: 40%;
         opacity: 1;
-        font-size:4.7rem;
+        font-size:3.5rem;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0);
         margin-top: 10px;
         text-decoration: none;
     }
 
     .next-title {
-        top: 60%;
+        top: 58%;
         opacity: 0.8;
          background: #e28743;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-        font-size: 4.5rem;
+        font-size: 3rem;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
         margin-top: 10px;
     }
@@ -113,13 +113,13 @@ background: #e28743;
         position: absolute;
         left: 7%;
         bottom: 2%;
-        font-size: 2rem;
+        font-size: 1rem;
         text-align: left;
         color: #fff
     }
 
     .swiper-pagination .current-number {
-        font-size: 6rem;
+        font-size: 3rem;
         font-weight: bold;
     }
 
@@ -154,10 +154,14 @@ background: #e28743;
     .welcome-text {
         position: absolute;
         top: 70%;
-        right: 25px;
+        right: 40px;
         transform: translateY(-50%);
-        color: #b77847;
+        color: #ffffff;
         font-size: 1rem;
+
+        font-weight: bold;
+        font-family: 'Cairo', sans-serif;
+
         font-weight: bold;
         text-align: center;
         writing-mode: vertical-rl;

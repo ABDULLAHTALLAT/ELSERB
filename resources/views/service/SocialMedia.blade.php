@@ -317,7 +317,7 @@
     <section class="slider">
         <div class="overlay"></div>
         <h1 class="animated-text">Social Media & Digital Marketing</h1>
-        <div class="welcome-text">WELCOMYOU</div>
+        <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>

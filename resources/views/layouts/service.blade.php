@@ -40,7 +40,8 @@
         background: rgba(0, 0, 0, 0.273);
     }
 
-      .animated-text {
+
+.animated-text {
     font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
@@ -50,6 +51,11 @@
 
 .animated-text span {
     display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
     animation: wave 1.9s infinite ease-in-out;
 }
 
@@ -64,8 +70,6 @@
         transform: translateY(0);
     }
 }
-
-
     .welcome-text {
         position: absolute;
         right: 10px;
@@ -162,15 +166,15 @@
         }
 
         .service-icon {
-            width: 110px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             position: center;
             margin-bottom: 20px;
         }
 
         .service-icon img {
-            width: 110%;
-            height: 110%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
             padding-bottom: 30px;
         }
@@ -393,10 +397,10 @@
         <div class="overlay"></div>
 
         <!-- النص المتحرك في المنتصف -->
-        <h1 class="animated-text">Our Services</h1>
+        <h1 class="animated-text">Our <space> <space> <space> Services</h1>
 
         <!-- كلمة مرحبا بك على الجانب الأيسر -->
-        <div class="welcome-text">WELCOMYOU</div>
+        <div class="welcome-text">Alserb...</div>
 
         <!-- أيقونات السوشيال ميديا -->
         <div class="social-icons">
@@ -408,7 +412,7 @@
             <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
 
-     
+
 
     </section>
 

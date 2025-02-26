@@ -13,5 +13,6 @@
 
     <div class="mb-5"></div> {{-- مسافة بين الأقسام --}}
 
-    @include('layouts.qutition_buttun')
+            @include('layouts.gotoup')
+
 @endsection

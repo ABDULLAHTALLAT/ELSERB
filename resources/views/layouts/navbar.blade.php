@@ -21,7 +21,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            
+
         }
 
 
@@ -70,7 +70,7 @@
 
       .logo-text {
     font-size: 1.8rem;
-    font-weight: 750;
+
     color: var(--text-color);
     transition: all 0.3s ease;
     margin-left: -10px;
@@ -79,7 +79,7 @@
 }
 
 .logo-text:hover {
-    background: linear-gradient(45deg, #ff7b00, #a47c4f); /* تأثير لونين */
+    background: linear-gradient(45deg, #873e23, #a47c4f,#c3814c); /* تأثير لونين */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -168,10 +168,11 @@
             flex-direction: column;
             gap: 1rem;
             text-align: center;
+
         }
 
         .menu-item {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 900;
             color: var(--text-color);
             text-decoration: none;
@@ -318,7 +319,7 @@
             <a href="{{ route('contact') }}" class="menu-item">Contact</a>
             <a href="{{ route('blog') }}" class="menu-item">Blog</a>
 
-           
+
         </div>
     </div>
 
@@ -335,7 +336,9 @@
             const menuOverlay = document.querySelector('.menu-overlay');
             const navSection = document.querySelector('.nav-section');
             const menuItems = document.querySelectorAll('.menu-item');
-            const audio = new Audio('https://www.palmenburg.com/site_palmenburg/audio/hover.mp3');
+          const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/387');
+
+
             let isMenuOpen = false;
 
             const toggleMenu = () => {

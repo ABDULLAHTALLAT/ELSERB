@@ -65,7 +65,7 @@
 
 <body>
 
-    <div id="scrollText">Alserb</div>
+   
     <div id="scrollToTopBtn"></div>
 
     <script>

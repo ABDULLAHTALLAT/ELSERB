@@ -22,7 +22,7 @@
         .slider {
         width: 100%;
         height: 95vh;
-        background: url({{ asset('images/slider/9.jpg') }}) center/cover no-repeat;
+        background: url({{ asset('images/slider2/video.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -37,10 +37,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0);
     }
 
-   .animated-text {
+
+.animated-text {
     font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
@@ -50,6 +51,11 @@
 
 .animated-text span {
     display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
+
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
     animation: wave 1.9s infinite ease-in-out;
 }
 
@@ -64,8 +70,6 @@
         transform: translateY(0);
     }
 }
-
-
     .welcome-text {
         position: absolute;
         right: 10px;
@@ -109,7 +113,7 @@
 .social-iconc a:hover {
     transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
     border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
-background-color: #936138;
+background-color: #904600;
 }
 
 
@@ -118,7 +122,8 @@ background-color: #936138;
             margin: auto;
             text-align: left;
         }
-.title {
+
+        .title {
     color: #c3814c;
     font-weight: bold;
     font-size: 60px;
@@ -130,47 +135,48 @@ background-color: #936138;
 .title:hover {
     color: #904600; /* اللون الجديد عند تمرير الفأرة */
 }
+.social-icons {
+    margin: 10px 0;
+}
 
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
 
-        .social-icons {
-            margin: 10px 0;
-        }
+/* تخصيص الألوان لكل منصة */
+.facebook { background: #1877F2; }
+.instagram { background: #E4405F; }
+.tiktok { background: #000000; }
+.snapchat { background: #FFFC00; color: black; } /* لون نص أسود ليظهر على الخلفية الصفراء */
+.youtube { background: #FF0000; }
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-        }
+/* تأثيرات عند التحويل */
+.social-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2);
+}
 
-        .google {
-            background: #4c4c6d;
-        }
-
-        .twitter {
-            background: #55acee;
-        }
-
-        .google-plus {
-            background: #dd4b39;
-        }
-
-        .linkedin {
-            background: #0077b5;
-        }
-
-        .behance {
-            background: #ff2b2b;
-        }
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في التأثير */
+.facebook:hover { box-shadow: 0 0 5px #1877F2, 0 0 10px #1877F2, 0 0 15px #1877F2; }
+.instagram:hover { box-shadow: 0 0 5px #E4405F, 0 0 10px #E4405F, 0 0 15px #E4405F; }
+.tiktok:hover { box-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000; }
+.snapchat:hover { box-shadow: 0 0 5px #FFFC00, 0 0 10px #FFFC00, 0 0 15px #FFFC00; }
+.youtube:hover { box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; }
 
         .subtitle {
             font-weight: bold;
-            font-size: 30px;
+                    font-family: 'Cairo', sans-serif;
+
             color: #000000;
             margin-top: 50px;
         }
@@ -178,16 +184,20 @@ background-color: #936138;
         .description {
             color: #666;
             max-width: 600px;
-            font-size:18px;
+            font-family: 'Cairo', sans-serif;
+
         }
 
         .bold-text {
             font-weight: bold;
-            font-size: 22px;
+                    font-family: 'Cairo', sans-serif;
+
         }
 
         .highlight-text {
             font-weight: bold;
+              font-family: 'Cairo', sans-serif;
+
             color: #000;
         }
 
@@ -204,22 +214,36 @@ background-color: #936138;
             padding-bottom: 30px;
         }
 
-        .work-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-        }
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* توزيع البطاقات بالتساوي */
+    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
+    margin: auto; /* توسيط العنصر */
+    gap: 3px; /* المسافة بين البطاقات */
+}
 
-        .work-card {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            padding-top: 20px;
-        }
+.work-card {
+    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
+    max-width: 300px; /* تحديد عرض أقصى */
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .work-card {
+        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
+    }
+}
 
         .work-card img {
             width: 100%;
@@ -279,7 +303,8 @@ background-color: #936138;
     <section class="slider">
         <div class="overlay"></div>
         <h1 class="animated-text">Video & Photography</h1>
-        <div class="welcome-text">WELCOMYOU</div>
+
+        <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -452,6 +477,20 @@ background-color: #936138;
         text.appendChild(span);
     });
 </script>
+
+    <script>
+            const text = document.querySelector(".animated-text");
+            const letters = text.textContent.split("");
+            text.innerHTML = ""; // إزالة النص الأصلي
+
+    letters.forEach((letter, index) => {
+        const span = document.createElement("span");
+            span.textContent = letter;
+            span.style.animationDelay = `${index * 0.3}s`; // تأخير الموجة لكل حرف
+            text.appendChild(span);
+    });
+    </script>
+
 </body>
 
 </html>

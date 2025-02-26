@@ -249,7 +249,7 @@
     <section class="slider">
         <div class="overlay"></div>
         <h1 class="animated-text">Our Clients</h1>
-        <div class="welcome-text">WELCOMYOU</div>
+        <div class="welcome-text">Alserb...</div>
         <div class="social-icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-behance"></i></a>
@@ -260,7 +260,7 @@
     </section>
 
     <div class="container clients-section">
-        <h2>OUR CLIENTS</h2>
+        <h2>Our Clients</h2>
         <div class="clients">
             <div class="left">
                 <p>Our customers are success partners that we are proud to deal with</p>

@@ -13,7 +13,7 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-          
+
             gap: 90px;
 
             padding:80px 0% ;
@@ -29,22 +29,22 @@
         h1,
         h2 {
             color: #c3814c;
-           
-           
+
+
         }
 
         h1 {
             font-size: 38px;
             margin-bottom: 10px;
             text-align: left;
-           
+
         }
 
         h2 {
-            font-size:30px;
+            font-size:25px;
             margin-bottom: 30px;
             text-align: left;
-           
+
         }
 
         .form-grid {
@@ -67,7 +67,7 @@
         input[type="email"],
         input[type="tel"],
         textarea {
-           
+
             width: 110%;
             padding: 20px;
             border: 2px solid #6e492b;
@@ -88,7 +88,7 @@
 
         .checkbox-wrapper {
             margin-bottom: 10px;
-           
+
         }
 
         .custom-checkbox {
@@ -155,7 +155,7 @@
             color: #c3814c;
             padding: 12px 30px;
             border: none;
-            border-radius: 20px;
+            border-radius: 10px;
             cursor: pointer;
             font-size: 20px;
             transition: background-color 0.2s, color 0.3s;
@@ -177,8 +177,8 @@
 
         .circle-wrapper {
             position: absolute;
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
             border: 5px solid #c3814c;
             border-radius: 50%;
             display: flex;
@@ -186,12 +186,12 @@
             align-items: center;
             overflow: hidden;
             margin-left: 100px;
-            top: 100px;
+            top: 30px;
         }
 
         .circle-image {
-            width: 95%;
-            height: 95%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -268,7 +268,7 @@
     <div class="container">
         <div class="form-section">
             <h1>Ready to get started?</h1>
-            <h1>Request For a Quotation</h1>
+            <h2>Request For a Quotation</h2>
             <br>
             <br>
 
@@ -355,6 +355,9 @@
                 <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
 
                 <button type="submit" class="submit-btn">SUBMIT <i class="fas fa-user"></i>  </button>
+
+                <button type="button" id="getNewQuotation" class="submit-btn" style="display: none;">GET  A NEW QUOTATION</button>
+
             </form>
         </div>
 
@@ -363,7 +366,14 @@
                 <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Decorative Circle" class="circle-image">
             </div>
         </div>
+
+
     </div>
+<div id="message-box"
+    style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
+    padding:20px; border-radius:10px; font-size:18px; text-align:center; width:300px; box-shadow:0px 0px 10px rgba(0,0,0,0.2);">
+</div>
+
 
     <section class="contact-info">
         <div class="container">
@@ -378,7 +388,7 @@
                 <div class="contact-item">
                     <img src="{{ asset('images/conect/q-email.svg') }}" alt="Email Icon" width="80" height="80">
                     <div>
-                        <p>info@elserb.com</p>
+                        <p>info@alserb.com</p>
                         <small>online support</small>
                     </div>
                 </div>
@@ -393,6 +403,88 @@
         </div>
     </section>
 
+
+   <script>
+    document.getElementById("quotationForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // منع الإرسال الافتراضي
+
+        let form = this;
+        let formData = new FormData(form);
+        let messageBox = document.createElement("div");
+
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            // ✅ نجاح الإرسال
+            messageBox.innerHTML = "Thank you for contacting us 😊";
+            messageBox.style.backgroundColor = "#d4edda"; // لون أخضر فاتح
+            messageBox.style.color = "#155724"; // لون النص أخضر غامق
+            setTimeout(() => {
+                window.location.href = "/new-quotation-page"; // توجيه لصفحة أخرى بعد ثوانٍ
+            }, 2000);
+        })
+        .catch(error => {
+            // ❌ فشل الإرسال
+            messageBox.innerHTML = "Please try again 😞";
+            messageBox.style.backgroundColor = "#f8d7da"; // لون أحمر فاتح
+            messageBox.style.color = "#721c24"; // لون النص أحمر غامق
+        })
+        .finally(() => {
+            messageBox.style.position = "fixed";
+            messageBox.style.top = "50%";
+            messageBox.style.left = "50%";
+            messageBox.style.transform = "translate(-50%, -50%)";
+            messageBox.style.padding = "20px";
+            messageBox.style.borderRadius = "10px";
+            messageBox.style.boxShadow = "0 0 10px rgba(0,0,0,0.1)";
+            messageBox.style.fontSize = "18px";
+            messageBox.style.fontWeight = "bold";
+            document.body.appendChild(messageBox);
+
+            setTimeout(() => {
+                messageBox.remove();
+            }, 3000); // إخفاء الرسالة بعد 3 ثوانٍ
+        });
+    });
+</script>
+<script>
+    document.getElementById("quotationForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // منع الإرسال الافتراضي
+
+        // تنفيذ الطلب باستخدام fetch أو AJAX (إذا كنت تستخدم Laravel AJAX هنا)
+        fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+            headers: {
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+            }
+        })
+            .then(response => response.json()) // يفترض أن يكون الرد JSON
+            .then(data => {
+                if (data.success) { // تأكد من نجاح العملية
+                    document.getElementById("submitBtn").style.display = "none"; // إخفاء زر Submit
+                    document.getElementById("newQuotationBtn").style.display = "block"; // إظهار زر New Quotation
+                } else {
+                    alert("Failed to send, please try again!");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred!");
+            });
+    });
+</script>
 
 </body>
 
