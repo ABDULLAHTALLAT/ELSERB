@@ -5,7 +5,7 @@
     .header {
         position: relative;
         width: 100%;
-        height: 110vh;
+        height: 100vh;
     }
 
     .slider {
@@ -29,13 +29,14 @@
         justify-content: center;
         flex-direction: column;
         color: white;
-        position: relative;
+
     }
 
     .slide-title {
         font-size: 2rem;
         font-weight: bold;
         position: absolute;
+        width: 100%;
         z-index: 5;
         color: white;
         transition: all 0.5s ease;
@@ -87,7 +88,7 @@ background: #e28743;
         left: 10%;
         bottom: 10%;
         height: auto;
-        width: 40%;
+        width: 100%;
         padding: 0;
         overflow: hidden;
     }
@@ -248,7 +249,159 @@ background: #e28743;
         /* رمز "+" */
     }
     /* إضافة طبقة شفافة فوق السلايدر */
+@media (max-width: 2020px) {
+    .slide-title {
+        font-size: 2rem;
+    }
 
+    .previous-title, .next-title {
+        font-size: 2rem;
+    }
+
+    .current-title {
+        font-size: 2.5rem;
+    }
+
+    .gallery-thumbs {
+        width: 60%;
+        left: 20%;
+    }
+
+    .swiper-pagination .current-number {
+        font-size: 2rem;
+    }
+
+    .swiper-container.gallery-top {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يجعل الصورة تغطي الشاشة بالكامل */
+}
+
+}
+
+@media (max-width: 768px) {
+    .slide-title {
+        font-size: 1.5rem;
+    }
+
+    .previous-title, .next-title {
+        font-size: 1.8rem;
+    }
+
+    .current-title {
+        font-size: 2rem;
+    }
+
+    .gallery-thumbs {
+        width: 80%;
+        left: 10%;
+    }
+
+    .swiper-pagination {
+        left: 5%;
+    }
+
+    .swiper-pagination .current-number {
+        font-size: 1.5rem;
+    }
+
+    .swiper-container.gallery-top {
+    width: 100%;
+    height: 100vh; /* يجعل الصورة تأخذ كامل ارتفاع الشاشة */
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يجعل الصورة تغطي الشاشة بالكامل */
+}
+
+}
+
+@media (max-width: 1280px) {
+    .slide-title {
+        font-size: 1.2rem;
+        left: 2%;
+    }
+
+    .previous-title, .next-title {
+        font-size: 1.5rem;
+    }
+
+    .current-title {
+        font-size: 1.8rem;
+    }
+
+    .gallery-thumbs {
+        width: 100%;
+        left: 0;
+    }
+
+    .swiper-pagination {
+        left: 3%;
+    }
+
+    .swiper-pagination .current-number {
+        font-size: 1.2rem;
+    }
+
+    .social-media {
+        right: 10px;
+        top: 50%;
+    }
+
+    .swiper-container.gallery-top {
+    width: 100%;
+    height: 100vh; /* يجعل الصورة تأخذ كامل ارتفاع الشاشة */
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يجعل الصورة تغطي الشاشة بالكامل */
+}
+
+}
+
+@media (max-width: 1420px) {
+    .header,
+    .slider,
+    .swiper-container.gallery-top {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .swiper-slide {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .swiper-slide img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
 
 </style>
 </head>

@@ -17,7 +17,7 @@
 
     .slider {
         width: 100%;
-        height: 80vh;
+        height: 85vh;
         background: url({{ asset('images/About/contactus.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -97,7 +97,7 @@
         bottom: 20%;
         transform: rotate(-90deg) translateY(100%);
         font-size: 12px;
-        color: #c3814c;
+        color: #ffffff71;
         font-weight: normal;
         transition: all 1s ease-in-out;
     }
@@ -106,9 +106,9 @@
         transform: rotate(-90deg) translateY(0);
     }
 
- .social-icons {
+    .social-icons {
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: 40%;
     transform: translateY(-50%);
     display: flex;
@@ -131,8 +131,9 @@
 }
 
 .social-icons a:hover {
-    transform: translateY(-5px) scale(1.6); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
-    border-color: #754d2e; /* تغيير لون الحواف عند الـ hover */
+    transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #904600;
 }
 
 
@@ -171,11 +172,13 @@
         .info-item h2 {
             color: #c3814c;
             margin-bottom: 10px;
+            font-family: 'Cairo', sans-serif;
         }
 
         .info-item p {
             color: #333;
             margin: 0;
+            font-family: 'Cairo', sans-serif;
         }
 
         .contact-form {
@@ -194,6 +197,7 @@
             margin-bottom: 5px;
             font-weight: bold;
             padding-bottom: 19px;
+            font-family: 'Cairo', sans-serif;
         }
 
         .form-group input,
@@ -263,10 +267,11 @@
         <div class="welcome-text">Alserb...</div>
         <div class="social-icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 

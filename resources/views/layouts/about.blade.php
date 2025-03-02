@@ -9,12 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nippor:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-      body {
-font-family: 'Nippor', sans-serif;
-        background: #ffffff;
-        position: relative
 
-      }
         .about-section {
             background-color: #ffffff;
             display: flex;
@@ -26,7 +21,7 @@ font-family: 'Nippor', sans-serif;
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 1s forwards;
-            position: relative;
+
         }
 
         @keyframes fadeInUp {
@@ -104,7 +99,7 @@ font-family: 'Nippor', sans-serif;
             object-fit: contain;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1220px) {
             .about-section {
                 flex-direction: column;
                 text-align: center;
@@ -118,6 +113,7 @@ font-family: 'Nippor', sans-serif;
                 width: 200px;
                 height: 200px;
                 margin-top: 30px;
+                display: none !important;
             }
             .content h1 {
                 font-size: 36px;

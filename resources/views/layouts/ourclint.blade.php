@@ -14,7 +14,7 @@
     .slider {
         width: 100%;
         height: 85vh;
-        background: url({{ asset('images/clients/clints.jpg') }}) center/cover no-repeat;
+        background: url({{ asset('images/slider2/clien.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -23,54 +23,37 @@
         overflow: hidden;
     }
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-    }
 
-    @keyframes moveBlur {
-    0% {
-        transform: translateX(0);
-        filter: blur(2px);
-    }
-    25% {
-        transform: translateX(-2px);
-        filter: blur(1.5px);
-    }
-    50% {
-        transform: translateX(2px);
-        filter: blur(1px);
-    }
-    75% {
-        transform: translateX(-2px);
-        filter: blur(1.5px);
-    }
-    100% {
-        transform: translateX(0);
-        filter: blur(2px);
-    }
-}
 
 .animated-text {
-    font-size:9em;
+    font-size: 7em;
     font-weight: bold;
     color: #f5f5f5;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    animation: moveBlur 1s infinite ease-in-out;
+    gap: 7px;
 }
 
+.animated-text span {
+    display: inline-block;
+    transform: translateY(0); /* لا يوجد تحريك افتراضي */
+}
 
-    .slider.active .animated-text {
-        transform: translateX(0);
-        opacity: 1;
+/* عند تمرير الماوس، يتم تفعيل الأنيميشن ويظل مستمرًا */
+.animated-text:hover span {
+    animation: wave 1.9s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
     }
-
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
     .welcome-text {
         position: absolute;
         right: 10px;
@@ -86,31 +69,37 @@
         transform: rotate(-90deg) translateY(0);
     }
 
+
     .social-icons {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-    }
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
 
-    .social-icons a {
-        text-decoration: none;
-        color: white;
-        font-size: 10px;
-        margin: 3px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        transition: 0.3s;
-    }
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* عرض الأيقونة */
+    height: 40px; /* ارتفاع الأيقونة */
+    border: 2px solid transparent; /* حواف شفافة افتراضيًا */
+    border-radius: 50%; /* لجعل الأيقونة دائرية */
+    transition: all 0.3s ease; /* تأثير سلس على جميع الخصائص */
+}
 
-    .social-icons a:hover {
-        background: #556B2F;
-    }
+.social-iconsk a:hover {
+    transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #904600;
+}
+
 
     .section {
         padding: 50px 20px;
@@ -147,10 +136,13 @@
         transform: translateY(-50px);
         transition: all .5s ease-in-out;
     }
-
+.container p {
+      font-family: Arial, sans-serif;
+}
     .clients-section.active h2 {
         opacity: 1;
         font-size: 50px;
+
         transform: translateY(0);
 
     }
@@ -160,6 +152,7 @@
         justify-content: space-between;
         align-items: flex-start;
         text-align: left;
+        font-family: Arial, sans-serif;
         opacity: 0;
         transform: translateY(50px);
         transition: all 1s ease-in-out 0.3s;
@@ -193,16 +186,20 @@
         opacity: 0;
         transform: translateY(-50px);
         transition: all 1s ease-in-out;
+        padding-left: 30px;
+        padding-bottom: 30px;
     }
 
     .partners.active h2 {
         opacity: 1;
+
         transform: translateY(0);
     }
 
     .partners p,
     .logos {
         opacity: 0;
+          font-family: Arial, sans-serif;
         transform: translateY(50px);
         transition: all 1s ease-in-out 0.3s;
     }
@@ -247,15 +244,16 @@
 
 <body>
     <section class="slider">
-        <div class="overlay"></div>
-        <h1 class="animated-text">Our Clients</h1>
+
+        <h1 class="animated-text"> Our Clients</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -309,6 +307,19 @@
             setTimeout(() => {
                 document.querySelector(".partners").classList.add("active");
             }, 1000);
+        });
+    </script>
+
+    <script>
+        const text = document.querySelector(".animated-text");
+        const letters = text.textContent.split("");
+        text.innerHTML = ""; // إزالة النص الأصلي
+
+        letters.forEach((letter, index) => {
+            const span = document.createElement("span");
+            span.textContent = letter;
+            span.style.animationDelay = `${index * 0.3}s`; // تأخير الموجة لكل حرف
+            text.appendChild(span);
         });
     </script>
 </body>

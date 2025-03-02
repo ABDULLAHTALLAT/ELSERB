@@ -198,99 +198,111 @@ background-color: #904600;
 
             color: #000;
         }
-
         .work-section {
             text-align: center;
-            padding: 50px 0;
+            margin-bottom: 50px;
         }
 
         .work-title {
             color: #c3814c;
             font-weight: bold;
             font-size: 50px;
-            margin-bottom: 20px;
-            padding-bottom: 30px;
+            margin-bottom: 40px;
+
         }
 
-.work-container {
+        .work-title:hover {
+            color: #904600;
+        }
+
+      .work-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* توزيع البطاقات بالتساوي */
-    max-width: 1300px; /* عرض أقصى للحاوية ليتناسب مع 4 بطاقات */
-    margin: auto; /* توسيط العنصر */
-    gap: 3px; /* المسافة بين البطاقات */
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+    max-width: 1500px; /* تحديد عرض مناسب لتحديد عدد الكروت */
+    margin: auto;
 }
 
 .work-card {
-    flex-basis: calc(25% - 15px); /* كل بطاقة تأخذ ربع المساحة مع الفراغات */
-    max-width: 300px; /* تحديد عرض أقصى */
+    position: relative;
+    width: 280px;
     height: 400px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    padding-top: 20px;
+    border-radius: 20px;
+    padding-bottom: 30px;
 }
 
-@media (max-width: 1200px) {
-    .work-card {
-        flex-basis: calc(50% - 15px); /* عندما تصغر الشاشة تصبح 2 في الصف */
-    }
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-    .work-card {
-        flex-basis: 100%; /* على الشاشات الصغيرة يصبح كل عنصر في صف مستقل */
-    }
+.work-card:hover img {
+    filter: brightness(100%);
+    transform: scale(1.05);
 }
 
-        .work-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-        }
+.work-card .work-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #c3814c;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
 
-        .work-card:hover img {
-            transform: translateY(30px);
-        }
+.work-card:hover .work-info {
+    opacity: 1;
+}
 
-        .work-info {
-            position: absolute;
-            bottom: -9999px;
-            /* جعل العنصر بعيداً عن الرؤية */
-            left: 0;
-            width: 100%;
-            background: rgba(123, 225, 20, 0.7);
-            font-size: large;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-        }
+.work-card .category-name {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 20px;
+}
 
-        .work-card:hover .work-info {
-            bottom: 0;
-        }
+.work-card:hover .category-name {
+    opacity: 1;
+}
 
-        .show-more {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: 2px solid #c3814c;
-            background: none;
-            color: #c3814c;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    .show-more {
+    display: inline-block; /* اجعل الرابط يبدو كزر */
+    text-decoration: none; /* إزالة الخط السفلي */
+    font-size: 18px; /* تكبير حجم النص */
+    padding: 15px 25px; /* تكبير الأبعاد */
+    border-radius: 5px; /* تدوير الحواف */
+    margin-top: 20px;
+    border: 2px solid #c3814c;
+    background: none;
+    color: #c3814c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
 
-        .show-more:hover {
-            background: #c3814c;
-            color: white;
-        }
+.show-more:hover {
+    background: #c3814c;
+    color: white;
+}
 
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
 
@@ -359,15 +371,50 @@ background-color: #904600;
 
 
     <div class="work-section">
-        <h2 class="work-title">Our Work</h2>
-        <button class="show-more" id="showMore">Show More</button>
-        <div class="work-container" id="workGallery">
 
+
+
+        <div class="container work-container">
+            <h2 class="work-title">Our Work</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
+                        <img src="{{ asset('images/work/1.jpg') }}" alt="Project 1">
+                        <div class="work-info">Project 1</div>
+                        <div class="category-name">Design</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="work-card" data-category="development" onclick="openProject('2', 'Development')">
+                        <img src="{{ asset('images/work/2.jpg') }}" alt="Project 2">
+                        <div class="work-info">Project 2</div>
+                        <div class="category-name">Development</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="work-card" data-category="photography" onclick="openProject('3', 'Photography')">
+                        <img src="{{ asset('images/work/3.jpg') }}" alt="Project 3">
+                        <div class="work-info">Project 3</div>
+                        <div class="category-name">Photography</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="work-card" data-category="design" onclick="openProject('4', 'Design')">
+                        <img src="{{ asset('images/work/4.jpg') }}" alt="Project 4">
+                        <div class="work-info">Project 4</div>
+                        <div class="category-name">Design</div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+        <a href="{{ route('ourwork') }}" class="show-more">Show More</a>
+
+
 
 
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 

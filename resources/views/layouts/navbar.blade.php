@@ -30,7 +30,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 90px;
     background-color: #00000000; /* شفاف في البداية */
     transition: background-color 0.1s ease-in-out;
     padding: 15px 20px;
@@ -39,7 +39,7 @@
 
 /* ✅ عندما يتم التمرير يصبح النيفبار أسود */
 .nav-section.scrolled {
-    background-color: rgba(0, 0, 0, 0.9); /* لون أسود */
+    background-color: rgb(0, 0, 0); /* لون أسود */
 }
 
 /* ✅ عندما يكون داخل القائمة الجانبية يبقى شفاف */
@@ -168,19 +168,21 @@
             display: flex;
             flex-direction: column;
             font-family: 'Cairo', sans-serif;
-            gap: 1rem;
+            gap: .4rem;
             text-align: center;
 
         }
 
-        .menu-item {
-            font-size: 2.5rem;
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-            transform: translateY(10px);
-            opacity: 0;
-        }
+       .menu-item {
+    font-size: 3rem;
+    font-weight: bold; /* جعل الخط عريضًا */
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    opacity: 0;
+}
+
 
         .menu-item:hover {
             color: var(--primary-color);
@@ -271,10 +273,42 @@
     margin-right: 8px;
 }
 
-/* ✅ إظهار القائمة عند تمرير الفأرة */
-.language-switcher:hover .language-menu {
-    display: block;
+@media (max-width: 1420px) { /* التغيير للأجهزة اللوحية والمحمولة */
+    .nav-section {
+        background-color: #0000009e !important; /* تغيير لون الخلفية */
+        width: 100%;
+    }
+
+    .menu-text {
+        font-size: 1.2rem;
+            display: none;
+ /* تقليل حجم النص */
+    }
+
+    .menu-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 20px;
+    }
+
+    .menu-item {
+        font-size: 1rem; /* تصغير حجم النص داخل القائمة */
+    }
+
+
+     .brand img {
+
+        margin-left: 120px;
+    }
+.logo-text {
+
+font-size: 1rem;
+
 }
+
+}
+
+
 
     </style>
 </head>

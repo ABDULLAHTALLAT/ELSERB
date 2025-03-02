@@ -8,10 +8,6 @@
         box-sizing: border-box;
     }
 
-    body {
-
-        background-color: #ffffff;
-    }
 
     .slider {
         width: 100%;
@@ -127,8 +123,9 @@ background-color: #c3814c
             color: #c3814c;
             font-size: 5em;
             font-weight: bold;
-            margin-bottom:-30px;
+            margin-bottom:-140px;
             text-align: left;
+
         }
 
         .about-content {
@@ -149,15 +146,17 @@ background-color: #c3814c
         /* الجزء الأيسر - النص الأول */
 
         .left-column p {
-            color: #444;
+            color: #000000;
             line-height: 1.6;
             font-size: 20px;
             max-width: 100%;
             text-align: left;
             margin: 0;
-            padding: 0;
+            padding-top: 140px;
+
             white-space: pre-line;
             font-weight: 500;
+            font-family: 'Cairo', sans-serif;
             letter-spacing: -0.2px;
         }
         /* الجزء الأيمن - النص الثاني */
@@ -165,10 +164,11 @@ background-color: #c3814c
         .right-column p {
             color: #444;
             line-height: 1.6;
-            font-size: 15px;
+            font-size: 20px;
             max-width: 100%;
             text-align: left;
              font-family: Arial, sans-serif;
+             font-style: bold;
             margin: 0;
             padding: 0;
             white-space: pre-line;
@@ -192,65 +192,64 @@ background-color: #c3814c
             margin-bottom: 30px;
             text-align: center;
         }
-        /* حاوية الكروت */
 
         .team-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             max-width: 1100px;
-            /* يضمن ألا يزيد عدد الكروت في الصف عن 5 */
             margin: auto;
         }
         /* تصميم الكرت */
 
-        .team-card {
-            position: relative;
-            width: 200px;
-            height: 280px;
-            background-color: #333;
-            /*border-radius: 10px;*/
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.4s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      .team-card {
+    position: relative;
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(135deg, #3e3d3d, #777676); /* تدرج لوني بين لونين */
+    /*border-radius: 10px;*/
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cairo', sans-serif;
+}
+
         /* الدائرة الفارغة بحواف خضراء */
 
         .team-card .circle-bg {
-            width: 190px;
-            height: 190px;
+            width: 195px;
+            height: 195px;
             background-color: transparent;
-            border: 2px solid #c3814c;
+            border: 6px solid #c3814c;
             border-radius: 50%;
             position: absolute;
-            top: 10px;
+            top: 30px;
             left: 50%;
             transform: translateX(-50%);
         }
         /* الصورة داخل الدائرة */
 
-        .team-card img {
-            width: 160px;
-            height:160px;
-            border-radius: 1px;
-            object-fit: cover;
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            filter: grayscale(100%);
-            transition: filter 0.2s ease-in-out;
-        }
-        /* عند تمرير الماوس على الكرت، تصبح الصورة ملونة */
+     .team-card img {
+    width: 170px; /* حجم الصورة */
+    height: 170px; /* تأكد من أن العرض والطول متساويان */
+    border-radius: 50%; /* يجعل الصورة دائرية */
+    object-fit: cover;
+    position: absolute;
+    top: 10px; /* ضبط الموضع */
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(100%);
+    transition: filter 0.2s ease-in-out;
+    border: 0px solid #ffffff00; /* إضافة إطار أبيض حول الصورة */
+}
 
-        .team-card:hover img {
-            filter: grayscale(0%);
-        }
-        /* تأثيرات التحريك عند تمرير الماوس */
-        /* التأثير الأول: يصعد للأعلى */
+.team-card:hover img {
+    filter: grayscale(0%);
+}
+
 
         .team-card:nth-child(odd):hover {
             transform: translateY(-20px);
@@ -267,10 +266,11 @@ background-color: #c3814c
             bottom: -100%;
             left: 0;
             width: 100%;
-            background-color: #333;
+            background-color: #33333300;
             color: white;
             padding: 10px;
             transition: bottom 0.4s ease-in-out;
+            font-family: 'Cairo', sans-serif;
         }
         /* عند تمرير الماوس، تظهر معلومات الفريق */
 
@@ -390,11 +390,11 @@ background-color: #c3814c
 
 
     <section class="about-section">
-        <h2 class="about-title">About Us</h2>
+        <h2 class="about-title">Alserb</h2>
         <div class="about-content">
             <div class="about-column left-column">
                 <p>
-                    Alserb is a marketing company that depends on knowledge and experience. The company helps commercial and service companies to help them and build an integrated community on the Internet, starting from building the brand and targeting the right audience
+                  <space><space> is a marketing company that depends on knowledge and experience. The company helps commercial and service companies to help them and build an integrated community on the Internet, starting from building the brand and targeting the right audience
                     for you, to designing and creating complete websites, in addition to campaign and account management services on the Internet on All platforms.
                 </p>
             </div>
@@ -403,8 +403,7 @@ background-color: #c3814c
                     Alserb brings you the best of the digital world. We are known by our planning and creative execution backed by original and engaging content that creates great customer interaction. If you are looking for a strong, reliable and successful partner with
                     extensive experience in successful digital marketing plans, then "Alserb" is your best choice. Before we can make any project successful, we must make sure that the people working on the project have experience in this field. Therefore,
                     in Alserb, we believe in the Arab talents in the field of e-marketing, and we have put in our plan that obtaining talents and skilled employees for their work is much more important than the profits of the company.
-                </p>
-                <p>
+
                     Today, all Alserb clients praise its employees, from the most senior positions to the new interns in the company. All members of Alserb undergo extensive training before starting Any project and more than 70 % of them are academics and e-marketing specialists
                     in all fields.
                 </p>
@@ -427,13 +426,13 @@ background-color: #c3814c
                 <img src="{{ asset('images/About/staf/Ab.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Abanoub Nader</h3>
-                <p>Graphic Designer</p>
+                <h3>Ahmed Abdelhady</h3>
+                <p>Founder CEO</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/Abdo.png') }}" alt="Team Member" width="100%" hight="100%" top="-25px">
+                <img src="{{ asset('images/About/staf/abdo2.png') }}" alt="Team Member" width="100%" hight="100%" top="-25px">
 
             </div>
             <div class="team-info">
@@ -443,56 +442,56 @@ background-color: #c3814c
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/4.jpeg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/aba.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Abanoub Nader</h3>
+                <p>Graphics Designer</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/5.webp') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/y.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Yasmine Ibrahim</h3>
+                <p>SocialMedia Specialist</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/6.jpg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/most.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Mustafa Ashraf</h3>
+                <p>SocialMedia Specialist</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/7.webp') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/2 (2).png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Ahmed Al-Fateh</h3>
+                <p>SocialMedia Specialist</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/8.jpeg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/amira.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Amira</h3>
+                <p>والله ماعرف </p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/9.jpg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/16.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Adham </h3>
+                <p>علي الله </p>
             </div>
         </div>
         <div class="team-card">
@@ -500,8 +499,8 @@ background-color: #c3814c
                 <img src="{{ asset('images/About/staf/10.jpeg') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Mahamoud </h3>
+                <p></p>
             </div>
         </div>
         <div class="team-card">

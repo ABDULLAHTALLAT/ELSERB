@@ -13,9 +13,9 @@
             color: white;
             padding: 24px 24px;
             border-radius: 12px; /* زوايا مستديرة */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(68, 68, 68, 0.115);
             text-decoration: none;
-
+   font-family: 'Cairo', sans-serif;
             font-size: 14px;
             text-transform: uppercase; /* لجعل النص بأحرف كبيرة */
             cursor: pointer;
@@ -31,6 +31,7 @@
         .float:hover {
             background-color: #904600; /* لون أغمق عند التمرير */
             transform: scale(1.05);
+               box-shadow: 0 4px 6px rgb(28, 28, 28);
         }
     </style>
 </head>

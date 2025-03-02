@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <style>
  * {
         margin: 0;
@@ -7,12 +8,12 @@
 
     body {
         font-family: Arial, sans-serif;
-        background-color: #000;
+        background-color: #000000;
     }
 
     .slider {
         width: 100%;
-        height: 75vh;
+        height: 85vh;
         background: url({{ asset('images/work/work.png') }}) center/cover no-repeat;
         background-attachment: fixed;
         display: flex;
@@ -85,361 +86,246 @@
         transform: rotate(-90deg) translateY(0);
     }
 
-    .social-icons {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-    }
+  .social-icons {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
 
-    .social-icons a {
-        text-decoration: none;
-        color: white;
-        font-size: 10px;
-        margin: 3px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        transition: 0.3s;
-    }
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* عرض الأيقونة */
+    height: 40px; /* ارتفاع الأيقونة */
+    border: 2px solid transparent; /* حواف شفافة افتراضيًا */
+    border-radius: 50%; /* لجعل الأيقونة دائرية */
+    transition: all 0.3s ease; /* تأثير سلس على جميع الخصائص */
+}
 
-    .social-icons a:hover {
-        background: #b57746;
-    }
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.1); /* تحريك الأيقونة للأمام قليلاً وتكبيرها */
+    border-color: #c3814c; /* تغيير لون الحواف عند الـ hover */
+background-color: #904600;
+}
 
 
-
-
-  .work-section {
-            text-align: center;
-            padding: 50px;
-            background-color: #000000;
+    .project-section {
+            background-color: rgba(0, 0, 0, 0.364);
         }
 
-        .work-title {
+        .filter-section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #c3814c;
+        }
+          h2:hover {
+
+            color: #663106;
+
+        }
+
+        .category-container {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 25px;
+            display: inline-block;
+            width: 700PX;
+        }
+
+        .category-container span {
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 500;
+            font-family: 'Cairo', sans-serif;
+            color: #777;
+            transition: color 0.3s ease-in-out;
+
+        }
+
+        .category-container span.active {
             color: #c3814c;
             font-weight: bold;
-            font-size: 50px;
-            margin-bottom: 20px;
-            padding-bottom: 30px;
         }
 
-.work-container {
+        .category-container span:hover {
+            color: #c3814c;
+        }
+
+      .work-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-     padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 200px;
-        padding-right: 200px;
-
-        gap: 6px;
+    gap: 10px;
+    padding: 40px;
+    max-width: 1100px; /* تحديد عرض مناسب لتحديد عدد الكروت */
+    margin: auto;
 }
 
 .work-card {
     position: relative;
-    width: calc(25% - 6px); /* 4 كروت في الصف الواحد (100% / 4) مع مراعاة الفجوة بين الكروت */
+    width: 250px;
     height: 400px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-
+    transition: transform 1s ease-in-out;
+    border-radius: 20px;
+    padding-bottom: 30px;
 }
 
-/* عند تغيير الحجم على الشاشات الصغيرة (مثل التابلت) */
-@media (max-width: 1024px) {
-    .work-card {
-        width: calc(50% - 6px); /* 2 كروت في الصف الواحد */
-    }
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(30%);
+    transition: 0.3s;
 }
 
-/* عند تغيير الحجم على الشاشات الصغيرة جدًا (مثل الموبايل) */
-@media (max-width: 768px) {
-    .work-card {
-        width: calc(100% - 6px); /* كارت واحد في الصف الواحد */
-    }
+.work-card:hover img {
+    filter: brightness(100%);
+    transform: scale(1.12);
 }
 
+.work-card .work-info,
+.work-card .category-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+                font-family: 'Cairo', sans-serif;
 
-        .work-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-        }
+    opacity: 1; /* اجعل الاسم والقسم ظاهرين افتراضيًا */
+    transition: opacity 0.3s ease-in-out;
+}
 
-        .work-card:hover img {
-            transform: translateY(30px);
-        }
+.work-card .work-info {
+    color: #c3814c;
+}
 
-        .work-info {
-            position: absolute;
-            bottom: -9999px;
-            /* جعل العنصر بعيداً عن الرؤية */
-            left: 0;
-            width: 100%;
-            background: #c3814c;
-            font-size: large;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-        }
+.work-card .category-name {
+    top: 59%;
+    color: #ffffff;
+    font-size: 30px;
+}
 
-        .work-card:hover .work-info {
-            bottom: 0;
-        }
-
-        .show-more {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: 2px solid #c3814c;
-            background: none;
-            color: #c3814c;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .show-more:hover {
-            background: #c3814c;
-            color: white;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-
-
-
+.work-card:hover .work-info,
+.work-card:hover .category-name {
+    opacity: 0; /* إخفاء الاسم والقسم عند التحويم */
+}
 
 </style>
 <body>
 
         <section class="slider">
             <div class="overlay"></div>
-            <h1 class="animated-text">Our Work</h1>
+            <h1 class="animated-text">Portfolio<space><space></h1>
             <div class="welcome-text">Alserb..</div>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-google"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-snapchat"></i></a>
             </div>
         </section>
 
-<div class="work-section">
-    <h2 class="work-title">Featured Portfolio</h2>
-    <div class="work-container" id="workGallery"></div>
-</div>
+<section class="project-section">
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="filter-section">
+        <h2>Featured Portfolio</h2>
+        <div class="category-container">
+            <span class="active" data-category="all">All</span>
+            <span data-category="Video & Photography">Video & Photography </span>
+            <span data-category="Motion Graphic">Motion Graphic</span>
+            <span data-category="Web Solutions"> Web Solutions </span>
+            <span data-category="Mobile Apps">Mobile Apps </span>
+            <span data-category="Graphic Design">Graphic Design</span>
+            <span data-category="Branding"> Branding</span>
+            <span data-category="Packaging">Packaging</span>
+            <span data-category="Social Media & Digital Marketing">Social Media & Digital Marketing</span>
+            <span data-category="Search Engine Optimization">Search Engine Optimization</span>
+        </div>
+    </div>
+
+    <div class="container work-container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
+                    <img src="images/work/1.jpg" alt="Project 1">
+                    <div class="work-info">Project 1</div>
+                    <div class="category-name">Design</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="work-card" data-category="development" onclick="openProject('2', 'Development')">
+                    <img src="images/work/2.jpg" alt="Project 2">
+                    <div class="work-info">Project 2</div>
+                    <div class="category-name">Development</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="work-card" data-category="photography" onclick="openProject('3', 'Photography')">
+                    <img src="images/work/3.jpg" alt="Project 3">
+                    <div class="work-info">Project 3</div>
+                    <div class="category-name">Photography</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="work-card" data-category="design" onclick="openProject('4', 'Design')">
+                    <img src="images/work/4.jpg" alt="Project 4">
+                    <div class="work-info">Project 4</div>
+                    <div class="category-name">Design</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+
+
+
 <script>
-    $(document).ready(function () {
-        let projects = [{
-            image: "{{ asset('images/work/1.jpg') }}",
-            name: "Project 1",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 2",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 3",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 4",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/1.jpg') }}",
-            name: "Project 5",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 6",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 7",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/3.jpg') }}",
-            name: "Project 8",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 2",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 3",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 4",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/1.jpg') }}",
-            name: "Project 5",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 6",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 7",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/3.jpg') }}",
-            name: "Project 8",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 2",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 3",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 4",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/1.jpg') }}",
-            name: "Project 5",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 6",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 7",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/3.jpg') }}",
-            name: "Project 8",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 2",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 3",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 4",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/1.jpg') }}",
-            name: "Project 5",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 6",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 7",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/3.jpg') }}",
-            name: "Project 8",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 2",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 3",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 4",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/1.jpg') }}",
-            name: "Project 5",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 6",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 7",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/3.jpg') }}",
-            name: "Project 8",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 2",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 3",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 4",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/1.jpg') }}",
-            name: "Project 5",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/4.jpg') }}",
-            name: "Project 6",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/2.jpg') }}",
-            name: "Project 7",
-            category: "Motion Graphic"
-        }, {
-            image: "{{ asset('images/work/3.jpg') }}",
-            name: "Project 8",
-            category: "Motion Graphic"
-        }];
+    document.querySelectorAll(".category-container span").forEach(item => {
+        item.addEventListener("click", function () {
+            document.querySelectorAll(".category-container span").forEach(el => el.classList.remove("active"));
+            this.classList.add("active");
 
-        // لا حاجة لاستخدام الزر "Show More" هنا
-        function renderProjects() {
-            let container = $("#workGallery");
+            let selectedCategory = this.getAttribute("data-category");
+            let cards = document.querySelectorAll(".work-card");
 
-            // عرض جميع المشاريع في البداية
-            projects.forEach(project => {
-                let card = `
-                    <div class="work-card">
-                        <img src="${project.image}" alt="${project.name}">
-                        <div class="work-info">
-                            <h5>${project.name}</h5>
-                            <p>${project.category}</p>
-                        </div>
-                    </div>
-                `;
-                container.append(card);
+            cards.forEach(card => {
+                if (selectedCategory === "all" || card.dataset.category === selectedCategory) {
+                    card.closest('.col-md-3').style.display = "block";
+                } else {
+                    card.closest('.col-md-3').style.display = "none";
+                }
             });
-        }
-
-        // عرض جميع المشاريع عند تحميل الصفحة
-        renderProjects();
+        });
     });
-</script>
 
+    function openProject(id, category) {
+        window.location.href = `project-details.html?id=${id}&category=${category}`;
+    }
+</script>
     <script>
             const text = document.querySelector(".animated-text");
             const letters = text.textContent.split("");

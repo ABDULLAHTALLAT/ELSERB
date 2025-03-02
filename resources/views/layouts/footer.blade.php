@@ -63,12 +63,14 @@
             font-weight: bold;
             color: white;
             margin-bottom: 10px;
+            font-family: 'Cairo', sans-serif;
         }
         .footer-email {
             color: #c3814c;
             font-size: 16px;
             text-decoration: none;
             margin-bottom: 15px;
+            font-family: 'Cairo', sans-serif;
         }
         /* أيقونات السوشيال ميديا */
         .social-icon {
@@ -89,11 +91,13 @@
         /* الروابط */
         .footer-links {
             margin-bottom: 10px;
+
         }
         .footer-links a {
             color: #c3814c;
             text-decoration: none;
             margin: 0 5px;
+            font-family: 'Cairo', sans-serif;
         }
         .footer-links a:hover {
             text-decoration: underline;
@@ -103,10 +107,14 @@
             margin-top: 15px;
             color: #777;
             font-size: 14px;
+            font-family: 'Cairo', sans-serif;
         }
         .highlight {
             color: #c3814c;
         }
+
+
+      
 
     </style>
 </head>

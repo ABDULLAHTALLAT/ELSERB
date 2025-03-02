@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مشغل الفيديو</title>
     <style>
-   .video-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    cursor: pointer;
-    overflow: hidden; /* يمنع أي تجاوز خارج الإطار */
-}
+        .video-section {
+            position: relative;
+            width: 100%;
+            max-width: 1530px;
+            height: auto;
+            cursor: pointer;
+            overflow: hidden;
+            margin: auto;
+        }
 
-.video-section img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover; /* يجعل الصورة تملأ كامل المساحة مع القص إذا لزم الأمر */
-    display: block;
-}
+        .video-section img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
 
         .play-button {
             position: absolute;
@@ -28,8 +30,8 @@
             transform: translate(-50%, -50%);
             background: rgba(0, 0, 0, 0.6);
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,7 +40,7 @@
 
         .play-button::before {
             content: '\25B6';
-            font-size: 50px;
+            font-size: 40px;
             color: white;
         }
 
@@ -57,26 +59,39 @@
 
         .popup-video iframe {
             width: 90%;
-            height: 80%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
             border-radius: 10px;
             border: none;
         }
 
         .close-btn {
             position: absolute;
-            top: 20px;
-            right: 30px;
+            top: 15px;
+            right: 20px;
             font-size: 30px;
             cursor: pointer;
             color: white;
             z-index: 1001;
+        }
+
+        /* تحسين الاستجابة للشاشات الصغيرة */
+        @media (max-width: 600px) {
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .play-button::before {
+                font-size: 30px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="video-section" onclick="openVideo()">
-        <img src="{{ asset('images/video/09.webp') }}" alt="عرض الفيديو">
+        <img src="{{ asset('images/video/123.webp') }}" alt="عرض الفيديو">
         <div class="play-button"></div>
     </div>
 
@@ -89,8 +104,6 @@
         function openVideo() {
             var popup = document.getElementById('popup-video');
             var iframe = document.getElementById('youtube-video');
-
-            // تحديد رابط الفيديو (ضع رابط الفيديو من اليوتيوب هنا)
             var videoUrl = "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1";
 
             iframe.src = videoUrl;
@@ -102,12 +115,9 @@
             var iframe = document.getElementById('youtube-video');
 
             popup.style.display = 'none';
-
-            // تعطيل الفيديو عن طريق إزالة الـ src
             iframe.src = "";
         }
 
-        // إغلاق الفيديو عند النقر خارج المشغل
         document.getElementById('popup-video').addEventListener('click', function (event) {
             var iframe = document.getElementById('youtube-video');
             if (!iframe.contains(event.target) && !event.target.classList.contains('close-btn')) {
@@ -115,7 +125,6 @@
             }
         });
 
-        // إغلاق الفيديو عند التمرير لأسفل
         window.addEventListener('scroll', function () {
             closeVideo();
         });

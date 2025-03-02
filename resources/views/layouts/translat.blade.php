@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar">
 
 <head>
     <meta charset="UTF-8">
@@ -59,13 +57,12 @@
             text-decoration: none;
             padding: 10px;
             color: #c3814c;
-            font-size: 16px;
+            font-size: 18px;
             text-align: right;
             gap: 10px;
-            /* إضافة مسافة بين العلم والكلمة */
+
         }
 
-        /* تنسيق الصور داخل القائمة */
         .menu-list img {
             width: 20px;
             height: 15px;

@@ -134,6 +134,7 @@
             color: #444;
             font-size: 1.2rem;
             margin-bottom: 50px;
+            font-family: 'Cairo', sans-serif;
         }
 
         .services-grid {
@@ -186,6 +187,8 @@
             position: relative;
             text-align: center;
             padding-bottom: 30px;
+                        font-family: 'Cairo', sans-serif;
+
         }
 
         .service-item:hover .service-title::after {
@@ -245,7 +248,7 @@
         .success-info h2 {
             color: #c3814c;
             font-size: 3em;
-
+            font-family: 'Cairo', sans-serif;
             margin-bottom: 10px;
         }
 

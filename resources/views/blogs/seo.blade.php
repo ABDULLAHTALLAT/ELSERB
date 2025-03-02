@@ -6,90 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO Importance</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            background: #f9f9f9;
-            color: #000000;
-        }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
+    body {
+        font-family: 'Cairo', sans-serif;
+        line-height: 1.8;
+        margin: 0;
+        background: #f9f9f9;
+        color: #000000;
+    }
 
-            padding:100px;
+    .container {
+        max-width: 800px;
+        margin: auto;
+
+        padding: 100px;
 
 
-        }
+    }
 
-        .image {
-            width: 100%;
-            border-radius: 5px;
-            transition: 0.3s ease-in-out;
-            padding-top: 40px;
-        }
+    .image {
+        width: 100%;
+        border-radius: 2px;
+        transition: 0.1s ease-in-out;
+        padding-top: 30px;
+    }
 
-        .image:hover {
-            filter: brightness(80%);
-        }
+    .image:hover {
+        filter: brightness(90%);
+    }
 
-        h1 {
-            color: #873e23;
-            font-size: 30px;
-        }
+    h1 {
+        color: #c3814c;
+        font-size: 30px;
+        font-family: 'Cairo', sans-serif;
+    }
+     h1:hover {
+        color: #3e2612;
 
-        .date {
-            color: gray;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
+    }
 
-              .social-icons {
-            margin: 10px 0;
-        }
+    .date {
+        color: gray;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-        }
+    .social-icons {
+        margin: 10px 0;
+    }
 
-        .google {
-            background: #4c4c6d;
-        }
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        border-radius: 5px;
+        margin: 5px;
+    }
 
-        .twitter {
-            background: #55acee;
-        }
+    .google {
+        background: #4c4c6d;
+    }
 
-        .google-plus {
-            background: #dd4b39;
-        }
+    .twitter {
+        background: #55acee;
+    }
 
-        .linkedin {
-            background: #0077b5;
-        }
+    .google-plus {
+        background: #dd4b39;
+    }
 
-        .behance {
-            background: #ff2b2b;
-        }
+    .linkedin {
+        background: #0077b5;
+    }
 
-        .content h2,
-        .content h3 {
-            color: #873e23;
-        }
+    .behance {
+        background: #ff2b2b;
+    }
 
-        .content p {
-            text-align: justify;
-            margin-bottom: 20px;
-        }
+    .content h2,
+    .content h3 {
+        color: #c3814c;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    .content p {
+        text-align: justify;
+        margin-bottom: 20px;
+        font-family: 'Cairo', sans-serif;
+    }
     </style>
 </head>
 

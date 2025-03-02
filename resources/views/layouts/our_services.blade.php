@@ -13,6 +13,8 @@
             padding: 6rem 2rem;
             background-color: #000000fc;
             position: relative;
+            width: 100%;
+            height: auto;
         }
 
         .section-title {
@@ -35,6 +37,7 @@
         }
 
         .service-card {
+             width: calc(33.33% - 2rem); /* ثلاثة كروت في الصف */
             width: 350px;
             height: 490px;
             border-radius: 20px;
@@ -60,11 +63,12 @@
             align-items: center;
             justify-content: center;
             padding: 2rem;
+
         }
 
         .service-icon {
-            width: 110%;
-            height: 98%;
+            width: 120%;
+            height: 100%;
             margin-bottom: 1.7rem;
             transition: transform 0.2ms ease;
             overflow: hidden;
@@ -79,8 +83,7 @@
         }
 
         .service-card:hover .service-icon {
-            transform: scale(1.1);
-            /* تكبير الصورة بشكل بسيط */
+            transform: scale(1);
             z-index: 2;
             background-color: #1a181800;
 
@@ -93,9 +96,16 @@
             margin-top: 2rem;
             text-transform: uppercase;
             letter-spacing: .4px;
+            font-family: 'Cairo', sans-serif;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1420px) {
+ .services-section {
+    width: 100%;
+    height: auto;
+ }
+
+
             .service-card {
                 width: 280px;
                 height: 350px;
@@ -108,6 +118,21 @@
                 font-size: 2rem;
             }
         }
+
+
+
+   @media (max-width: 1024px) {
+    .service-card {
+        width: calc(50% - 2rem); /* اثنان كروت في الصف */
+    }
+}
+
+/* عند تصغير الشاشة إلى أقل من 600px يصبح هناك كارت واحد في الصف */
+@media (max-width: 600px) {
+    .service-card {
+        width: 100%; /* كارت واحد في الصف */
+    }
+}
     </style>
 </head>
 
@@ -118,7 +143,7 @@
           <a href="{{ route('video-photography') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/234.png') }}" alt="Video & Photography">
+                        <img src="{{ asset('images/ourserves/videography.png') }}" alt="Video & Photography">
                     </div>
                     <h3>Video & Photography</h3>
                 </div>
@@ -127,7 +152,7 @@
             <a href="{{ route('motion-graphic') }}" class="service-card">
                 <div class="service-content">
                     <div class="service-icon">
-                        <img src="{{ asset('images/ourserves/mot.png') }}" alt="Motion Graphic">
+                        <img src="{{ asset('images/ourserves/motion.png') }}" alt="Motion Graphic">
                     </div>
                     <h3>Motion Graphic</h3>
                 </div>

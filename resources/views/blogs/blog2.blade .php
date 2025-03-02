@@ -7,7 +7,7 @@
     <title>SEO Importance</title>
     <style>
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Cairo', sans-serif;
         line-height: 1.8;
         margin: 0;
         background: #f9f9f9;
@@ -25,18 +25,24 @@
 
     .image {
         width: 100%;
-        border-radius: 5px;
-        transition: 0.3s ease-in-out;
-        padding-top: 40px;
+        border-radius: 2px;
+        transition: 0.1s ease-in-out;
+        padding-top: 30px;
     }
 
     .image:hover {
-        filter: brightness(80%);
+        filter: brightness(90%);
     }
 
     h1 {
-        color: #873e23;
+        color: #c3814c;
         font-size: 30px;
+        font-family: 'Cairo', sans-serif;
+    }
+
+    h1:hover {
+        color: #3e2612;
+
     }
 
     .date {
@@ -83,12 +89,15 @@
 
     .content h2,
     .content h3 {
-        color: #873e23;
+        color: #c3814c;
+        font-family: 'Cairo', sans-serif;
+
     }
 
     .content p {
         text-align: justify;
         margin-bottom: 20px;
+        font-family: 'Cairo', sans-serif;
     }
     </style>
 </head>

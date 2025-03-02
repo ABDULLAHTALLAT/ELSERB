@@ -167,17 +167,22 @@
             flex-direction: column;
             gap: 1.1rem;
             text-align: center;
+                        font-family: 'Cairo', sans-serif;
+
         }
 
-        .menu-item {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-            transform: translateY(20px);
-            opacity: 0;
-        }
+      .menu-item {
+    font-size: 3rem;
+    font-weight: bold; /* جعل الخط عريضًا */
+                font-family: 'Cairo', sans-serif;
+
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    opacity: 0;
+}
+
 
         .menu-item:hover {
             color: var(--primary-color);
@@ -229,6 +234,43 @@
             transform: translateZ(30px);
             z-index: 10;
         }
+
+        @media (max-width: 1024px) { /* التغيير للأجهزة اللوحية والمحمولة */
+    .nav-section {
+        background-color: #000 !important; /* تغيير لون الخلفية */
+    }
+
+    .menu-text {
+        font-size: 1.2rem;
+            display: none;
+ /* تقليل حجم النص */
+    }
+
+    .menu-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 20px;
+    }
+
+    .menu-item {
+        font-size: 1rem; /* تصغير حجم النص داخل القائمة */
+    }
+
+
+     .brand img {
+
+        margin-left: 120px;
+    }
+.logo-text {
+
+font-size: 1rem;
+margin-left: 10px;
+
+}
+
+}
+
+
     </style>
 </head>
 
@@ -260,7 +302,7 @@
             <a href="{{ route('home') }}" class="menu-item">Home</a>
             <a href="{{ route('ourservice') }}" class="menu-item">Our Services</a>
             <a href="{{ route('ourclients') }}" class="menu-item">Our Clients</a>
-            <a href="{{ route('ourwork') }}" class="menu-item">Our Works</a>
+            <a href="{{ route('ourwork') }}" class="menu-item">Portfolio</a>
             <a href="{{ route('quotations') }}" class="menu-item">Get a Quotation</a>
             <a href="{{ route('aboutus') }}" class="menu-item">About Us</a>
             <a href="{{ route('contact') }}" class="menu-item">Contact</a>

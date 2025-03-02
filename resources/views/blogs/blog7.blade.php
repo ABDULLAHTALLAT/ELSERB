@@ -6,89 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO Importance</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            background: #f9f9f9;
-            color: #000000;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-
-            padding:100px;
 
 
-        }
 
-        .image {
-            width: 100%;
-            border-radius: 5px;
-            transition: 0.3s ease-in-out;
-            padding-top: 40px;
-        }
+     body {
+        font-family: 'Cairo', sans-serif;
+        line-height: 1.8;
+        margin: 0;
+        background: #f9f9f9;
+        color: #000000;
+    }
 
-        .image:hover {
-            filter: brightness(80%);
-        }
+    .container {
+        max-width: 800px;
+        margin: auto;
 
-        h1 {
-            color: #873e23;
-            font-size: 30px;
-        }
+        padding: 100px;
 
-        .date {
-            color: gray;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
 
-             .social-icons {
-            margin: 10px 0;
-        }
+    }
 
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-        }
+    .image {
+        width: 100%;
+        border-radius: 2px;
+        transition: 0.1s ease-in-out;
+        padding-top: 30px;
+    }
 
-        .google {
-            background: #4c4c6d;
-        }
+    .image:hover {
+        filter: brightness(90%);
+    }
 
-        .twitter {
-            background: #55acee;
-        }
+    h1 {
+        color: #c3814c;
+        font-size: 30px;
+        font-family: 'Cairo', sans-serif;
+    }
+     h1:hover {
+        color: #3e2612;
 
-        .google-plus {
-            background: #dd4b39;
-        }
+    }
 
-        .linkedin {
-            background: #0077b5;
-        }
+    .date {
+        color: gray;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
 
-        .behance {
-            background: #ff2b2b;
-        }
-        .content h2,
-        .content h3 {
-            color: #873e23;
-        }
+    .social-icons {
+        margin: 10px 0;
+    }
 
-        .content p {
-            text-align: justify;
-            margin-bottom: 20px;
-        }
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .google {
+        background: #4c4c6d;
+    }
+
+    .twitter {
+        background: #55acee;
+    }
+
+    .google-plus {
+        background: #dd4b39;
+    }
+
+    .linkedin {
+        background: #0077b5;
+    }
+
+    .behance {
+        background: #ff2b2b;
+    }
+
+    .content h2,
+    .content h3 {
+        color: #c3814c;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    .content p {
+        text-align: justify;
+        margin-bottom: 20px;
+        font-family: 'Cairo', sans-serif;
+    }
     </style>
 </head>
 

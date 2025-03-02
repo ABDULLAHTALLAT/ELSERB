@@ -60,7 +60,7 @@
             margin-bottom: 8px;
             font-size: 20px;
             font-weight: normal !important;
-
+font-family: 'Cairo', sans-serif;
         }
 
         input[type="text"],
@@ -246,11 +246,14 @@
         .contact-item p {
             font-size: 16px;
             font-weight: normal;
+                        font-family: 'Cairo', sans-serif;
+
             margin: 0;
         }
 
         .contact-item small {
-            color: rgba(0, 0, 0, 0.636);
+            color: rgb(71, 71, 71);
+            font-family: 'Cairo', sans-serif;
         }
 
         .contact-item:hover {
@@ -269,8 +272,7 @@
         <div class="form-section">
             <h1>Ready to get started?</h1>
             <h2>Request For a Quotation</h2>
-            <br>
-            <br>
+
 
             {{-- quotations.store --}}
             <form action="{{ route('quotations.store') }}" method="POST" id="quotationForm">
@@ -350,6 +352,8 @@
                         </label>
                     </div>
                 </div>
+<br>
+<br>
 
                 <label for="message">YOUR MESSAGE</label>
                 <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
