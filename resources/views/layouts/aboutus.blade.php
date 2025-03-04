@@ -430,6 +430,16 @@ background-color: #c3814c
                 <p>Founder CEO</p>
             </div>
         </div>
+
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/amira.png') }}" alt="Team Member">
+            </div>
+            <div class="team-info">
+                <h3>Amira</h3>
+                <p> </p>
+            </div>
+        </div>
         <div class="team-card">
             <div class="circle-bg">
                 <img src="{{ asset('images/About/staf/abdo2.png') }}" alt="Team Member" width="100%" hight="100%" top="-25px">
@@ -476,22 +486,14 @@ background-color: #c3814c
                 <p>SocialMedia Specialist</p>
             </div>
         </div>
-        <div class="team-card">
-            <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/amira.png') }}" alt="Team Member">
-            </div>
-            <div class="team-info">
-                <h3>Amira</h3>
-                <p>والله ماعرف </p>
-            </div>
-        </div>
+
         <div class="team-card">
             <div class="circle-bg">
                 <img src="{{ asset('images/About/staf/16.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
                 <h3>Adham </h3>
-                <p>علي الله </p>
+                <p> خليها علي الله  </p>
             </div>
         </div>
         <div class="team-card">
