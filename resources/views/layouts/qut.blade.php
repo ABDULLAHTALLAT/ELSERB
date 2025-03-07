@@ -262,6 +262,45 @@ font-family: 'Cairo', sans-serif;
         }
 
 
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 5%;
+    }
+
+    .form-section {
+        max-width: 100%;
+        margin-top: 100px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .image-section {
+        display: none; /* إخفاء الصورة */
+    }
+
+    .contact-info {
+        height: auto;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-item {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
 
 
     </style>

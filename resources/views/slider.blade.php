@@ -426,12 +426,12 @@ background: #e28743;
 
         <!-- السوشيال ميديا -->
     <ul class="social-media">
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fab fa-snapchat"></i></a></li>
+        <li><a href="https://www.instagram.com/alserbagency/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/alserbagency/"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="http://linkedin.com/company/alserbagency/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.tiktok.com/@alserbagency"><i class="fab fa-tiktok"></i></a></li>
+        <a href="https://www.youtube.com/@alserbagency"><i class="fab fa-youtube"></i></a>
+        <li><a href="https://www.snapchat.com/add/alserbmarketing"><i class="fab fa-snapchat"></i></a></li>
     </ul>
 
 

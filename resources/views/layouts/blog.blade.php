@@ -154,7 +154,93 @@ background-color: #b88f61;
             text-decoration: underline;
             text-decoration-color: #bb7b54;
         }
+        @media (max-width: 1200px) {
+    .slider {
+        height: 60vh;
+    }
+    .animated-text {
+        font-size: 4em;
+    }
 
+     .social-icons a {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .slider {
+        height: 60vh;
+    }
+    .animated-text {
+        font-size: 4em;
+    }
+
+    .social-iconc a {
+        display: none;
+            }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 50vh;
+    }
+    .animated-text {
+        font-size: 3em;
+    }
+      .social-iconc {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        height: 40vh;
+    }
+    .animated-text {
+        font-size: 2em;
+    }
+    .social-iconc {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        display: none;
+    }
+    .read-more {
+    display: none; /* إخفاء زر القراءة */
+}
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+     .card p {
+        display: none;
+    }
+    .read-more {
+    display: none; /* إخفاء زر القراءة */
+}
+}
 
 </style>
 <body>
@@ -163,12 +249,12 @@ background-color: #b88f61;
         <h1 class="animated-text">News</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-iconc">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-snapchat"></i></a>
+        <a href="https://www.instagram.com/alserbagency/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/alserbagency/"><i class="fab fa-facebook"></i></a>
+        <a href="http://linkedin.com/company/alserbagency/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@alserbagency"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@alserbagency"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.snapchat.com/add/alserbmarketing"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 

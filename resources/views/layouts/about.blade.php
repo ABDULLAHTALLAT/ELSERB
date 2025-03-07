@@ -270,6 +270,37 @@
             border-radius: 50%;
             object-fit: cover;
         }
+
+
+        @media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 50px; /* تكبير العنوان */
+    }
+
+    .content p {
+        font-size: 20px; /* تكبير الخط */
+        line-height: 1.8;
+        color:#000000;
+    }
+
+    .gif-container {
+        display: none !important; /* إخفاء الصورة تمامًا */
+    }
+}
+
     </style>
 </head>
 

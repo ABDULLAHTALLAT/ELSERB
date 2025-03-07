@@ -53,41 +53,44 @@
         margin-bottom: 15px;
     }
 
-    .social-icons {
-        margin: 10px 0;
-    }
+.social-icons {
+    margin: 10px 0;
+}
 
-    .social-icons a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        font-size: 20px;
-        color: white;
-        border-radius: 5px;
-        margin: 5px;
-    }
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
 
-    .google {
-        background: #4c4c6d;
-    }
+/* تخصيص الألوان لكل منصة */
+.facebook { background: #1877F2; }
+.instagram { background: #E4405F; }
+.tiktok { background: #000000; }
+.snapchat { background: #FFFC00; color: black; } /* لون نص أسود ليظهر على الخلفية الصفراء */
+.youtube { background: #FF0000; }
 
-    .twitter {
-        background: #55acee;
-    }
+/* تأثيرات عند التحويل */
+.social-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(0, 0, 0, 0.2),
+                0 0 15px rgba(0, 0, 0, 0.2);
+}
 
-    .google-plus {
-        background: #dd4b39;
-    }
+/* جعل اللون الرئيسي لكل أيقونة ينتشر في التأثير */
+.facebook:hover { box-shadow: 0 0 5px #1877F2, 0 0 10px #1877F2, 0 0 15px #1877F2; }
+.instagram:hover { box-shadow: 0 0 5px #E4405F, 0 0 10px #E4405F, 0 0 15px #E4405F; }
+.tiktok:hover { box-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000; }
+.snapchat:hover { box-shadow: 0 0 5px #FFFC00, 0 0 10px #FFFC00, 0 0 15px #FFFC00; }
+.youtube:hover { box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; }
 
-    .linkedin {
-        background: #0077b5;
-    }
-
-    .behance {
-        background: #ff2b2b;
-    }
 
     .content h2,
     .content h3 {
@@ -101,6 +104,39 @@
         margin-bottom: 20px;
         font-family: 'Cairo', sans-serif;
     }
+
+       @media (max-width: 768px) {
+        .container {
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            padding-top: 10px;
+        }
+
+
+
+
+        .social-icons {
+            display: none;
+        }
+
+
+
+
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .content h2,
+        .content h3 {
+            font-size: 20px;
+        }
+    }
     </style>
 </head>
 
@@ -110,11 +146,10 @@
         <h1>Why is SEO Important for your Website?</h1>
         <p class="date">2025-02-18</p>
 <div class="social-icons">
-    <a href="#" class="google"><i class="fab fa-google"></i></a>
-    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="google-plus"><i class="fab fa-google-plus-g"></i></a>
-    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" class="behance"><i class="fab fa-behance"></i></a>
+                <a href="https://www.facebook.com/alserbagency/" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/alserbagency/" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@alserbagency" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@alserbagency"><i class="fab fa-youtube"></i></a>
 </div>
 
         <div class="content">

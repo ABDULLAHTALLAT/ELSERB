@@ -165,16 +165,16 @@
         .menu-items {
             display: flex;
             flex-direction: column;
-            gap: 1.1rem;
+            gap: .5rem;
             text-align: center;
                         font-family: 'Cairo', sans-serif;
 
         }
 
       .menu-item {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold; /* جعل الخط عريضًا */
-                font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', sans-serif;
 
     color: var(--text-color);
     text-decoration: none;

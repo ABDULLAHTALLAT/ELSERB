@@ -114,7 +114,31 @@
         }
 
 
-      
+      @media (max-width: 768px) {
+    #footer-animation {
+        display: none;
+    }
+
+    .footer-circle {
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+        border-radius: 0; /* إزالة الشكل الدائري */
+    }
+
+    .footer-logo {
+        width: 200px; /* تصغير الشعار */
+    }
+
+    .footer-text {
+        font-size: 18px;
+    }
+
+    .social-icon a {
+        font-size: 20px;
+    }
+}
+
 
     </style>
 </head>
@@ -130,15 +154,16 @@
         <div class="footer-circle">
             <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Logo" class="footer-logo">
             <p class="footer-text">Don't be shy and talk to us?</p>
-            <a href="mailto:info@ALSERB.com" class="footer-email">info@ELSERB.com</a>
+            <a href="mailto:info@alserb.com" class="footer-email">info@ELSERB.com</a>
 
             <!-- أيقونات السوشيال ميديا -->
             <div class="social-icon">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-google"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/alserbagency/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/alserbagency/"><i class="fab fa-facebook"></i></a>
+                <a href="http://linkedin.com/company/alserbagency/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.tiktok.com/@alserbagency"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@alserbagency"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.snapchat.com/add/alserbmarketing"><i class="fab fa-snapchat"></i></a>
             </div>
 
             <div class="footer-links">
@@ -154,43 +179,52 @@
     const canvas = document.getElementById("footer-animation");
         const ctx = canvas.getContext("2d");
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
 
+        // التحقق مما إذا كان يجب إخفاء الأنيميشن عند تصغير الشاشة
+        function checkScreenSize() {
+            if (window.innerWidth < 1000) {
+                canvas.style.display = "none"; // إخفاء الأنيميشن عند تصغير الشاشة
+                document.querySelector(".footer-circle").style.width = "100%";
+                document.querySelector(".footer-circle").style.height = "auto";
+                document.querySelector(".footer-circle").style.borderRadius = "0";
+            } else {
+                canvas.style.display = "block"; // عرض الأنيميشن عند تكبير الشاشة
+                document.querySelector(".footer-circle").style.width = "450px";
+                document.querySelector(".footer-circle").style.height = "450px";
+                document.querySelector(".footer-circle").style.borderRadius = "0%";
+            }
+        }
+
+        // إنشاء الكرات
         let spheres = [];
         let cubes = [];
-
         const sphereColor = "rgb(181,119,80)";
-        const cubeColor = "rgb(208,145,94,255)";
+        const cubeColor = "rgb(183,120,71)";
 
-        // إنشاء الكرات بأحجام مختلفة
         function createSpheres() {
+            spheres = [];
             for (let i = 0; i < 30; i++) {
                 spheres.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    radius: Math.random() * 30 + 10, // أحجام مختلفة
-                    dx: Math.random() * 2 - 1, // سرعة الحركة الأفقية
-                    dy: Math.random() * 2 - 1, // سرعة الحركة العمودية
-                    color: sphereColor // استخدام لون الكرات
+                    radius: Math.random() * 30 + 10,
+                    dx: Math.random() * 2 - 1,
+                    dy: Math.random() * 2 - 1,
+                    color: sphereColor
                 });
             }
         }
 
-        // رسم الكرة مع تأثير ثلاثي الأبعاد
         function drawSphere(sphere) {
             const { x, y, radius, color } = sphere;
-
-            const gradient = ctx.createRadialGradient(
-                x - radius * 0.4, // مركز الضوء الأفقي
-                y - radius * 0.4, // مركز الضوء العمودي
-                radius * 0.2, // حجم منطقة الضوء
-                x, y, radius // حدود الكرة
-            );
-
-            gradient.addColorStop(0, "white"); // منطقة مضيئة
-            gradient.addColorStop(0.3, color); // لون الكره الرئيسي
-            gradient.addColorStop(1, "#624126"); // منطقة داكنة
+            const gradient = ctx.createRadialGradient(x - radius * 0.4, y - radius * 0.4, radius * 0.2, x, y, radius);
+            gradient.addColorStop(0, "white");
+            gradient.addColorStop(0.3, color);
+            gradient.addColorStop(1, "#624126");
 
             ctx.fillStyle = gradient;
             ctx.beginPath();
@@ -198,37 +232,34 @@
             ctx.fill();
         }
 
-        // إنشاء مكعبات
+        // إنشاء المكعبات
         function createCubes() {
-            for (let i = 0; i < 60; i++) {
+            cubes = [];
+            for (let i = 0; i < 30; i++) {
                 cubes.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    size: Math.random() * 100 + 30, // حجم المكعب
-                    dx: Math.random() * 2 - 1, // سرعة الحركة الأفقية
-                    dy: Math.random() * 2 - 1, // سرعة الحركة العمودية
-                    color: cubeColor // استخدام لون المكعبات
+                    size: Math.random() * 50 + 20,
+                    dx: Math.random() * 2 - 1,
+                    dy: Math.random() * 2 - 1,
+                    color: cubeColor
                 });
             }
         }
 
-        // رسم المكعب
+        // رسم المكعبات
         function drawCube(cube) {
             const { x, y, size, color } = cube;
-
             ctx.strokeStyle = color;
             ctx.lineWidth = 1.5;
-
-            // رسم الوجوه الأمامية والخلفية
             ctx.beginPath();
-            ctx.rect(x, y, size, size); // الوجه الأمامي
+            ctx.rect(x, y, size, size);
             ctx.stroke();
 
             ctx.beginPath();
-            ctx.rect(x - size * 0.2, y - size * 0.2, size, size); // الوجه الخلفي
+            ctx.rect(x - size * 0.2, y - size * 0.2, size, size);
             ctx.stroke();
 
-            // توصيل الحواف بين الوجوه الأمامية والخلفية
             ctx.beginPath();
             ctx.moveTo(x, y);
             ctx.lineTo(x - size * 0.2, y - size * 0.2);
@@ -241,11 +272,10 @@
             ctx.stroke();
         }
 
-        // تحديث الكائنات
+        // تحديث الحركة
         function updateObjects() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // تحديث الكرات
             spheres.forEach(sphere => {
                 drawSphere(sphere);
                 sphere.x += sphere.dx;
@@ -255,7 +285,6 @@
                 if (sphere.y + sphere.radius > canvas.height || sphere.y - sphere.radius < 0) sphere.dy *= -1;
             });
 
-            // تحديث المكعبات
             cubes.forEach(cube => {
                 drawCube(cube);
                 cube.x += cube.dx;
@@ -268,17 +297,16 @@
             requestAnimationFrame(updateObjects);
         }
 
-        // تحديث الحجم عند تغيير حجم النافذة
+        // تحديث عند تغيير حجم الشاشة
         window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            spheres = [];
-            cubes = [];
+            resizeCanvas();
+            checkScreenSize();
             createSpheres();
             createCubes();
         });
 
-        // إنشاء الكائنات وتحديثها
+        resizeCanvas();
+        checkScreenSize();
         createSpheres();
         createCubes();
         updateObjects();

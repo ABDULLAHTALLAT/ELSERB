@@ -363,6 +363,58 @@ background-color: #c3814c
             }
         }
 
+
+        @media (max-width: 1200px) {
+    .slider {
+        height: 60vh;
+    }
+    .animated-text {
+        font-size: 4em;
+    }
+
+     .social-icons a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .slider {
+        height: 60vh;
+    }
+    .animated-text {
+        font-size: 4em;
+    }
+
+    .social-icons a {
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 50vh;
+    }
+    .animated-text {
+        font-size: 3em;
+    }
+      .social-icons {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        height: 40vh;
+    }
+    .animated-text {
+        font-size: 2em;
+    }
+    .social-icons {
+        display: none;
+    }
+}
+
+
 </style>
 <body>
 
@@ -371,11 +423,12 @@ background-color: #c3814c
         <h1 class="animated-text">About <space> <space> <space> Us</h1>
         <div class="welcome-text">Alserb...</div>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/alserbagency/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/alserbagency/"><i class="fab fa-facebook"></i></a>
+            <a href="http://linkedin.com/company/alserbagency/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.tiktok.com/@alserbagency"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@alserbagency"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.snapchat.com/add/alserbmarketing"><i class="fab fa-snapchat"></i></a>
         </div>
     </section>
 
@@ -423,7 +476,16 @@ background-color: #c3814c
     <div class="team-container">
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/Ab.png') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/') }}" alt=" ">
+            </div>
+            <div class="team-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/1.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
                 <h3>Ahmed Abdelhady</h3>
@@ -442,39 +504,58 @@ background-color: #c3814c
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/abdo2.png') }}" alt="Team Member" width="100%" hight="100%" top="-25px">
-
+                <img src="{{ asset('images/About/staf/y.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Abdullah Tallat</h3>
+                <h3>Yasmine Ibrahim</h3>
+                <p>Reel Creator</p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/4.png') }}" alt="Team Member">
+            </div>
+            <div class="team-info">
+                <h3>salma</h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/7.png') }}" alt="Team Member">
+            </div>
+            <div class="team-info">
+                <h3>jana</h3>
                 <p>Web Developar</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/aba.png') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/abdo2.png') }}" alt="Team Member" width="100%" hight="100%" top="-25px">
+
+            </div>
+            <div class="team-info">
+                <h3>Abdullah Tallat</h3>
+                <p>Software Engineer 💻</p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/3.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
                 <h3>Abanoub Nader</h3>
                 <p>Graphics Designer</p>
             </div>
         </div>
-        <div class="team-card">
-            <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/y.png') }}" alt="Team Member">
-            </div>
-            <div class="team-info">
-                <h3>Yasmine Ibrahim</h3>
-                <p>SocialMedia Specialist</p>
-            </div>
-        </div>
+
         <div class="team-card">
             <div class="circle-bg">
                 <img src="{{ asset('images/About/staf/most.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
                 <h3>Mustafa Ashraf</h3>
-                <p>SocialMedia Specialist</p>
+                <p>media buyer</p>
             </div>
         </div>
         <div class="team-card">
@@ -483,13 +564,23 @@ background-color: #c3814c
             </div>
             <div class="team-info">
                 <h3>Ahmed Al-Fateh</h3>
-                <p>SocialMedia Specialist</p>
+                <p>Media buyer</p>
             </div>
         </div>
 
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/16.png') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/19.png') }}" alt="Team Member">
+            </div>
+            <div class="team-info">
+                <h3>Rovan </h3>
+                <p>Videographer</p>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/12.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
                 <h3>Adham </h3>
@@ -498,7 +589,7 @@ background-color: #c3814c
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/10.jpeg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/29.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
                 <h3>Mahamoud </h3>
@@ -507,65 +598,74 @@ background-color: #c3814c
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/11.jpg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/22.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Karim</h3>
+                <p>Senior Sales</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/12.jpeg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/30.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Majid</h3>
+                <p>Senior Sales</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/13.webp') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/21.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Andrew</h3>
+                <p>Senior Sales</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/14.jpg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/26.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Mark</h3>
+                <p>Junior Sales</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/15.jpeg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/18.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Basant</h3>
+                <p> Fresh Sales</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/16.jpg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/24.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>adham</h3>
+                <p>Fresh Sales</p>
             </div>
         </div>
         <div class="team-card">
             <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/17.jpeg') }}" alt="Team Member">
+                <img src="{{ asset('images/About/staf/20.png') }}" alt="Team Member">
             </div>
             <div class="team-info">
-                <h3>Mike Johnson</h3>
-                <p>Designer</p>
+                <h3>Ahmed</h3>
+                <p>Accountant</p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/17.png') }}" alt="Team Member">
+            </div>
+            <div class="team-info">
+                <h3>Shaimaa</h3>
+                <p>Accountant</p>
             </div>
         </div>
     </div>

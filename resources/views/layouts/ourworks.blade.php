@@ -229,6 +229,58 @@ background-color: #904600;
     opacity: 0; /* إخفاء الاسم والقسم عند التحويم */
 }
 
+
+        @media (max-width: 1200px) {
+    .slider {
+        height: 60vh;
+    }
+    .animated-text {
+        font-size: 4em;
+    }
+
+     .social-icons a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .slider {
+        height: 60vh;
+    }
+    .animated-text {
+        font-size: 4em;
+    }
+
+    .social-icons a {
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 50vh;
+    }
+    .animated-text {
+        font-size: 3em;
+    }
+      .social-icons {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        height: 40vh;
+    }
+    .animated-text {
+        font-size: 2em;
+    }
+    .social-icons {
+        display: none;
+    }
+}
+
+
 </style>
 <body>
 
@@ -237,12 +289,12 @@ background-color: #904600;
             <h1 class="animated-text">Portfolio<space><space></h1>
             <div class="welcome-text">Alserb..</div>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-snapchat"></i></a>
+                <a href="https://www.instagram.com/alserbagency/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/alserbagency/"><i class="fab fa-facebook"></i></a>
+                <a href="http://linkedin.com/company/alserbagency/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.tiktok.com/@alserbagency"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@alserbagency"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.snapchat.com/add/alserbmarketing"><i class="fab fa-snapchat"></i></a>
             </div>
         </section>
 
