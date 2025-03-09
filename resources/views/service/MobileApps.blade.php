@@ -450,22 +450,22 @@ background-color: #904600;
             <div class="row">
                 <div class="col-md-3">
                     <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
-                        <img src="{{ asset('images/work/1.jpg') }}" alt="Project 1">
-                        <div class="work-info">Project 1</div>
+                        <img src="{{ asset('images/work/1.jpg') }}" alt="Mobile Apps">
+                        <div class="work-info">Mobile Apps</div>
                         <div class="category-name">Design</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="development" onclick="openProject('2', 'Development')">
-                        <img src="{{ asset('images/work/2.jpg') }}" alt="Project 2">
-                        <div class="work-info">Project 2</div>
+                        <img src="{{ asset('images/work/2.jpg') }}" alt="Mobile Apps">
+                        <div class="work-info">Mobile Apps</div>
                         <div class="category-name">Development</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="photography" onclick="openProject('3', 'Photography')">
-                        <img src="{{ asset('images/work/3.jpg') }}" alt="Project 3">
-                        <div class="work-info">Project 3</div>
+                        <img src="{{ asset('images/work/3.jpg') }}" alt="Mobile Apps">
+                        <div class="work-info">Mobile Apps</div>
                         <div class="category-name">Photography</div>
                     </div>
                 </div>

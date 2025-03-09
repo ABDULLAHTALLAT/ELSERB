@@ -172,7 +172,7 @@
         }
 
       .menu-item {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold; /* جعل الخط عريضًا */
   font-family: 'Cairo', sans-serif;
 

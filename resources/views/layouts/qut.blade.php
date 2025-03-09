@@ -240,13 +240,14 @@ font-family: 'Cairo', sans-serif;
         }
 
         .contact-item img {
-            width: 40px;
+            width: 80px;
+            
         }
 
         .contact-item p {
             font-size: 16px;
             font-weight: normal;
-                        font-family: 'Cairo', sans-serif;
+            font-family: 'Cairo', sans-serif;
 
             margin: 0;
         }
@@ -418,33 +419,45 @@ font-family: 'Cairo', sans-serif;
 </div>
 
 
-    <section class="contact-info">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-item">
-                    <img src="{{ asset('images/conect/q-contatct.svg') }}" alt="Phone Icon" width="80" height="80">
+<section class="contact-info">
+    <div class="container">
+        <div class="contact-wrapper">
+            <!-- كارت رقم الهاتف -->
+            <div class="contact-item">
+                <a href="https://wa.me/201200829644" target="_blank" style="text-decoration: none; color: inherit;">
+                    <img src="{{ asset('images/conect/123456789.png') }}" alt="Phone Icon" width="80" height="80">
                     <div>
-                        <p>+49 1577 1290379</p>
-                        <small>Sat-Thu 9am-5pm</small>
+                        <p>+201200829644</p>
+                        <small>Sat-fari 11am-7pm</small>
                     </div>
-                </div>
-                <div class="contact-item">
+                </a>
+            </div>
+
+            <!-- كارت البريد الإلكتروني -->
+            <div class="contact-item">
+                <a href="mailto:info@alserbagency.com" style="text-decoration: none; color: inherit;">
                     <img src="{{ asset('images/conect/q-email.svg') }}" alt="Email Icon" width="80" height="80">
                     <div>
-                        <p>info@alserb.com</p>
-                        <small>online support</small>
+                        <p>info@alserbagency.com</p>
+                        <small>Online Support</small>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <img src="{{ asset('images/conect/q-support.svg') }}" alt="Support Icon" width="80" height="80">
+                </a>
+            </div>
+
+            <!-- كارت الاتصال المباشر -->
+            <div class="contact-item">
+                <a href="tel:+201200829644" style="text-decoration: none; color: inherit;">
+                    <img src="{{ asset('images/conect/321.png') }}" alt="Support Icon" width="80" height="80">
                     <div>
                         <p>24/7 Support</p>
                         <small>Honor to serve you</small>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
    <script>

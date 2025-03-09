@@ -326,9 +326,9 @@ background-color: #904600;
 
     <div class="partners">
         <h2>Our Partners of Success</h2>
-        <p>Over 100+ Clients Over The World</p>
+        <p></p>
         <div class="logos">
-            <img src="images/clients/1.png" alt="Partner 1">
+            {{-- <img src="images/clients/1.png" alt="Partner 1">
             <img src="images/clients/2.png" alt="Partner 2">
             <img src="images/clients/3.png" alt="Partner 3">
             <img src="images/clients/4.png" alt="Partner 4">
@@ -347,7 +347,7 @@ background-color: #904600;
             <img src="images/clients/2.png" alt="Partner 2">
             <img src="images/clients/3.png" alt="Partner 3">
             <img src="images/clients/4.png" alt="Partner 4">
-            <img src="images/clients/5.png" alt="Partner 5">
+            <img src="images/clients/5.png" alt="Partner 5"> --}}
         </div>
     </div>
 

@@ -216,12 +216,13 @@ background-color: #904600;
 
 .work-card .work-info {
     color: #c3814c;
+     font-size: 20px;
 }
 
 .work-card .category-name {
-    top: 59%;
+    top: 75%;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .work-card:hover .work-info,
@@ -281,6 +282,47 @@ background-color: #904600;
 }
 
 
+@media (max-width: 1200px) {
+    .category-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 15px;
+    }
+
+    .category-container span {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .work-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px; /* تقليل المسافة بين الكروت عند تصغير الشاشة */
+    }
+
+    .work-card {
+        width: 100%;
+        max-width: 300px; /* تحديد أقصى عرض للكرت */
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-card {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .work-container {
+        gap: 5px; /* جعل المسافة بين الكروت 5px عند الشاشات الصغيرة */
+    }
+}
+
+
 </style>
 <body>
 
@@ -306,7 +348,7 @@ background-color: #904600;
             <span class="active" data-category="all">All</span>
             <span data-category="Video & Photography">Video & Photography </span>
             <span data-category="Motion Graphic">Motion Graphic</span>
-            <span data-category="Web Solutions"> Web Solutions </span>
+            <span data-category="Web Solutions">Web Solutions </span>
             <span data-category="Mobile Apps">Mobile Apps </span>
             <span data-category="Graphic Design">Graphic Design</span>
             <span data-category="Branding"> Branding</span>
@@ -320,30 +362,38 @@ background-color: #904600;
         <div class="row">
             <div class="col-md-3">
                 <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
-                    <img src="images/work/1.jpg" alt="Project 1">
-                    <div class="work-info">Project 1</div>
-                    <div class="category-name">Design</div>
+                    <img src="images/work/1.webp" alt="Web Solutions">
+                    <div class="work-info">Alsumow</div>
+                    <div class="category-name">Web Solutions</div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="work-card" data-category="development" onclick="openProject('2', 'Development')">
-                    <img src="images/work/2.jpg" alt="Project 2">
-                    <div class="work-info">Project 2</div>
-                    <div class="category-name">Development</div>
+                    <img src="images/work/2.jpeg" alt="Web Solutions">
+                    <div class="work-info">HR</div>
+                    <div class="category-name">Web Solutions</div>
+                </div>
+            </div>
+
+             <div class="col-md-3">
+                <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
+                    <img src="images/work/3.jpg" alt="Web Solutions">
+                    <div class="work-info">CRM</div>
+                    <div class="category-name">Web Solutions</div>
+                </div>
+            </div>
+             <div class="col-md-3">
+                <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
+                    <img src="images/work/3.jpg" alt="Web Solutions">
+                    <div class="work-info">ERB</div>
+                    <div class="category-name">Web Solutions</div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="work-card" data-category="photography" onclick="openProject('3', 'Photography')">
-                    <img src="images/work/3.jpg" alt="Project 3">
-                    <div class="work-info">Project 3</div>
-                    <div class="category-name">Photography</div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="work-card" data-category="design" onclick="openProject('4', 'Design')">
-                    <img src="images/work/4.jpg" alt="Project 4">
-                    <div class="work-info">Project 4</div>
-                    <div class="category-name">Design</div>
+                <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
+                    <img src="images/work/4.png" alt="Project 1">
+                    <div class="work-info">photo</div>
+                    <div class="category-name">Video & Photography</div>
                 </div>
             </div>
 
@@ -356,7 +406,7 @@ background-color: #904600;
 
 
 <script>
-    document.querySelectorAll(".category-container span").forEach(item => {
+  document.querySelectorAll(".category-container span").forEach(item => {
         item.addEventListener("click", function () {
             document.querySelectorAll(".category-container span").forEach(el => el.classList.remove("active"));
             this.classList.add("active");
@@ -365,7 +415,8 @@ background-color: #904600;
             let cards = document.querySelectorAll(".work-card");
 
             cards.forEach(card => {
-                if (selectedCategory === "all" || card.dataset.category === selectedCategory) {
+                let categoryText = card.querySelector(".category-name").textContent.trim();
+                if (selectedCategory === "all" || categoryText === selectedCategory) {
                     card.closest('.col-md-3').style.display = "block";
                 } else {
                     card.closest('.col-md-3').style.display = "none";
@@ -374,9 +425,6 @@ background-color: #904600;
         });
     });
 
-    function openProject(id, category) {
-        window.location.href = `project-details.html?id=${id}&category=${category}`;
-    }
 </script>
     <script>
             const text = document.querySelector(".animated-text");

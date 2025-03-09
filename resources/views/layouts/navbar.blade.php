@@ -348,7 +348,7 @@ font-size: 1rem;
             <a href="{{ route('home') }}" class="menu-item">Home</a>
             <a href="{{ route('ourservice') }}" class="menu-item">Our Services</a>
             <a href="{{ route('ourclients') }}" class="menu-item">Our Clients</a>
-            <a href="{{ route('ourwork') }}" class="menu-item">Our Work</a>
+            <a href="{{ route('ourwork') }}" class="menu-item">Portfolio</a>
             <a href="{{ route('quotations') }}" class="menu-item">Get a Quotation</a>
             <a href="{{ route('aboutus') }}" class="menu-item">About Us</a>
             <a href="{{ route('contact') }}" class="menu-item">Contact</a>

@@ -260,51 +260,23 @@ background-color: #b88f61;
 
 <div class="container">
     <div class="card">
-        <a href="{{ route('seoblog') }}">
-        <img src="{{ asset("images/Blugs/seo/1 (1).jpg") }}" alt="Web Applications"></a>
-        <h3>The difference between web applications and websites.</h3>
-        <p>Understanding the difference between web applications and websitesSEO stands for Search Engine Optimization, which is the practice of increasing the quantity and quality of traffic to
-        your website through organic search engine results. It is also a valuable tool for brand awareness......</p>
-        <a href="{{ route('seoblog') }}" class="read-more">READ MORE</a>
-    </div>
-    <div class="card">
-        <a href="{{ route('blog6') }}">
-        <img src="{{ asset("images/Blugs/seo/1 (2).jpg") }}" alt="SEO Importance"></a>
-        <h3>Why is SEO Important for your Website?</h3>
-        <p>SEO enhances visibility and quality of traffic to your website SEO stands for Search Engine Optimization, which is the practice of increasing the quantity and quality of traffic to
-        your website through organic search engine results. It is also a valuable tool for brand awareness... SEO stands for Search Engine Optimization, which is the practice of increasing the quantity and quality of traffic to
-        your website through organic search engine results. It is also a valuable tool for brand awareness......</p>
-        <a href="{{ route('blog6') }}" class="read-more">READ MORE</a>
-    </div>
-    <div class="card">
-        <a href="{{ route('blog5') }}">
-        <img src="{{ asset("images/Blugs/seo/1 (3).jpg") }}" alt="Mobile Technologies"></a>
-        <h3>Top Technologies Used to Develop Mobile App</h3>
-        <p>Discover the most important technologies used in mobile app development.SEO stands for Search Engine Optimization, which is the practice of increasing the quantity and quality of traffic to
-        your website through organic search engine results. It is also a valuable tool for brand awareness.....</p>
-        <a href="{{ route('blog5') }}" class="read-more">READ MORE</a>
-    </div>
-    <div class="card">
-        <a href="{{ route('blog4') }}">
-        <img src="{{ asset("images/Blugs/seo/1 (4).jpg") }}"alt="Brand Marketing"></a>
-        <h3>What is brand marketing? And how to create a brand marketing strategy</h3>
-        <p>Learn how to build a strong brand marketing strategy...</p>
-        <a href="{{ route('blog4') }}" class="read-more">READ MORE</a>
-    </div>
-    <div class="card">
-        <a href="{{ route('blog3') }}">
-        <img src="{{ asset("images/Blugs/seo/1 (5).jpg") }}" alt="Visual Identity"></a>
-        <h3>The Importance of Visual Identity for Building a Strong Brand</h3>
-        <p>Visual identity is key to brand recognition and differentiation...</p>
-        <a href="{{ route('blog3') }}" class="read-more">READ MORE</a>
-    </div>
-    <div class="card">
-        <a href="{{ route('blog2') }}" >
-        <img src="{{ asset("images/Blugs/seo/1 (6).jpg") }}" alt="Website Traffic"></a>
-        <h3>How to increase traffic to website?</h3>
-        <p>Boosting website traffic is essential for online success...</p>
+        <a href="{{ route('blog2') }}">
+        <img src="{{ asset("images/Blugs/seo/socia1.png") }}" alt="Web Applications"></a>
+        <h3>the power of video content on social media</h3>
+        <p>
+        Video content is a powerful tool for engaging audiences on social media, offering dynamic storytelling, strong brand
+        building, and effective action-driving....</p>
         <a href="{{ route('blog2') }}" class="read-more">READ MORE</a>
     </div>
+    <div class="card">
+        <a href="{{ route('seoblog') }}">
+        <img src="{{ asset("images/Blugs/seo/seo.webp") }}" alt="SEO Importance"></a>
+        <h3>why is SEO the backbone of digital marketing?</h3>
+        <p>SEO is key to digital marketing, linking businesses with customers at critical moments. A strong SEO foundation ensures
+        a scalable and effective marketing strategy.....</p>
+        <a href="{{ route('seoblog') }}" class="read-more">READ MORE</a>
+    </div>
+
 </div>
 
 

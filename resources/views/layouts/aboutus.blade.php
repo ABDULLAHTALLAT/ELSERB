@@ -453,12 +453,10 @@ background-color: #c3814c
             </div>
             <div class="about-column right-column">
                 <p>
-                    Alserb brings you the best of the digital world. We are known by our planning and creative execution backed by original and engaging content that creates great customer interaction. If you are looking for a strong, reliable and successful partner with
-                    extensive experience in successful digital marketing plans, then "Alserb" is your best choice. Before we can make any project successful, we must make sure that the people working on the project have experience in this field. Therefore,
-                    in Alserb, we believe in the Arab talents in the field of e-marketing, and we have put in our plan that obtaining talents and skilled employees for their work is much more important than the profits of the company.
-
-                    Today, all Alserb clients praise its employees, from the most senior positions to the new interns in the company. All members of Alserb undergo extensive training before starting Any project and more than 70 % of them are academics and e-marketing specialists
-                    in all fields.
+                Alserb excels in digital marketing through strategic planning, creative execution, and engaging content that drives
+                customer interaction. We prioritize Arab talents, valuing expertise over profit, ensuring our team is highly skilled and
+                experienced. With rigorous training and a workforce of over 70% specialists and academics, Alserb guarantees excellence
+                in every project.
                 </p>
             </div>
         </div>
@@ -520,15 +518,7 @@ background-color: #c3814c
                 <p></p>
             </div>
         </div>
-        <div class="team-card">
-            <div class="circle-bg">
-                <img src="{{ asset('images/About/staf/7.png') }}" alt="Team Member">
-            </div>
-            <div class="team-info">
-                <h3>jana</h3>
-                <p>Web Developar</p>
-            </div>
-        </div>
+
         <div class="team-card">
             <div class="circle-bg">
                 <img src="{{ asset('images/About/staf/abdo2.png') }}" alt="Team Member" width="100%" hight="100%" top="-25px">
@@ -556,6 +546,15 @@ background-color: #c3814c
             <div class="team-info">
                 <h3>Mustafa Ashraf</h3>
                 <p>media buyer</p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="circle-bg">
+                <img src="{{ asset('images/About/staf/7.png') }}" alt="Team Member">
+            </div>
+            <div class="team-info">
+                <h3>jana</h3>
+                <p>Web Developar</p>
             </div>
         </div>
         <div class="team-card">

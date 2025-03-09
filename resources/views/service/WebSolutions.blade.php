@@ -471,30 +471,30 @@ background-color: #904600;
             <div class="row">
                 <div class="col-md-3">
                     <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
-                        <img src="{{ asset('images/work/1.jpg') }}" alt="Project 1">
-                        <div class="work-info">Project 1</div>
-                        <div class="category-name">Design</div>
+                        <img src="{{ asset('images/work/1.webp') }}" alt="Web Solutions">
+                        <div class="work-info">ALSUMOW</div>
+                        <div class="category-name">Web Solutions</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="development" onclick="openProject('2', 'Development')">
-                        <img src="{{ asset('images/work/2.jpg') }}" alt="Project 2">
-                        <div class="work-info">Project 2</div>
-                        <div class="category-name">Development</div>
+                        <img src="{{ asset('images/work/2.jpeg') }}" alt="Web Solutions">
+                        <div class="work-info">ERB</div>
+                        <div class="category-name">Web Solutions</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="photography" onclick="openProject('3', 'Photography')">
-                        <img src="{{ asset('images/work/3.jpg') }}" alt="Project 3">
-                        <div class="work-info">Project 3</div>
-                        <div class="category-name">Photography</div>
+                        <img src="{{ asset('images/work/3.jpg') }}" alt="Web Solutions">
+                        <div class="work-info">HR</div>
+                        <div class="category-name">Web Solutions</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="design" onclick="openProject('4', 'Design')">
-                        <img src="{{ asset('images/work/4.jpg') }}" alt="Project 4">
-                        <div class="work-info">Project 4</div>
-                        <div class="category-name">Design</div>
+                        <img src="{{ asset('images/work/2.jpeg') }}" alt="Web Solutions">
+                        <div class="work-info">CRM</div>
+                        <div class="category-name">Web Solutions</div>
                     </div>
                 </div>
 

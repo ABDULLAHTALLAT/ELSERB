@@ -154,7 +154,7 @@
         <div class="footer-circle">
             <img src="{{ asset('images/logo/LOGOELSERB-removebg.png') }}" alt="Logo" class="footer-logo">
             <p class="footer-text">Don't be shy and talk to us?</p>
-            <a href="mailto:info@alserb.com" class="footer-email">info@ELSERB.com</a>
+            <a href="mailto:info@alserbagency.com" class="footer-email">info@alserbagency.com</a>
 
             <!-- أيقونات السوشيال ميديا -->
             <div class="social-icon">
@@ -171,8 +171,11 @@
                 <a href="#">imprint</a> /
                 <a href="#">Sitemap</a>
             </div>
-            <p class="copyright">© 2025 <span class="highlight">Alserb</span> | All Rights Reserved <br>
-            AT</p>
+        <p class="copyright">
+            © 2025 <span class="highlight">Alserb</span> | All Rights Reserved <br>
+            <a href="https://www.linkedin.com/in/abdullah-tallat/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BOFJE2zGrTvOITvwJEmW9vg%3D%3D" target="_blank"
+                style="text-decoration: none; color: inherit;">AT</a>
+        </p>
         </div>
     </div>
 <script>

@@ -432,29 +432,29 @@ background-color: #904600;
             <div class="row">
                 <div class="col-md-3">
                     <div class="work-card" data-category="design" onclick="openProject('1', 'Design')">
-                        <img src="{{ asset('images/work/1.jpg') }}" alt="Project 1">
-                        <div class="work-info">Project 1</div>
+                        <img src="{{ asset('images/work/1.jpg') }}" alt="Packaging">
+                        <div class="work-info">Packaging</div>
                         <div class="category-name">Design</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="development" onclick="openProject('2', 'Development')">
-                        <img src="{{ asset('images/work/2.jpg') }}" alt="Project 2">
-                        <div class="work-info">Project 2</div>
+                        <img src="{{ asset('images/work/2.jpg') }}" alt="Packaging">
+                        <div class="work-info">Packaging</div>
                         <div class="category-name">Development</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="photography" onclick="openProject('3', 'Photography')">
-                        <img src="{{ asset('images/work/3.jpg') }}" alt="Project 3">
-                        <div class="work-info">Project 3</div>
+                        <img src="{{ asset('images/work/3.jpg') }}" alt="Packaging">
+                        <div class="work-info">Packaging</div>
                         <div class="category-name">Photography</div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="work-card" data-category="design" onclick="openProject('4', 'Design')">
-                        <img src="{{ asset('images/work/4.jpg') }}" alt="Project 4">
-                        <div class="work-info">Project 4</div>
+                        <img src="{{ asset('images/work/4.jpg') }}" alt="Packaging">
+                        <div class="work-info">Packaging</div>
                         <div class="category-name">Design</div>
                     </div>
                 </div>
